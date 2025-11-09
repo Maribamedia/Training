@@ -18,14 +18,749 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Preload hero image -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <style>
+        :root {
+            --primary: #1976d2;
+            --primary-dark: #1565c0;
+            --primary-light: #42a5f5;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --white: #ffffff;
+            --gray-light: #e9ecef;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+            --border-radius: 8px;
+            --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            --box-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--gray-800);
+            margin-left: 4px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 32px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-700);
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 120px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .secondary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .secondary-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-1px);
+        }
+        
+        /* Chatbot Section */
+        .chatbot-section {
+            padding: 80px 0;
+            background-color: var(--gray-100);
+        }
+        
+        .chatbot-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .chatbot-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .chatbot-header p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .chatbot-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Common Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            background: rgba(25, 118, 210, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        
+        /* Benefits Section */
+        .benefits-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .benefits-list {
+            margin-top: 32px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+        
+        .benefit-icon {
+            background-color: rgba(25, 118, 210, 0.1);
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .benefit-text p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        
+        .benefits-image {
+            text-align: center;
+            color: var(--primary);
+        }
+        
+        /* Use Cases Section */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        
+        .use-case-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .use-case-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            background: rgba(25, 118, 210, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .use-case-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .use-case-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 32px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pricing-header {
+            margin-bottom: 32px;
+        }
+        
+        .pricing-name {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .pricing-period {
+            color: var(--gray-600);
+            font-size: 1rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+            flex-grow: 1;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li i {
+            color: var(--success);
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .pricing-features li .fa-times {
+            color: #dc3545;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--gray-900);
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-links li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        
+        .footer-links li a:hover {
+            color: var(--white);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .benefits-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .benefits-image {
+                order: -1;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 16px;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--white);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0 0 24px 0;
+            }
+            
+            nav ul li a {
+                font-size: 1.2rem;
+            }
+            
+            .header-container .cta-button {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .mobile-menu-btn.active i:before {
+                content: "\f00d";
+            }
+            
+            .hero {
+                padding: 160px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button, .secondary-button {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .chatbot-container {
+                height: 500px;
+            }
+            
+            .chatbot-container iframe {
+                height: 100%;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .pricing-card {
+                padding: 32px 24px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 48px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid,
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -42,8 +777,9 @@
                     <li><a href="#use-cases">Use Cases</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                 </ul>
+                <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button" style="margin-top: 20px;">Request Demo</a>
             </nav>
-            <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Request Demo</a>
+            <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button desktop-only">Request Demo</a>
         </div>
     </header>
 
@@ -54,7 +790,7 @@
             <p>We save training costs for enterprises by converting training to video, creating interactive AI trainers, and providing multi-language support for global teams.</p>
             <div class="hero-buttons">
                 <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Get Started</a>
-                <a href="https://app.colossyan.com/share/zwc3q15j" target="_blank" rel="noopener" class="secondary-button">View Course Demo</a>
+                <a href="https://app.colossyan.com/share/05v4mlgr" target="_blank" rel="noopener" class="secondary-button">View Course Demo</a>
             </div>
         </div>
     </section>
@@ -90,7 +826,48 @@
                 <p>Comprehensive training solutions designed for modern enterprises</p>
             </div>
             <div class="features-grid">
-                <!-- Feature cards remain the same as previous code -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Conversion</h3>
+                    <p>Transform traditional training materials into engaging video content that improves knowledge retention.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Trainers</h3>
+                    <p>Interactive AI-powered trainers that adapt to individual learning styles and provide personalized feedback.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Reach global teams with training content automatically translated and localized for different regions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Track learner progress, engagement, and knowledge retention with detailed analytics and reporting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-First Design</h3>
+                    <p>Access training anytime, anywhere with our responsive platform optimized for all devices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level security with encryption, SSO, and compliance with industry standards and regulations.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -105,7 +882,42 @@
                         <p>Our platform delivers measurable benefits that impact your bottom line</p>
                     </div>
                     <div class="benefits-list">
-                        <!-- Benefit items remain the same -->
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Reduce Costs by up to 60%</h4>
+                                <p>Eliminate expenses associated with in-person training, travel, and printed materials.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>50% Faster Onboarding</h4>
+                                <p>Accelerate employee onboarding with interactive, self-paced training modules.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Improved Knowledge Retention</h4>
+                                <p>Video and interactive content increases knowledge retention by up to 75% compared to traditional methods.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Global Team Alignment</h4>
+                                <p>Ensure consistent training across all locations with multi-language support and localization.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="benefits-image">
@@ -123,7 +935,34 @@
                 <p>TrainingOS adapts to your specific business needs</p>
             </div>
             <div class="use-cases-grid">
-                <!-- Use case cards remain the same -->
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Employee Onboarding</h3>
+                    <p>Streamline new hire training with consistent, engaging content that scales with your organization.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Skills Development</h3>
+                    <p>Upskill employees with specialized training programs tailored to your industry and requirements.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Compliance Training</h3>
+                    <p>Ensure regulatory compliance with automated tracking, reporting, and certification management.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partner & Channel Training</h3>
+                    <p>Extend training to partners and distributors with secure, branded learning portals.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -136,7 +975,55 @@
                 <p>Flexible solutions tailored to your organization's needs</p>
             </div>
             <div class="pricing-grid">
-                <!-- Pricing cards remain the same -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Video Course Creation</h3>
+                        <div class="pricing-price">R170 000</div>
+                        <div class="pricing-period">per year</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited students</li>
+                        <li><i class="fas fa-check"></i> Advanced Video Conversion</li>
+                        <li><i class="fas fa-check"></i> Detailed Analytics</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> Multi-language Support</li>
+                        <li><i class="fas fa-times"></i> AI Trainers</li>
+                    </ul>
+                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">AI Training Specialist</h3>
+                        <div class="pricing-price">R80 000</div>
+                        <div class="pricing-period">per year</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited Users</li>
+                        <li><i class="fas fa-check"></i> Detailed Analytics</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> Multi-language Support</li>
+                        <li><i class="fas fa-check"></i> AI Trainers</li>
+                        <li><i class="fas fa-times"></i> Advanced Video Conversion</li>
+                    </ul>
+                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Full Training Management</h3>
+                        <div class="pricing-price">Custom</div>
+                        <div class="pricing-period">tailored pricing</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited Video Conversion</li>
+                        <li><i class="fas fa-check"></i> Unlimited Students</li>
+                        <li><i class="fas fa-check"></i> 24/7 Dedicated Support</li>
+                        <li><i class="fas fa-check"></i> Advanced AI Trainers</li>
+                        <li><i class="fas fa-check"></i> 150 Language Support</li>
+                        <li><i class="fas fa-check"></i> Full Training Management</li>
+                    </ul>
+                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Contact Sales</a>
+                </div>
             </div>
         </div>
     </section>
@@ -164,16 +1051,6 @@
                         <li><a href="#features">Features</a></li>
                         <li><a href="#use-cases">Use Cases</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#">Security</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Webinars</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -182,7 +1059,6 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">Partners</a></li>
                     </ul>
                 </div>
             </div>
@@ -193,23 +1069,78 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/script.js" defer></script>
-    
-    <!-- Performance Monitoring -->
     <script>
-        // Basic performance monitoring
-        window.addEventListener('load', function() {
-            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-            console.log('Page load time:', loadTime + 'ms');
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
             
-            // Send to analytics (example)
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'timing_complete', {
-                    'name': 'load',
-                    'value': loadTime,
-                    'event_category': 'Load Performance'
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+                document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('#mobileMenuBtn') && !event.target.closest('#mainNav')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('#mainNav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                    document.body.style.overflow = '';
                 });
-            }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                }
+            });
+            
+            // Basic performance monitoring
+            window.addEventListener('load', function() {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                console.log('Page load time:', loadTime + 'ms');
+                
+                // Send to analytics (example)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'timing_complete', {
+                        'name': 'load',
+                        'value': loadTime,
+                        'event_category': 'Load Performance'
+                    });
+                }
+            });
         });
     </script>
 </body>
