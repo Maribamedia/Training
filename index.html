@@ -158,8 +158,6 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
-            position: relative;
-            z-index: 10;
         }
         
         .cta-button:hover {
@@ -209,8 +207,6 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            position: relative;
-            z-index: 5;
         }
         
         .hero p {
@@ -219,8 +215,6 @@
             margin: 0 auto 48px;
             opacity: 0.9;
             font-weight: 400;
-            position: relative;
-            z-index: 5;
         }
         
         .hero-buttons {
@@ -228,8 +222,6 @@
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
-            position: relative;
-            z-index: 10; /* Ensure buttons are above other elements */
         }
         
         .secondary-button {
@@ -245,8 +237,6 @@
             font-size: 0.9rem;
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            position: relative;
-            z-index: 10;
         }
         
         .secondary-button:hover {
@@ -705,10 +695,6 @@
                 font-size: 1.2rem;
             }
             
-            .header-container .cta-button {
-                display: none;
-            }
-            
             .mobile-menu-btn {
                 display: block;
             }
@@ -776,6 +762,11 @@
                 gap: 30px;
                 text-align: center;
             }
+            
+            /* Hide desktop CTA button on mobile */
+            .desktop-only {
+                display: none;
+            }
         }
         
         @media (max-width: 576px) {
@@ -798,6 +789,13 @@
                 margin-bottom: 16px;
             }
         }
+        
+        /* Show desktop CTA button on larger screens */
+        @media (min-width: 769px) {
+            .mobile-cta-button {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -814,8 +812,8 @@
                     <li><a href="#benefits">Benefits</a></li>
                     <li><a href="#use-cases">Use Cases</a></li>
                     <li><a href="#pricing">Pricing</a></li>
+                    <li class="mobile-cta-button"><a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Request Demo</a></li>
                 </ul>
-                <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button" style="margin-top: 20px;">Request Demo</a>
             </nav>
             <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button desktop-only">Request Demo</a>
         </div>
@@ -1163,14 +1161,6 @@
                 } else {
                     header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
                 }
-            });
-            
-            // Test button functionality
-            document.querySelectorAll('.cta-button, .secondary-button').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    console.log('Button clicked:', this.href);
-                    // Allow default behavior to continue (navigation)
-                });
             });
             
             // Basic performance monitoring
