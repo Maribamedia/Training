@@ -42,6 +42,7 @@
             --gray-800: #343a40;
             --gray-900: #212529;
             --border-radius: 8px;
+            --border-radius-lg: 12px;
             --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             --box-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -51,6 +52,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         body {
@@ -74,7 +79,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -153,6 +158,8 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+            position: relative;
+            z-index: 10;
         }
         
         .cta-button:hover {
@@ -171,7 +178,7 @@
             z-index: 1001;
         }
         
-        /* Hero Section */
+        /* Hero Section - FIXED */
         .hero {
             padding: 180px 0 120px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -179,6 +186,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            margin-top: 80px; /* Added to prevent header overlap */
         }
         
         .hero:before {
@@ -190,6 +198,7 @@
             height: 100%;
             background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             opacity: 0.1;
+            pointer-events: none; /* Added to ensure buttons are clickable */
         }
         
         .hero h1 {
@@ -200,6 +209,8 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            z-index: 5;
         }
         
         .hero p {
@@ -208,6 +219,8 @@
             margin: 0 auto 48px;
             opacity: 0.9;
             font-weight: 400;
+            position: relative;
+            z-index: 5;
         }
         
         .hero-buttons {
@@ -215,6 +228,8 @@
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 10; /* Ensure buttons are above other elements */
         }
         
         .secondary-button {
@@ -230,6 +245,8 @@
             font-size: 0.9rem;
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 10;
         }
         
         .secondary-button:hover {
@@ -264,7 +281,7 @@
         }
         
         .chatbot-container {
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             overflow: hidden;
             box-shadow: var(--box-shadow-lg);
             max-width: 900px;
@@ -304,12 +321,15 @@
         
         .feature-card {
             background: var(--white);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             padding: 32px;
             box-shadow: var(--box-shadow);
             transition: var(--transition);
             text-align: center;
             border: 1px solid var(--gray-200);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .feature-card:hover {
@@ -342,6 +362,7 @@
         .feature-card p {
             color: var(--gray-600);
             line-height: 1.7;
+            flex-grow: 1;
         }
         
         /* Benefits Section */
@@ -401,11 +422,14 @@
         
         .use-case-card {
             background: var(--white);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             padding: 32px;
             box-shadow: var(--box-shadow);
             transition: var(--transition);
             border: 1px solid var(--gray-200);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .use-case-card:hover {
@@ -436,6 +460,7 @@
         .use-case-card p {
             color: var(--gray-600);
             line-height: 1.7;
+            flex-grow: 1;
         }
         
         /* Pricing Section */
@@ -447,7 +472,7 @@
         
         .pricing-card {
             background: var(--white);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             padding: 40px 32px;
             box-shadow: var(--box-shadow);
             text-align: center;
@@ -658,6 +683,7 @@
                 visibility: hidden;
                 transition: var(--transition);
                 z-index: 999;
+                box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
             }
             
             nav.active {
@@ -693,6 +719,7 @@
             
             .hero {
                 padding: 160px 0 100px;
+                margin-top: 70px; /* Adjusted for mobile */
             }
             
             .hero h1 {
@@ -710,7 +737,7 @@
             
             .cta-button, .secondary-button {
                 width: 100%;
-                max-width: 250px;
+                max-width: 280px;
                 text-align: center;
             }
             
@@ -747,6 +774,7 @@
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
+                text-align: center;
             }
         }
         
@@ -758,6 +786,16 @@
             .features-grid,
             .use-cases-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .benefit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .benefit-icon {
+                margin-right: 0;
+                margin-bottom: 16px;
             }
         }
     </style>
@@ -786,8 +824,8 @@
     <!-- Hero Section -->
     <section class="hero" aria-label="Main hero section">
         <div class="container">
-            <h1>Revolutionize Enterprise Training</h1>
-            <p>We save training costs for enterprises by converting training to video, creating interactive AI trainers, and providing multi-language support for global teams.</p>
+            <h1>Transform Enterprise Training with AI-Powered Solutions</h1>
+            <p>TrainingOS revolutionizes corporate learning by converting traditional training materials into engaging video content, deploying interactive AI trainers, and providing comprehensive multi-language support for global teams. Our platform reduces training costs by up to 60% while improving knowledge retention and employee engagement across your organization.</p>
             <div class="hero-buttons">
                 <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Get Started</a>
                 <a href="https://app.colossyan.com/share/05v4mlgr" target="_blank" rel="noopener" class="secondary-button">View Course Demo</a>
@@ -799,8 +837,8 @@
     <section class="chatbot-section" aria-label="AI Chatbot">
         <div class="container">
             <div class="chatbot-header">
-                <h2>Speak to TrainingOS Enterprise Solutions Specialist</h2>
-                <p>Get personalized recommendations for your organization's training needs</p>
+                <h2>Consult with Our Enterprise Solutions Specialist</h2>
+                <p>Receive personalized recommendations tailored to your organization's specific training requirements, budget constraints, and implementation timeline. Our AI-powered assistant can analyze your needs and suggest the optimal TrainingOS solution.</p>
             </div>
             <div class="chatbot-container">
                 <iframe 
@@ -822,51 +860,51 @@
     <section class="features" id="features" aria-label="Product Features">
         <div class="container">
             <div class="section-title">
-                <h2>Powerful Features</h2>
-                <p>Comprehensive training solutions designed for modern enterprises</p>
+                <h2>Comprehensive Training Platform Features</h2>
+                <p>TrainingOS combines cutting-edge technology with enterprise-grade security to deliver a complete training solution that scales with your organization's needs.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-video"></i>
                     </div>
-                    <h3>Video Conversion</h3>
-                    <p>Transform traditional training materials into engaging video content that improves knowledge retention.</p>
+                    <h3>Advanced Video Conversion</h3>
+                    <p>Transform traditional training materials, presentations, and documents into professional-grade video content with automated voiceovers, animations, and interactive elements. Our AI-powered conversion maintains brand consistency while reducing production time by 80%.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>AI Trainers</h3>
-                    <p>Interactive AI-powered trainers that adapt to individual learning styles and provide personalized feedback.</p>
+                    <h3>Interactive AI Trainers</h3>
+                    <p>Deploy personalized AI trainers that adapt to individual learning styles, provide real-time feedback, and simulate realistic scenarios. Our AI trainers are available 24/7, support multiple conversation styles, and continuously improve based on learner interactions.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h3>Multi-Language Support</h3>
-                    <p>Reach global teams with training content automatically translated and localized for different regions.</p>
+                    <h3>Global Multi-Language Support</h3>
+                    <p>Reach diverse global teams with automatic translation and localization for 150+ languages. Our platform preserves context and cultural nuances while maintaining consistent training quality across all regions and dialects.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3>Advanced Analytics</h3>
-                    <p>Track learner progress, engagement, and knowledge retention with detailed analytics and reporting.</p>
+                    <h3>Comprehensive Analytics Dashboard</h3>
+                    <p>Track learner progress, engagement metrics, knowledge retention rates, and skill development with detailed analytics and customizable reporting. Identify knowledge gaps and optimize training programs based on data-driven insights.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Mobile-First Design</h3>
-                    <p>Access training anytime, anywhere with our responsive platform optimized for all devices.</p>
+                    <h3>Mobile-First Learning Experience</h3>
+                    <p>Access training content anytime, anywhere with our fully responsive platform optimized for all devices. Offline capabilities ensure continuous learning even without internet connectivity, with automatic sync when connection is restored.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Enterprise Security</h3>
-                    <p>Bank-level security with encryption, SSO, and compliance with industry standards and regulations.</p>
+                    <h3>Enterprise-Grade Security</h3>
+                    <p>Protect sensitive training data with bank-level encryption, SSO integration, GDPR compliance, and SOC 2 certification. Our platform includes advanced access controls, audit trails, and data residency options to meet strict enterprise security requirements.</p>
                 </div>
             </div>
         </div>
@@ -878,8 +916,8 @@
             <div class="benefits-content">
                 <div class="benefits-text">
                     <div class="section-title">
-                        <h2>Transform Your Training ROI</h2>
-                        <p>Our platform delivers measurable benefits that impact your bottom line</p>
+                        <h2>Measurable Business Impact</h2>
+                        <p>TrainingOS delivers tangible ROI through cost reduction, improved efficiency, and enhanced employee performance across your organization.</p>
                     </div>
                     <div class="benefits-list">
                         <div class="benefit-item">
@@ -887,8 +925,8 @@
                                 <i class="fas fa-percentage"></i>
                             </div>
                             <div class="benefit-text">
-                                <h4>Reduce Costs by up to 60%</h4>
-                                <p>Eliminate expenses associated with in-person training, travel, and printed materials.</p>
+                                <h4>Substantial Cost Reduction</h4>
+                                <p>Eliminate expenses associated with in-person training, travel, accommodation, printed materials, and venue rentals. Organizations typically achieve 60-70% reduction in overall training costs while maintaining or improving training quality.</p>
                             </div>
                         </div>
                         <div class="benefit-item">
@@ -896,8 +934,8 @@
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div class="benefit-text">
-                                <h4>50% Faster Onboarding</h4>
-                                <p>Accelerate employee onboarding with interactive, self-paced training modules.</p>
+                                <h4>Accelerated Onboarding Process</h4>
+                                <p>Reduce new hire onboarding time by 50% with standardized, self-paced training modules that ensure consistent knowledge transfer. New employees become productive faster while receiving comprehensive role-specific training.</p>
                             </div>
                         </div>
                         <div class="benefit-item">
@@ -905,8 +943,8 @@
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             <div class="benefit-text">
-                                <h4>Improved Knowledge Retention</h4>
-                                <p>Video and interactive content increases knowledge retention by up to 75% compared to traditional methods.</p>
+                                <h4>Enhanced Knowledge Retention</h4>
+                                <p>Video and interactive content increases knowledge retention by up to 75% compared to traditional training methods. Microlearning modules and spaced repetition techniques reinforce key concepts for long-term retention.</p>
                             </div>
                         </div>
                         <div class="benefit-item">
@@ -914,8 +952,8 @@
                                 <i class="fas fa-globe"></i>
                             </div>
                             <div class="benefit-text">
-                                <h4>Global Team Alignment</h4>
-                                <p>Ensure consistent training across all locations with multi-language support and localization.</p>
+                                <h4>Global Team Standardization</h4>
+                                <p>Ensure consistent training delivery and messaging across all locations, departments, and regions. Maintain brand voice and compliance standards while accommodating local language and cultural requirements.</p>
                             </div>
                         </div>
                     </div>
@@ -931,37 +969,37 @@
     <section class="use-cases" id="use-cases" aria-label="Use Cases">
         <div class="container">
             <div class="section-title">
-                <h2>Enterprise Use Cases</h2>
-                <p>TrainingOS adapts to your specific business needs</p>
+                <h2>Enterprise Implementation Scenarios</h2>
+                <p>TrainingOS adapts to diverse organizational needs across industries and departments, delivering targeted solutions for specific business challenges.</p>
             </div>
             <div class="use-cases-grid">
                 <div class="use-case-card">
                     <div class="use-case-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Employee Onboarding</h3>
-                    <p>Streamline new hire training with consistent, engaging content that scales with your organization.</p>
+                    <h3>Employee Onboarding & Orientation</h3>
+                    <p>Streamline new hire training with consistent, engaging content that scales with organizational growth. Automate administrative training, policy acknowledgment, and role-specific skill development while maintaining personal connection through AI-powered interactions.</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Skills Development</h3>
-                    <p>Upskill employees with specialized training programs tailored to your industry and requirements.</p>
+                    <h3>Technical Skills Development</h3>
+                    <p>Upskill technical teams with specialized training programs for software, processes, and emerging technologies. Create interactive simulations, coding exercises, and technical scenarios that build practical skills through hands-on learning experiences.</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Compliance Training</h3>
-                    <p>Ensure regulatory compliance with automated tracking, reporting, and certification management.</p>
+                    <h3>Compliance & Regulatory Training</h3>
+                    <p>Ensure regulatory compliance with automated tracking, certification management, and audit-ready reporting. Deliver mandatory training for safety protocols, data protection, industry regulations, and ethical standards with complete documentation.</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3>Partner & Channel Training</h3>
-                    <p>Extend training to partners and distributors with secure, branded learning portals.</p>
+                    <h3>Partner & Channel Enablement</h3>
+                    <p>Extend training to partners, distributors, and resellers with secure, branded learning portals. Ensure consistent product knowledge, sales techniques, and brand messaging across your entire ecosystem while tracking partner performance and engagement.</p>
                 </div>
             </div>
         </div>
@@ -971,8 +1009,8 @@
     <section class="pricing" id="pricing" aria-label="Pricing Plans">
         <div class="container">
             <div class="section-title">
-                <h2>Enterprise Pricing</h2>
-                <p>Flexible solutions tailored to your organization's needs</p>
+                <h2>Enterprise-Grade Pricing Solutions</h2>
+                <p>Flexible pricing models designed to scale with your organization's training needs and budget requirements.</p>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
@@ -982,12 +1020,12 @@
                         <div class="pricing-period">per year</div>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Unlimited students</li>
-                        <li><i class="fas fa-check"></i> Advanced Video Conversion</li>
-                        <li><i class="fas fa-check"></i> Detailed Analytics</li>
-                        <li><i class="fas fa-check"></i> Priority Support</li>
-                        <li><i class="fas fa-check"></i> Multi-language Support</li>
-                        <li><i class="fas fa-times"></i> AI Trainers</li>
+                        <li><i class="fas fa-check"></i> Unlimited student access</li>
+                        <li><i class="fas fa-check"></i> Advanced video conversion tools</li>
+                        <li><i class="fas fa-check"></i> Comprehensive analytics dashboard</li>
+                        <li><i class="fas fa-check"></i> Priority technical support</li>
+                        <li><i class="fas fa-check"></i> Multi-language content delivery</li>
+                        <li><i class="fas fa-times"></i> AI-powered interactive trainers</li>
                     </ul>
                     <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Get Started</a>
                 </div>
@@ -999,12 +1037,12 @@
                         <div class="pricing-period">per year</div>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Unlimited Users</li>
-                        <li><i class="fas fa-check"></i> Detailed Analytics</li>
-                        <li><i class="fas fa-check"></i> Priority Support</li>
-                        <li><i class="fas fa-check"></i> Multi-language Support</li>
-                        <li><i class="fas fa-check"></i> AI Trainers</li>
-                        <li><i class="fas fa-times"></i> Advanced Video Conversion</li>
+                        <li><i class="fas fa-check"></i> Unlimited user licenses</li>
+                        <li><i class="fas fa-check"></i> Detailed performance analytics</li>
+                        <li><i class="fas fa-check"></i> Priority customer support</li>
+                        <li><i class="fas fa-check"></i> Multi-language AI interactions</li>
+                        <li><i class="fas fa-check"></i> AI-powered personalized trainers</li>
+                        <li><i class="fas fa-times"></i> Advanced video conversion suite</li>
                     </ul>
                     <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Get Started</a>
                 </div>
@@ -1012,15 +1050,15 @@
                     <div class="pricing-header">
                         <h3 class="pricing-name">Full Training Management</h3>
                         <div class="pricing-price">Custom</div>
-                        <div class="pricing-period">tailored pricing</div>
+                        <div class="pricing-period">tailored enterprise pricing</div>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Unlimited Video Conversion</li>
-                        <li><i class="fas fa-check"></i> Unlimited Students</li>
-                        <li><i class="fas fa-check"></i> 24/7 Dedicated Support</li>
-                        <li><i class="fas fa-check"></i> Advanced AI Trainers</li>
-                        <li><i class="fas fa-check"></i> 150 Language Support</li>
-                        <li><i class="fas fa-check"></i> Full Training Management</li>
+                        <li><i class="fas fa-check"></i> Unlimited video conversion capabilities</li>
+                        <li><i class="fas fa-check"></i> Unlimited student and admin users</li>
+                        <li><i class="fas fa-check"></i> 24/7 dedicated enterprise support</li>
+                        <li><i class="fas fa-check"></i> Advanced AI trainer customization</li>
+                        <li><i class="fas fa-check"></i> 150+ language support with localization</li>
+                        <li><i class="fas fa-check"></i> Complete training management system</li>
                     </ul>
                     <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Contact Sales</a>
                 </div>
@@ -1031,9 +1069,9 @@
     <!-- CTA Section -->
     <section class="cta-section" aria-label="Call to Action">
         <div class="container">
-            <h2>Ready to Transform Your Training Program?</h2>
-            <p>Join leading enterprises that have reduced training costs while improving employee engagement and knowledge retention.</p>
-            <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Schedule a Demo</a>
+            <h2>Ready to Revolutionize Your Corporate Training Program?</h2>
+            <p>Join hundreds of forward-thinking enterprises that have transformed their training approach, reduced costs by up to 60%, and significantly improved employee engagement and knowledge retention with TrainingOS.</p>
+            <a href="https://cal.com/partner-discovery/south-africa" target="_blank" rel="noopener" class="cta-button">Schedule a Personalized Demo</a>
         </div>
     </section>
 
@@ -1043,7 +1081,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>TrainingOS</h3>
-                    <p>Enterprise training solutions that reduce costs and improve outcomes through video conversion, AI trainers, and multi-language support.</p>
+                    <p>Enterprise training solutions that reduce costs and improve outcomes through advanced video conversion, AI-powered trainers, and comprehensive multi-language support for global organizations.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Product</h3>
@@ -1063,7 +1101,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 TrainingOS. All rights reserved.</p>
+                <p>&copy; 2023 TrainingOS. All rights reserved. | Enterprise Training Solutions</p>
             </div>
         </div>
     </footer>
@@ -1125,6 +1163,14 @@
                 } else {
                     header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
                 }
+            });
+            
+            // Test button functionality
+            document.querySelectorAll('.cta-button, .secondary-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    console.log('Button clicked:', this.href);
+                    // Allow default behavior to continue (navigation)
+                });
             });
             
             // Basic performance monitoring
