@@ -1,41 +1,1177 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>TrainingOS - AI-Powered Educational Infrastructure | Mariba Media</title>
     <meta name="description" content="Mariba Media's TrainingOS: The Global Standard for AI-Powered Educational Infrastructure. Resolving the Scale vs. Quality dichotomy with pedagogically-sound AI solutions.">
     
-    <!-- Favicon - Optimized with consistent sizes and proper references -->
-    <!-- SVG Favicon (Modern browsers) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 stop-color=%22%2316a34a%22/><stop offset=%22100%25%22 stop-color=%22%2305842e%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22url(%23g)%22/><path d=%22M50 30 L35 50 L50 70 L65 50 Z%22 fill=%22white%22 opacity=%220.9%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22white%22/><path d=%22M45 45 L55 55 M55 45 L45 55%22 stroke=%22%2316a34a%22 stroke-width=%223%22 stroke-linecap=%22round%22/></svg>" type="image/svg+xml">
-    
-    <!-- PNG Favicon for older browsers -->
-    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGsSURBVHgB7ZdNSwJBFIbft66pGJEUEn0JQR9EnyAiqMAgCKo/ENgu+gPRRVBBF0EFQRBEdGNEQYFuKvsRYlKm5DofdRWJtXGn2WfggDPvOfPOnNl3ZhYwMTExMTEx+ctwVdQx8IoW+GCK2zSjsa5eA6EsdiQJK5iiZRSzwIBeAxHcGgg4Da2BqUEDaTWoNZDVGvBqDUS1BoYGDXi1BgJaAw6tgbLWwEBroKo1UNYa6GgN1LQG6loDLa2BttZAR2ugqzXQ1xr40RrgrAEJRSigYDiCJ55EV3xQ+hKDlEgikpzFqAcwUDBR8JEU5mdmsFwo4Pj2DpXXV7x3u2g0m3h4qqJUKuG0WIxGk8ko95HhH3QYTLXHx2G329F/f9Pq9fLd45NfDA1Ul/MFFUZ7vR7qtRpCwSACgQAsFgsG7cFQYO/l/BIYDLJut4tKuYz19XWYJAmCwyFbWFpCv9+H2+3GwuIinE4n6ObWEIVAgJ6Lt7e3OD87w+bWFkRRhGcw0Gq1QtKjfB7VpyfQzY1RAqyGQ2Gvz4cNQWCA48A0ep8F+Dd+ASd2iLmQCZEoAAAAAElFTkSuQmCC">
-    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGsSURBVHgB7ZdNSwJBFIbft66pGJEUEn0JQR9EnyAiqMAgCKo/ENgu+gPRRVBBF0EFQRBEdGNEQYFuKvsRYlKm5DofdRWJtXGn2WfggDPvOfPOnNl3ZhYwMTExMTEx+ctwVdQx8IoW+GCK2zSjsa5eA6EsdiQJK5iiZRSzwIBeAxHcGgg4Da2BqUEDaTWoNZDVGvBqDUS1BoYGDXi1BgJaAw6tgbLWwEBroKo1UNYa6GgN1LQG6loDLa2BttZAR2ugqzXQ1xr40RrgrAEJRSigYDiCJ55EV3xQ+hKDlEgikpzFkAcwUDBR8JEU5mdmsFwo4Pj2DpXXV7x3u2g0m3h4qqJUKuG0WIxGk8ko95HhH3QYTLXHx2G329F/f9Pq9fLd45NfDA1Ul/MFFUZ7vR7qtRpCwSACgQAsFgsG7cFQYO/l/BIYDLJut4tKuYz19XWYJAmCwyFbWFpCv9+H2+3GwuIinE4n6ObWEIVAgJ6Lt7e3OD87w+bWFkRRhGcw0Gq1QtKjfB7VpyfQzY1RAqyGQ2Gvz4cNQWCA48A0ep8F+Dd+ASd2iLmQCZEoAAAAAElFTkSuQmCC">
-    
-    <!-- Apple Touch Icon (iOS Safari) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGrSURBVHgB7dZBboMwEAXQGcE5oLegp0h6irSHsHMIewi7h7CniD2Eu4ewp4g5hL1DeArvJ8myY1uCgYU8abH8z5Jsy5A5juP8hN6w24Zh+BzH8Quvq+/7N7w+XddPq9XqGa8rTdNHvC5jzD1el+/7N3hd0zT5eF2e513idf0CQIdh+B0MBgN1g8FgMBgMBoPBYDAYDNQBh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+Fw/g+1A/QGeZ7H9jT7eZ7HcJq+71/GcXzD6zLG3ON1FUXBxmnyPO8Sr+sXscFHS18kZ6IAAAAASUVORK5CYII=">
-    
-    <!-- Windows Metro Icon -->
-    <meta name="msapplication-TileColor" content="#16a34a">
-    <meta name="msapplication-TileImage" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGsSURBVHgB7ZdNSwJBFIbft66pGJEUEn0JQR9EnyAiqMAgCKo/ENgu+gPRRVBBF0EFQRBEdGNEQYFuKvsRYlKm5DofdRWJtXGn2WfggDPvOfPOnNl3ZhYwMTExMTEx+ctwVdQx8IoW+GCK2zSjsa5eA6EsdiQJK5iiZRSzwIBeAxHcGgg4Da2BqUEDaTWoNZDVGvBqDUS1BoYGDXi1BgJaAw6tgbLWwEBroKo1UNYa6GgN1LQG6loDLa2BttZAR2ugqzXQ1xr40RrgrAEJRSigYDiCJ55EV3xQ+hKDlEgikpzFkAcwUDBR8JEU5mdmsFwo4Pj2DpXXV7x3u2g0m3h4qqJUKuG0WIxGk8ko95HhH3QYTLXHx2G329F/f9Pq9fLd45NfDA1Ul/MFFUZ7vR7qtRpCwSACgQAsFgsG7cFQYO/l/BIYDLJut4tKuYz19XWYJAmCwyFbWFpCv9+H2+3GwuIinE4n6ObWEIVAgJ6Lt7e3OD87w+bWFkRRhGcw0Gq1QtKjfB7VpyfQzY1RAqyGQ2Gvz4cNQWCA48A0ep8F+Dd+ASd2iLmQCZEoAAAAAElFTkSuQmCC">
-    
-    <!-- Theme Color -->
+    <!-- Favicon Suite -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://api.dicebear.com/7.x/shapes/png?seed=TrainingOS&backgroundType=solid&backgroundColor=16a34a&size=32">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://api.dicebear.com/7.x/shapes/png?seed=TrainingOS&backgroundType=solid&backgroundColor=16a34a&size=16">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://api.dicebear.com/7.x/shapes/png?seed=TrainingOS&backgroundType=solid&backgroundColor=16a34a&size=180">
+    <link rel="mask-icon" href="https://api.dicebear.com/7.x/shapes/svg?seed=TrainingOS&backgroundType=solid&backgroundColor=16a34a" color="#16a34a">
     <meta name="theme-color" content="#16a34a">
     
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="data:application/json,{%22name%22:%22TrainingOS%22,%22short_name%22:%22TrainingOS%22,%22theme_color%22:%22%2316a34a%22,%22background_color%22:%22%23ffffff%22,%22display%22:%22standalone%22,%22icons%22:[{%22src%22:%22data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGsSURBVHgB7ZdNSwJBFIbft66pGJEUEn0JQR9EnyAiqMAgCKo/ENgu+gPRRVBBF0EFQRBEdGNEQYFuKvsRYlKm5DofdRWJtXGn2WfggDPvOfPOnNl3ZhYwMTExMTEx+ctwVdQx8IoW+GCK2zSjsa5eA6EsdiQJK5iiZRSzwIBeAxHcGgg4Da2BqUEDaTWoNZDVGvBqDUS1BoYGDXi1BgJaAw6tgbLWwEBroKo1UNYa6GgN1LQG6loDLa2BttZAR2ugqzXQ1xr40RrgrAEJRSigYDiCJ55EV3xQ+hKDlEgikpzFkAcwUDBR8JEU5mdmsFwo4Pj2DpXXV7x3u2g0m3h4qqJUKuG0WIxGk8ko95HhH3QYTLXHx2G329F/f9Pq9fLd45NfDA1Ul/MFFUZ7vR7qtRpCwSACgQAsFgsG7cFQYO/l/BIYDLJut4tKuYz19XWYJAmCwyFbWFpCv9+H2+3GwuIinE4n6ObWEIVAgJ6Lt7e3OD87w+bWFkRRhGcw0Gq1QtKjfB7VpyfQzY1RAqyGQ2Gvz4cNQWCA48A0ep8F+Dd+ASd2iLmQCZEoAAAAAElFTkSuQmCC%22,%22sizes%22:%22192x192%22,%22type%22:%22image/png%22,%22purpose%22:%22any%22},{%22src%22:%22data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGsSURBVHgB7ZdNSwJBFIbft66pGJEUEn0JQR9EnyAiqMAgCKo/ENgu+gPRRVBBF0EFQRBEdGNEQYFuKvsRYlKm5DofdRWJtXGn2WfggDPvOfPOnNl3ZhYwMTExMTEx+ctwVdQx8IoW+GCK2zSjsa5eA6EsdiQJK5iiZRSzwIBeAxHcGgg4Da2BqUEDaTWoNZDVGvBqDUS1BoYGDXi1BgJaAw6tgbLWwEBroKo1UNYa6GgN1LQG6loDLa2BttZAR2ugqzXQ1xr40RrgrAEJRSigYDiCJ55EV3xQ+hKDlEgikpzFkAcwUDBR8JEU5mdmsFwo4Pj2DpXXV7x3u2g0m3h4qqJUKuG0WIxGk8ko95HhH3QYTLXHx2G329F/f9Pq9fLd45NfDA1Ul/MFFUZ7vr7qtRpCwSACgQAsFgsG7cFQYO/l/BIYDLJut4tKuYz19XWYJAmCwyFbWFpCv9+H2+3GwuIinE4n6ObWEIVAgJ6Lt7e3OD87w+bWFkRRhGcw0Gq1QtKjfB7VpyfQzY1RAqyGQ2Gvz4cNQWCA48A0ep8F+Dd+ASd2iLmQCZEoAAAAAElFTkSuQmCC%22,%22sizes%22:%22512x512%22,%22type%22:%22image/png%22,%22purpose%22:%22any%22}]}">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="TrainingOS - AI-Powered Educational Infrastructure">
+    <meta property="og:description" content="The Global Standard for AI-Powered Educational Infrastructure">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maribamedia.co.za">
+    <meta property="og:image" content="https://api.dicebear.com/7.x/shapes/png?seed=TrainingOS&backgroundType=solid&backgroundColor=16a34a&size=1200">
     
     <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.tailwindcss.com" />
-    <link rel="preconnect" href="https://esm.sh" />
-
+    <link rel="dns-prefetch" href="https://esm.sh" />
+    
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Rest of your Tailwind config and script remains the same -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    }
+                }
+            },
+            plugins: [],
+        }
+    </script>
+
+    <!-- Import Map for React Modules -->
+    <script type="importmap">
+    {
+        "imports": {
+            "react": "https://esm.sh/react@18.3.1",
+            "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+            "react-dom": "https://esm.sh/react-dom@18.3.1",
+            "framer-motion": "https://esm.sh/framer-motion@11.6.11",
+            "lucide-react": "https://esm.sh/lucide-react@0.344.0"
+        }
+    }
+    </script>
+
+    <!-- Babel for JSX Transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary-600: #16a34a;
+            --primary-700: #15803d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #16a34a 0%, #0d9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Loading Animation */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+        
+        .shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        
+        /* Performance Optimizations */
+        .will-change-transform {
+            will-change: transform;
+        }
+        
+        .content-visibility-auto {
+            content-visibility: auto;
+        }
+        
+        /* Mobile Touch Improvements */
+        @media (max-width: 768px) {
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-white text-slate-900 antialiased">
+    <div id="root" class="min-h-screen"></div>
+
+    <!-- Main Application Script -->
+    <script type="text/babel" data-type="module">
+        import React, { useState, useEffect, useRef, useCallback } from 'react';
+        import { createRoot } from 'react-dom/client';
+        import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+        import * as Icons from 'lucide-react';
+        
+        // Performance Optimization: Dynamic imports
+        const LoadingSpinner = () => (
+            <div className="flex items-center justify-center min-h-screen">
+                <div className="w-12 h-12 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin"></div>
+            </div>
+        );
+        
+        // Custom Hook: Intersection Observer
+        const useInView = (options = {}) => {
+            const [isInView, setIsInView] = useState(false);
+            const ref = useRef(null);
+            
+            useEffect(() => {
+                const observer = new IntersectionObserver(([entry]) => {
+                    setIsInView(entry.isIntersecting);
+                }, options);
+                
+                if (ref.current) {
+                    observer.observe(ref.current);
+                }
+                
+                return () => {
+                    if (ref.current) {
+                        observer.unobserve(ref.current);
+                    }
+                };
+            }, [options]);
+            
+            return [ref, isInView];
+        };
+        
+        // Component 1: Navigation
+        const Navigation = () => {
+            const [isScrolled, setIsScrolled] = useState(false);
+            const [mobileOpen, setMobileOpen] = useState(false);
+            
+            const navItems = [
+                { name: 'TrainingOS', href: '#trainingos', icon: 'Cpu' },
+                { name: 'Features', href: '#features', icon: 'Zap' },
+                { name: 'Benefits', href: '#benefits', icon: 'TrendingUp' },
+                { name: 'Use Cases', href: '#usecases', icon: 'Briefcase' },
+                { name: 'Leadership', href: '#leadership', icon: 'Users' },
+                { name: 'Pricing', href: '#pricing', icon: 'CreditCard' },
+            ];
+            
+            useEffect(() => {
+                const handleScroll = () => {
+                    setIsScrolled(window.scrollY > 50);
+                };
+                window.addEventListener('scroll', handleScroll, { passive: true });
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+            
+            return (
+                <motion.nav
+                    initial={{ y: -100 }}
+                    animate={{ y: 0 }}
+                    className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                        isScrolled ? 'glass py-3 shadow-lg' : 'bg-transparent py-5'
+                    }`}
+                >
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="flex items-center justify-between">
+                            {/* Logo */}
+                            <a href="/" className="flex items-center space-x-2">
+                                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+                                    <Icons.Cpu className="w-6 h-6 text-white" />
+                                </div>
+                                <span className="text-xl font-bold text-slate-900">
+                                    Training<span className="text-primary-600">OS</span>
+                                </span>
+                            </a>
+                            
+                            {/* Desktop Navigation */}
+                            <div className="hidden md:flex items-center space-x-8">
+                                {navItems.map((item) => {
+                                    const Icon = Icons[item.icon];
+                                    return (
+                                        <a
+                                            key={item.name}
+                                            href={item.href}
+                                            className="group flex items-center space-x-1 text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors"
+                                        >
+                                            <Icon className="w-4 h-4" />
+                                            <span>{item.name}</span>
+                                            <span className="block h-0.5 w-0 group-hover:w-full bg-primary-600 transition-all duration-300"></span>
+                                        </a>
+                                    );
+                                })}
+                                
+                                <a
+                                    href="https://cal.com/partner-discovery/south-africa"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300 flex items-center space-x-2"
+                                >
+                                    <Icons.Calendar className="w-4 h-4" />
+                                    <span>Request Demo</span>
+                                </a>
+                            </div>
+                            
+                            {/* Mobile Menu Button */}
+                            <button
+                                onClick={() => setMobileOpen(!mobileOpen)}
+                                className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                                aria-label="Toggle menu"
+                            >
+                                {mobileOpen ? (
+                                    <Icons.X className="w-6 h-6 text-slate-700" />
+                                ) : (
+                                    <Icons.Menu className="w-6 h-6 text-slate-700" />
+                                )}
+                            </button>
+                        </div>
+                        
+                        {/* Mobile Menu */}
+                        <AnimatePresence>
+                            {mobileOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: 'auto' }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    className="md:hidden mt-4 overflow-hidden"
+                                >
+                                    <div className="glass rounded-xl p-4 space-y-3">
+                                        {navItems.map((item) => {
+                                            const Icon = Icons[item.icon];
+                                            return (
+                                                <a
+                                                    key={item.name}
+                                                    href={item.href}
+                                                    onClick={() => setMobileOpen(false)}
+                                                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 transition-colors"
+                                                >
+                                                    <Icon className="w-5 h-5 text-primary-600" />
+                                                    <span className="font-medium text-slate-700">{item.name}</span>
+                                                </a>
+                                            );
+                                        })}
+                                        <a
+                                            href="https://cal.com/partner-discovery/south-africa"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white p-3 rounded-lg font-semibold text-center hover:shadow-lg transition-all"
+                                            onClick={() => setMobileOpen(false)}
+                                        >
+                                            Request Demo
+                                        </a>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                </motion.nav>
+            );
+        };
+        
+        // Component 2: Hero Section
+        const HeroSection = () => {
+            const stats = [
+                { value: '80%', label: 'Cost Reduction', icon: Icons.DollarSign },
+                { value: '95%', label: 'Learner Retention', icon: Icons.Users },
+                { value: '100+', label: 'Languages', icon: Icons.Globe },
+                { value: '90%', label: 'Automation', icon: Icons.Bot },
+            ];
+            
+            return (
+                <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+                    {/* Background Elements */}
+                    <div className="absolute inset-0 -z-10">
+                        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse-slow"></div>
+                        <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse-slow animation-delay-2000"></div>
+                    </div>
+                    
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="max-w-6xl mx-auto">
+                            {/* Hero Content */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="text-center mb-16"
+                            >
+                                <span className="inline-block px-4 py-1.5 rounded-full bg-primary-50 text-primary-700 text-sm font-semibold mb-6 border border-primary-100">
+                                    🚀 The Future of Education is Here
+                                </span>
+                                
+                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+                                    Resolve the{' '}
+                                    <span className="gradient-text">Scale vs. Quality</span>
+                                    <br />
+                                    Dichotomy
+                                </h1>
+                                
+                                <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+                                    TrainingOS delivers institutional-grade learning outcomes with AI-automated educational infrastructure. 
+                                    Reduce operational costs by up to 80% while achieving 95% learner retention.
+                                </p>
+                                
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a
+                                        href="https://cal.com/partner-discovery/south-africa"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:shadow-primary-500/30 transition-all duration-300 hover:-translate-y-1"
+                                    >
+                                        <Icons.Video className="w-5 h-5" />
+                                        <span>Schedule Executive Briefing</span>
+                                    </a>
+                                    
+                                    <a
+                                        href="#features"
+                                        className="inline-flex items-center justify-center space-x-2 bg-white text-slate-700 px-8 py-4 rounded-xl font-semibold border-2 border-slate-200 hover:border-primary-300 hover:bg-slate-50 transition-all duration-300"
+                                    >
+                                        <Icons.BookOpen className="w-5 h-5" />
+                                        <span>Explore Features</span>
+                                    </a>
+                                </div>
+                            </motion.div>
+                            
+                            {/* Stats Grid */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 40 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                            >
+                                {stats.map((stat, index) => {
+                                    const Icon = stat.icon;
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="glass p-6 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
+                                        >
+                                            <div className="flex items-center space-x-3 mb-3">
+                                                <div className="p-2 rounded-lg bg-primary-50">
+                                                    <Icon className="w-5 h-5 text-primary-600" />
+                                                </div>
+                                                <div className="text-3xl font-bold text-slate-900">{stat.value}</div>
+                                            </div>
+                                            <div className="text-sm text-slate-600 font-medium">{stat.label}</div>
+                                        </div>
+                                    );
+                                })}
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 3: TrainingOS Overview
+        const TrainingOSOverview = () => {
+            const [iframeLoaded, setIframeLoaded] = useState(false);
+            
+            const capabilities = [
+                {
+                    icon: Icons.Globe,
+                    title: 'Linguistic Precision',
+                    description: 'Perfect-score TEFL certification, 100+ languages with high semantic accuracy'
+                },
+                {
+                    icon: Icons.Brain,
+                    title: 'Zero Manual Assessment',
+                    description: 'AI algorithms instantly assess complex, open-ended student inputs'
+                },
+                {
+                    icon: Icons.FileCheck,
+                    title: 'Audit-Ready Compliance',
+                    description: 'Automatically generates SACE-compliant reports and skills audit trails'
+                },
+                {
+                    icon: Icons.Shield,
+                    title: 'Enterprise Security',
+                    description: 'Bank-grade encryption, POPIA compliance, and data sovereignty'
+                }
+            ];
+            
+            return (
+                <section id="trainingos" className="py-16 md:py-24 bg-white">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="max-w-4xl mx-auto text-center mb-12">
+                            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary-50 text-primary-700 mb-6">
+                                <Icons.Sparkles className="w-4 h-4" />
+                                <span className="font-semibold">Proprietary Technology</span>
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                                TrainingOS: AI-Powered Educational Infrastructure
+                            </h2>
+                            <p className="text-lg text-slate-600">
+                                We deliver not software, but a fully-managed Educational Infrastructure as a Service.
+                            </p>
+                        </div>
+                        
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            {/* Capabilities List */}
+                            <div>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-8">Core Capabilities</h3>
+                                
+                                <div className="space-y-6">
+                                    {capabilities.map((capability, index) => {
+                                        const Icon = capability.icon;
+                                        return (
+                                            <motion.div
+                                                key={index}
+                                                initial={{ opacity: 0, x: -20 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: index * 0.1 }}
+                                                className="flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-colors"
+                                            >
+                                                <div className="p-3 rounded-lg bg-primary-50">
+                                                    <Icon className="w-6 h-6 text-primary-600" />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold text-slate-900 mb-1">{capability.title}</h4>
+                                                    <p className="text-slate-600 text-sm">{capability.description}</p>
+                                                </div>
+                                            </motion.div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                            
+                            {/* Interactive Demo */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                className="relative"
+                            >
+                                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+                                    {/* Mock Browser */}
+                                    <div className="bg-slate-50 px-4 py-3 border-b border-slate-200 flex items-center justify-between">
+                                        <div className="flex items-center space-x-2">
+                                            <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                                            <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                            <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                                        </div>
+                                        <div className="text-xs text-slate-500 flex items-center space-x-1">
+                                            <Icons.Lock className="w-3 h-3" />
+                                            <span>https://demo.trainingos.ai</span>
+                                        </div>
+                                        <div className="w-10"></div>
+                                    </div>
+                                    
+                                    {/* Demo Content */}
+                                    <div className="aspect-video bg-gradient-to-br from-slate-50 to-white">
+                                        {!iframeLoaded && (
+                                            <div className="w-full h-full flex items-center justify-center">
+                                                <div className="text-center">
+                                                    <div className="w-12 h-12 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin mx-auto mb-4"></div>
+                                                    <p className="text-slate-500 text-sm">Loading interactive demo...</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                        
+                                        <div className={`w-full h-full ${iframeLoaded ? 'block' : 'hidden'}`}>
+                                            <iframe
+                                                src="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1"
+                                                className="w-full h-full border-0"
+                                                onLoad={() => setIframeLoaded(true)}
+                                                title="TrainingOS AI Demo"
+                                                allow="camera; microphone; clipboard-write"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {/* Decorative Elements */}
+                                <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary-100 rounded-full -z-10"></div>
+                                <div className="absolute -top-4 -left-4 w-16 h-16 bg-emerald-100 rounded-full -z-10"></div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 4: Features Grid
+        const FeaturesGrid = () => {
+            const features = [
+                {
+                    icon: Icons.Video,
+                    title: 'Smart Content Conversion',
+                    description: 'Transform static documents into interactive learning journeys with AI-powered conversion.'
+                },
+                {
+                    icon: Icons.Bot,
+                    title: 'Interactive AI Trainers',
+                    description: '24/7 personalized AI tutors that adapt to individual learning styles.'
+                },
+                {
+                    icon: Icons.Globe,
+                    title: '100+ Languages',
+                    description: 'Instantly localize content while maintaining context and cultural nuance.'
+                },
+                {
+                    icon: Icons.BarChart,
+                    title: 'Deep Analytics',
+                    description: 'Track engagement metrics, retention rates, and skill gaps in real-time.'
+                },
+                {
+                    icon: Icons.Smartphone,
+                    title: 'Mobile-First Learning',
+                    description: 'Fully responsive experience with offline capabilities.'
+                },
+                {
+                    icon: Icons.ShieldCheck,
+                    title: 'Built-In Compliance',
+                    description: 'Automatically generate SACE-compliant reports and audit trails.'
+                }
+            ];
+            
+            return (
+                <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                                Everything You Need to Scale Knowledge
+                            </h2>
+                            <p className="text-lg text-slate-600">
+                                TrainingOS combines cutting-edge generative AI with robust enterprise infrastructure.
+                            </p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {features.map((feature, index) => {
+                                const Icon = feature.icon;
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.1 }}
+                                        className="glass p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                                    >
+                                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center mb-4">
+                                            <Icon className="w-6 h-6 text-primary-600" />
+                                        </div>
+                                        <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
+                                        <p className="text-slate-600 text-sm">{feature.description}</p>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 5: Benefits Showcase
+        const BenefitsShowcase = () => {
+            const benefits = [
+                {
+                    icon: Icons.TrendingUp,
+                    title: '80% Cost Reduction',
+                    description: 'Eliminate travel, venue, and instructor costs with automated delivery.'
+                },
+                {
+                    icon: Icons.Clock,
+                    title: '95% Learner Retention',
+                    description: 'Interactive AI trainers dramatically improve knowledge retention.'
+                },
+                {
+                    icon: Icons.Zap,
+                    title: '90% Administrative Automation',
+                    description: 'Automate curriculum delivery, assessment grading, and reporting.'
+                },
+                {
+                    icon: Icons.Globe2,
+                    title: 'Global Consistency',
+                    description: 'Ensure consistent high-quality training across all locations.'
+                }
+            ];
+            
+            return (
+                <section id="benefits" className="py-16 md:py-24 bg-white">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <motion.div
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                            >
+                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                                    Measurable Business Impact
+                                </h2>
+                                <p className="text-lg text-slate-600 mb-8">
+                                    Stop treating training as a cost center. TrainingOS delivers tangible ROI through 
+                                    efficiency gains and performance improvements.
+                                </p>
+                                
+                                <div className="space-y-6">
+                                    {benefits.map((benefit, index) => {
+                                        const Icon = benefit.icon;
+                                        return (
+                                            <div key={index} className="flex items-start space-x-4">
+                                                <div className="p-3 rounded-lg bg-primary-50">
+                                                    <Icon className="w-5 h-5 text-primary-600" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="font-bold text-slate-900 mb-1">{benefit.title}</h3>
+                                                    <p className="text-slate-600 text-sm">{benefit.description}</p>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </motion.div>
+                            
+                            <motion.div
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="relative"
+                            >
+                                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                                    <div className="aspect-square bg-gradient-to-br from-slate-900 to-primary-900 p-8">
+                                        {/* Animated Data Visualization */}
+                                        <div className="h-full flex flex-col justify-center">
+                                            <div className="mb-8">
+                                                <div className="flex items-center justify-between mb-2">
+                                                    <span className="text-sm text-slate-300">ROI Improvement</span>
+                                                    <span className="text-sm text-emerald-400 font-bold">+150%</span>
+                                                </div>
+                                                <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                                    <motion.div
+                                                        initial={{ width: 0 }}
+                                                        whileInView={{ width: '85%' }}
+                                                        viewport={{ once: true }}
+                                                        transition={{ duration: 1.5 }}
+                                                        className="h-full bg-gradient-to-r from-primary-500 to-emerald-500"
+                                                    />
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="grid grid-cols-3 gap-4">
+                                                {[
+                                                    { label: 'Before', value: '40%', color: 'bg-slate-600' },
+                                                    { label: 'After 3 Months', value: '75%', color: 'bg-primary-500' },
+                                                    { label: 'After 1 Year', value: '95%', color: 'bg-emerald-500' }
+                                                ].map((item, idx) => (
+                                                    <div key={idx} className="text-center">
+                                                        <div className={`h-24 ${item.color} rounded-lg mb-2 flex items-center justify-center`}>
+                                                            <span className="text-white font-bold text-xl">{item.value}</span>
+                                                        </div>
+                                                        <span className="text-sm text-slate-300">{item.label}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 6: Use Cases
+        const UseCases = () => {
+            const cases = [
+                { icon: Icons.UserCheck, title: 'Corporate Onboarding', description: 'Streamline new hire training across global teams' },
+                { icon: Icons.Code2, title: 'Technical Skills', description: 'Upskill teams with interactive coding scenarios' },
+                { icon: Icons.Scale, title: 'Compliance Training', description: 'Automate regulatory training with audit-ready tracking' },
+                { icon: Icons.Briefcase, title: 'Partner Enablement', description: 'Train distributors in secure brand-aligned portals' },
+                { icon: Icons.Target, title: 'Sales Performance', description: 'Role-play customer objections with AI avatars' },
+                { icon: Icons.Users, title: 'Leadership Development', description: 'Scale executive coaching through simulations' },
+            ];
+            
+            return (
+                <section id="usecases" className="py-16 md:py-24 bg-slate-50">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Enterprise Implementation</h2>
+                            <p className="text-lg text-slate-600">
+                                From technical upskilling to soft skills development, TrainingOS adapts to every need.
+                            </p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {cases.map((useCase, index) => {
+                                const Icon = useCase.icon;
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.1 }}
+                                        className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300"
+                                    >
+                                        <div className="flex items-center space-x-3 mb-3">
+                                            <div className="p-2 rounded-lg bg-primary-50">
+                                                <Icon className="w-5 h-5 text-primary-600" />
+                                            </div>
+                                            <h3 className="font-bold text-slate-900">{useCase.title}</h3>
+                                        </div>
+                                        <p className="text-slate-600 text-sm">{useCase.description}</p>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 7: Leadership
+        const Leadership = () => {
+            const leaders = [
+                {
+                    name: 'Tebogo Victor Mariba',
+                    title: 'Founder, CEO & Chief EdTech Architect',
+                    credentials: 'Advanced TEFL/TESOL (100% Score), POPIA Reg: 2025-066818',
+                    description: 'The visionary behind TrainingOS, translating complex learning theories into scalable, intelligent systems.',
+                    icon: Icons.BrainCircuit
+                },
+                {
+                    name: 'Thuna Victor Mariba',
+                    title: 'Senior Educational Strategist',
+                    credentials: 'SACE No: 25226, SABPP No: 7434, B.Tech HR Development',
+                    description: '33-year career spanning public service and educational leadership. Provides critical institutional memory.',
+                    icon: Icons.GraduationCap
+                },
+                {
+                    name: 'John Coffman',
+                    title: 'Global Strategic Advisor (USA)',
+                    credentials: '25-Year Industry Veteran, US Insurance & Risk Management',
+                    description: 'Provides strategic oversight and risk intelligence for global scalability and financial maturity.',
+                    icon: Icons.Award
+                }
+            ];
+            
+            return (
+                <section id="leadership" className="py-16 md:py-24 bg-white">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Executive Leadership</h2>
+                            <p className="text-lg text-slate-600">
+                                A symbiosis of vision, governance, and strategy ensuring innovation is balanced by integrity.
+                            </p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {leaders.map((leader, index) => {
+                                const Icon = leader.icon;
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.2 }}
+                                        className="text-center"
+                                    >
+                                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center mx-auto mb-6">
+                                            <Icon className="w-10 h-10 text-primary-600" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-2">{leader.name}</h3>
+                                        <p className="text-primary-600 font-semibold mb-2">{leader.title}</p>
+                                        <p className="text-sm text-slate-500 mb-3 italic">{leader.credentials}</p>
+                                        <p className="text-slate-600 text-sm">{leader.description}</p>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 8: Pricing
+        const Pricing = () => {
+            const tiers = [
+                {
+                    name: 'TrainingOS Foundation',
+                    price: 'R280,000',
+                    period: '/year',
+                    description: 'Complete educational infrastructure with AI-powered content conversion',
+                    features: ['Unlimited student access', 'Advanced content conversion', 'Analytics dashboard', 'Priority support', 'Multi-language delivery'],
+                    cta: 'Get Started'
+                },
+                {
+                    name: 'AI Training Specialist',
+                    price: 'R170,000',
+                    period: '/year',
+                    popular: true,
+                    description: 'Advanced AI trainers and personalized learning paths',
+                    features: ['Unlimited user licenses', 'AI-powered trainers', 'Performance analytics', 'Priority support', 'Role-playing scenarios'],
+                    cta: 'Get Started'
+                },
+                {
+                    name: 'Enterprise Complete',
+                    price: 'Custom',
+                    period: 'tailored pricing',
+                    description: 'Full TrainingOS ecosystem with dedicated support',
+                    features: ['Unlimited everything', '24/7 Dedicated Support', 'Custom integrations', 'Full localization', 'SLA & Advanced Security'],
+                    cta: 'Contact Sales'
+                }
+            ];
+            
+            return (
+                <section id="pricing" className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Transparent Enterprise Pricing</h2>
+                            <p className="text-lg text-slate-600">Scalable solutions designed for modern organizations with clear ROI.</p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                            {tiers.map((tier, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className={`relative rounded-2xl p-8 ${
+                                        tier.popular
+                                            ? 'bg-gradient-to-b from-white to-slate-50 border-2 border-primary-300 shadow-2xl'
+                                            : 'bg-white border border-slate-200'
+                                    }`}
+                                >
+                                    {tier.popular && (
+                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-primary-600 to-emerald-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                            Most Popular
+                                        </div>
+                                    )}
+                                    
+                                    <h3 className="text-xl font-bold text-slate-900 mb-2">{tier.name}</h3>
+                                    <p className="text-slate-600 text-sm mb-6">{tier.description}</p>
+                                    
+                                    <div className="mb-6">
+                                        <span className="text-3xl md:text-4xl font-bold text-slate-900">{tier.price}</span>
+                                        <span className="text-slate-500"> {tier.period}</span>
+                                    </div>
+                                    
+                                    <ul className="space-y-3 mb-8">
+                                        {tier.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-center space-x-2">
+                                                <Icons.Check className="w-4 h-4 text-primary-600" />
+                                                <span className="text-sm text-slate-600">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    
+                                    <a
+                                        href="https://cal.com/partner-discovery/south-africa"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={`block w-full py-3 rounded-lg text-center font-semibold transition-all ${
+                                            tier.popular
+                                                ? 'bg-gradient-to-r from-primary-600 to-emerald-600 text-white hover:shadow-lg'
+                                                : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
+                                        }`}
+                                    >
+                                        {tier.cta}
+                                    </a>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 9: Call to Action
+        const CallToAction = () => {
+            return (
+                <section className="py-16 md:py-24 bg-gradient-to-br from-primary-700 via-primary-600 to-emerald-700 text-white relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="absolute inset-0" style={{
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+                        }}></div>
+                    </div>
+                    
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Educational Infrastructure?</h2>
+                            <p className="text-primary-100 text-lg md:text-xl mb-10">
+                                Join forward-thinking enterprises that have resolved the scale vs. quality dichotomy.
+                            </p>
+                            <a
+                                href="https://cal.com/partner-discovery/south-africa"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center space-x-2 bg-white text-primary-700 px-8 py-4 rounded-xl font-bold hover:bg-primary-50 hover:shadow-2xl transition-all duration-300"
+                            >
+                                <Icons.Calendar className="w-5 h-5" />
+                                <span>Schedule Executive Briefing</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 10: Contact
+        const ContactSection = () => {
+            const contacts = [
+                {
+                    department: 'Technology & AI Architecture',
+                    name: 'Tebogo Victor Mariba',
+                    phone: '+27 76 647 3499',
+                    icon: Icons.Code2
+                },
+                {
+                    department: 'Policy & Compliance',
+                    name: 'Thuna Victor Mariba',
+                    phone: '+27 83 294 8245',
+                    icon: Icons.FileCheck
+                },
+                {
+                    department: 'Executive Office',
+                    name: 'Mariba Media',
+                    email: 'victor@maribamedia.co.za',
+                    website: 'www.maribamedia.co.za',
+                    icon: Icons.Briefcase
+                }
+            ];
+            
+            return (
+                <section id="contact" className="py-16 md:py-24 bg-white">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Strategic Engagement</h2>
+                            <p className="text-lg text-slate-600">
+                                Mariba Media is operational and ready for deployment across educational, corporate, and government sectors.
+                            </p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                            {contacts.map((contact, index) => {
+                                const Icon = contact.icon;
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.1 }}
+                                        className="text-center p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300"
+                                    >
+                                        <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-4">
+                                            <Icon className="w-6 h-6 text-primary-600" />
+                                        </div>
+                                        <h3 className="font-bold text-slate-900 mb-2">{contact.department}</h3>
+                                        <p className="text-primary-600 font-semibold mb-2">{contact.name}</p>
+                                        {contact.phone && (
+                                            <p className="text-slate-600 text-sm">{contact.phone}</p>
+                                        )}
+                                        {contact.email && (
+                                            <p className="text-slate-600 text-sm">{contact.email}</p>
+                                        )}
+                                        {contact.website && (
+                                            <p className="text-slate-600 text-sm">{contact.website}</p>
+                                        )}
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+        
+        // Component 11: Footer
+        const Footer = () => {
+            return (
+                <footer className="bg-slate-900 text-slate-400 py-12">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                        <div className="grid md:grid-cols-4 gap-8 mb-8">
+                            <div>
+                                <div className="text-2xl font-bold text-white mb-4">
+                                    Mariba<span className="text-primary-400">Media</span>
+                                </div>
+                                <p className="text-sm">
+                                    The Global Standard for AI-Powered Educational Infrastructure
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-white font-semibold mb-4">Platform</h4>
+                                <ul className="space-y-2 text-sm">
+                                    <li><a href="#trainingos" className="hover:text-white transition-colors">TrainingOS</a></li>
+                                    <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+                                    <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-white font-semibold mb-4">Company</h4>
+                                <ul className="space-y-2 text-sm">
+                                    <li><a href="#leadership" className="hover:text-white transition-colors">Leadership</a></li>
+                                    <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-white font-semibold mb-4">Legal</h4>
+                                <ul className="space-y-2 text-sm">
+                                    <li>Company Reg: 2024 / 132788 / 07</li>
+                                    <li>POPIA Reg: 2025-066818</li>
+                                    <li>SABPP Accredited</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div className="border-t border-slate-800 pt-8 text-sm text-center">
+                            <p>Headquarters: Gauteng, South Africa | Global Advisory: United States</p>
+                            <p className="mt-2">&copy; {new Date().getFullYear()} Mariba Media (Pty) Ltd. All rights reserved.</p>
+                        </div>
+                    </div>
+                </footer>
+            );
+        };
+        
+        // Main App Component
+        function App() {
+            const [loading, setLoading] = useState(true);
+            
+            useEffect(() => {
+                // Simulate initial loading
+                const timer = setTimeout(() => setLoading(false), 1000);
+                return () => clearTimeout(timer);
+            }, []);
+            
+            if (loading) {
+                return <LoadingSpinner />;
+            }
+            
+            return (
+                <div className="min-h-screen overflow-x-hidden">
+                    <Navigation />
+                    <main>
+                        <HeroSection />
+                        <TrainingOSOverview />
+                        <FeaturesGrid />
+                        <BenefitsShowcase />
+                        <UseCases />
+                        <Leadership />
+                        <Pricing />
+                        <CallToAction />
+                        <ContactSection />
+                    </main>
+                    <Footer />
+                </div>
+            );
+        }
+        
+        // Initialize React App
+        const rootElement = document.getElementById('root');
+        if (rootElement) {
+            const root = createRoot(rootElement);
+            root.render(<App />);
+        }
+    </script>
+</body>
+</html>
