@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrainingOS - AI-Powered Educational Infrastructure | Mariba Media</title>
-    <meta name="description" content="Mariba Media's TrainingOS: The Global Standard for AI-Powered Educational Infrastructure. Resolving the Scale vs. Quality dichotomy with pedagogically-sound AI solutions.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>TrainingOS - Your Personal AI Training Team | Mariba Media</title>
+    <meta name="description" content="Your 24/7 AI training partner for recruitment, education, sales and lead generation in South Africa. Scale training without hiring, cut costs by 80% with 95% retention.">
     
     <!-- Fixed Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
     <meta name="theme-color" content="#16a34a">
     
     <!-- Fonts -->
@@ -35,6 +35,9 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                    },
+                    fontSize: {
+                        'xxs': '0.625rem',
                     }
                 }
             }
@@ -51,10 +54,11 @@
         body {
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .glass {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
         }
         
@@ -65,7 +69,31 @@
             background-clip: text;
         }
         
-        /* Simple animations */
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            .mobile-tap-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .mobile-text-lg {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+            
+            .mobile-text-xl {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+        }
+        
+        /* Prevent horizontal scroll */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Smooth animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -74,40 +102,53 @@
         .fade-in {
             animation: fadeIn 0.6s ease-out;
         }
+        
+        .team-glow {
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.1);
+        }
+        
+        /* Better touch targets for mobile */
+        button, a, input, select, textarea {
+            touch-action: manipulation;
+        }
+        
+        /* Optimize images and containers for mobile */
+        img, video, iframe {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass shadow-sm py-4">
-        <div class="container mx-auto px-4 md:px-6">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass shadow-sm py-3 md:py-4">
+        <div class="container mx-auto px-3 md:px-6">
             <div class="flex items-center justify-between">
-                <a href="#" class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <a href="#" class="flex items-center gap-2 mobile-tap-target">
+                    <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-600 flex items-center justify-center">
+                        <svg class="w-4 h-4 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                         </svg>
                     </div>
-                    <span class="text-xl font-bold text-slate-900">
+                    <span class="text-lg md:text-xl font-bold text-slate-900">
                         Training<span class="text-primary-600">OS</span>
                     </span>
                 </a>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#trainingos" class="text-sm font-medium text-slate-600 hover:text-primary-600">TrainingOS</a>
-                    <a href="#features" class="text-sm font-medium text-slate-600 hover:text-primary-600">Features</a>
-                    <a href="#benefits" class="text-sm font-medium text-slate-600 hover:text-primary-600">Benefits</a>
-                    <a href="#usecases" class="text-sm font-medium text-slate-600 hover:text-primary-600">Use Cases</a>
-                    <a href="#leadership" class="text-sm font-medium text-slate-600 hover:text-primary-600">Leadership</a>
-                    <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-primary-600">Pricing</a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#team" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Your AI Team</a>
+                    <a href="#industries" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Industries</a>
+                    <a href="#usecases" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Use Cases</a>
+                    <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Pricing</a>
                     
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="bg-primary-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-primary-700 transition-all">
-                        Request Demo
+                    <a href="#audit" class="bg-primary-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-all mobile-tap-target">
+                        FREE Audit
                     </a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuButton" class="md:hidden p-2">
+                <button id="mobileMenuButton" class="md:hidden p-2 mobile-tap-target">
                     <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -115,16 +156,14 @@
             </div>
             
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="md:hidden mt-4 hidden">
-                <div class="bg-white rounded-lg shadow-lg p-4 space-y-3">
-                    <a href="#trainingos" class="block py-2 text-slate-700 hover:text-primary-600">TrainingOS</a>
-                    <a href="#features" class="block py-2 text-slate-700 hover:text-primary-600">Features</a>
-                    <a href="#benefits" class="block py-2 text-slate-700 hover:text-primary-600">Benefits</a>
-                    <a href="#usecases" class="block py-2 text-slate-700 hover:text-primary-600">Use Cases</a>
-                    <a href="#leadership" class="block py-2 text-slate-700 hover:text-primary-600">Leadership</a>
-                    <a href="#pricing" class="block py-2 text-slate-700 hover:text-primary-600">Pricing</a>
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="block mt-4 bg-primary-600 text-white py-3 rounded-lg text-center font-semibold">
-                        Request Demo
+            <div id="mobileMenu" class="md:hidden mt-3 hidden">
+                <div class="bg-white rounded-lg shadow-lg p-4 space-y-2">
+                    <a href="#team" class="block py-3 px-2 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors mobile-tap-target">Your AI Team</a>
+                    <a href="#industries" class="block py-3 px-2 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors mobile-tap-target">Industries</a>
+                    <a href="#usecases" class="block py-3 px-2 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors mobile-tap-target">Use Cases</a>
+                    <a href="#pricing" class="block py-3 px-2 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors mobile-tap-target">Pricing</a>
+                    <a href="#audit" class="block mt-2 bg-primary-600 text-white py-3 rounded-lg text-center font-semibold mobile-tap-target">
+                        FREE Automation Audit
                     </a>
                 </div>
             </div>
@@ -132,188 +171,190 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden fade-in">
+    <section id="team" class="pt-20 pb-12 md:pt-32 md:pb-24 relative overflow-hidden fade-in px-3 md:px-0">
         <div class="absolute inset-0 -z-10">
-            <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
-            <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+            <div class="absolute top-1/4 -right-10 md:-right-20 w-48 h-48 md:w-96 md:h-96 bg-primary-100 rounded-full mix-blend-multiply filter blur-2xl md:blur-3xl opacity-70"></div>
+            <div class="absolute bottom-1/4 -left-10 md:-left-20 w-48 h-48 md:w-96 md:h-96 bg-emerald-100 rounded-full mix-blend-multiply filter blur-2xl md:blur-3xl opacity-70"></div>
         </div>
         
-        <div class="container mx-auto px-4 md:px-6">
+        <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12 md:mb-16">
-                    <span class="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-semibold mb-6 border border-primary-100">
-                        The Global Standard for AI-Powered Educational Infrastructure
+                <div class="text-center mb-8 md:mb-16">
+                    <span class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary-50 text-primary-700 text-xs md:text-sm font-semibold mb-4 md:mb-6 border border-primary-100">
+                        No Hiring. No Overhead. Always On.
                     </span>
                     
-                    <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
-                        Resolving the <span class="gradient-text">Scale vs. Quality</span> Dichotomy
+                    <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 px-2">
+                        Your Personal <span class="gradient-text">AI Training Team</span>
                     </h1>
                     
-                    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto">
-                        Mariba Media delivers institutional-grade learning outcomes with TrainingOS, our AI-automated educational infrastructure. 
-                        Demonstrably reduce operational costs by up to 80% while achieving learner retention rates of 95%.
+                    <p class="text-sm sm:text-base md:text-lg text-slate-600 mb-6 md:mb-10 max-w-3xl mx-auto px-2 md:px-0 mobile-text-lg">
+                        Imagine having a dedicated training coach and content team, working 24/7 for every one of your learners, candidates, or clients. Consistent, expert training delivery at scale.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="bg-primary-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-700 transition-all flex items-center justify-center gap-2">
-                            Request Executive Briefing
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-2">
+                        <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="bg-primary-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-primary-700 transition-all flex items-center justify-center gap-2 mobile-tap-target">
+                            Deploy Your AI Team
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </a>
                         
-                        <a href="https://app.colossyan.com/share/05v4mlgr" target="_blank" class="bg-white text-slate-700 px-8 py-4 rounded-xl font-semibold border-2 border-slate-200 hover:border-primary-300 transition-all flex items-center justify-center gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <a href="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1" target="_blank" class="bg-white text-slate-700 px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold border-2 border-slate-200 hover:border-primary-300 transition-all flex items-center justify-center gap-2 mobile-tap-target">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            View TrainingOS Demo
+                            Try Free Demo
                         </a>
                     </div>
                 </div>
                 
                 <!-- Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 px-2">
+                    <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 team-glow">
+                        <div class="flex items-center gap-2 md:gap-3 mb-2">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <div class="text-2xl md:text-3xl font-bold text-slate-900">80%</div>
+                            <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-slate-900">80%</div>
                         </div>
-                        <div class="text-sm text-slate-600">Cost Reduction</div>
+                        <div class="text-xs md:text-sm text-slate-600">Cost Reduction</div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 team-glow">
+                        <div class="flex items-center gap-2 md:gap-3 mb-2">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-4.201a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />
                             </svg>
-                            <div class="text-2xl md:text-3xl font-bold text-slate-900">95%</div>
+                            <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-slate-900">95%</div>
                         </div>
-                        <div class="text-sm text-slate-600">Learner Retention</div>
+                        <div class="text-xs md:text-sm text-slate-600">Learner Retention</div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 team-glow">
+                        <div class="flex items-center gap-2 md:gap-3 mb-2">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <div class="text-2xl md:text-3xl font-bold text-slate-900">100+</div>
+                            <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-slate-900">24/7</div>
                         </div>
-                        <div class="text-sm text-slate-600">Languages</div>
+                        <div class="text-xs md:text-sm text-slate-600">AI Coach</div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 team-glow">
+                        <div class="flex items-center gap-2 md:gap-3 mb-2">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
-                            <div class="text-2xl md:text-3xl font-bold text-slate-900">90%</div>
+                            <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-slate-900">90%</div>
                         </div>
-                        <div class="text-sm text-slate-600">Automation</div>
+                        <div class="text-xs md:text-sm text-slate-600">Automation</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TrainingOS Section -->
-    <section id="trainingos" class="py-16 md:py-24 bg-white fade-in">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-4xl mx-auto text-center mb-12">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 text-primary-700 mb-6">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+    <!-- Meet Your AI Team Section -->
+    <section class="py-12 md:py-24 bg-white fade-in px-3 md:px-0">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-8 md:mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary-50 text-primary-700 text-xs md:text-sm font-semibold mb-4 md:mb-6">
+                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-4.201a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />
                     </svg>
-                    <span class="font-semibold">Proprietary Technology</span>
+                    <span class="font-semibold">Your New AI Department</span>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                    TrainingOS: AI-Powered Educational Infrastructure
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4 px-2">
+                    Meet Your 24/7 AI Training Department
                 </h2>
-                <p class="text-lg text-slate-600">
-                    We deliver not software, but a fully-managed Educational Infrastructure as a Service.
+                <p class="text-sm sm:text-base md:text-lg text-slate-600 px-2 md:px-0">
+                    We're not just software—we're your personal AI-powered training partner, designed specifically for South African recruiters, training providers, educators, and sales leaders.
                 </p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-8">Core Capabilities</h3>
+            <div class="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
+                <div class="flex-1">
+                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-6">Three AI Experts, One Team</h3>
                     
                     <div class="space-y-6">
-                        <div class="flex gap-4">
+                        <div class="flex flex-col sm:flex-row gap-4">
                             <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-4.201a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />
                                     </svg>
                                 </div>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-2">Linguistic Precision & Inclusivity</h4>
-                                <p class="text-slate-600">Leveraging perfect-score TEFL certification, supports 100+ languages with high semantic accuracy.</p>
+                                <h4 class="font-bold text-slate-900 mb-2 text-base md:text-lg">Your Personal 24/7 Trainer</h4>
+                                <p class="text-sm md:text-base text-slate-600">Deploy a dedicated AI coach for every learner. It role-plays sales scenarios, practices interview skills, and adapts to individual pacing—available in 100+ languages.</p>
                             </div>
                         </div>
                         
-                        <div class="flex gap-4">
+                        <div class="flex flex-col sm:flex-row gap-4">
                             <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                     </svg>
                                 </div>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-2">Zero Manual Assessment</h4>
-                                <p class="text-slate-600">Advanced AI algorithms instantly assess complex, open-ended student inputs including essays.</p>
+                                <h4 class="font-bold text-slate-900 mb-2 text-base md:text-lg">Your Content & Compliance Team</h4>
+                                <p class="text-sm md:text-base text-slate-600">Automatically turn manuals, PDFs, or product info into engaging interactive courses. Generate SACE-compliant reports and skills audits on autopilot.</p>
                             </div>
                         </div>
                         
-                        <div class="flex gap-4">
+                        <div class="flex flex-col sm:flex-row gap-4">
                             <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                     </svg>
                                 </div>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-2">Audit-Ready Compliance Engine</h4>
-                                <p class="text-slate-600">Automatically generates SACE-compliant reports, learner progress analytics, and skills audit trails.</p>
+                                <h4 class="font-bold text-slate-900 mb-2 text-base md:text-lg">Your Analytics & Coaching Assistant</h4>
+                                <p class="text-sm md:text-base text-slate-600">Track learner engagement, knowledge gaps, and skill mastery in real time. Get insights to refine your training and improve candidate quality.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Demo Container -->
-                <div class="relative">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+                <div class="flex-1 w-full lg:w-auto">
+                    <div class="rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-2xl border border-slate-200 max-w-lg mx-auto lg:mx-0">
                         <!-- Browser Mockup -->
-                        <div class="bg-slate-50 px-4 py-3 border-b border-slate-200 flex items-center justify-between">
-                            <div class="flex gap-2">
-                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                        <div class="bg-slate-50 px-3 md:px-4 py-2 md:py-3 border-b border-slate-200 flex items-center justify-between">
+                            <div class="flex gap-1.5 md:gap-2">
+                                <div class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-400"></div>
+                                <div class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400"></div>
+                                <div class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400"></div>
                             </div>
-                            <div class="text-sm text-slate-500 flex items-center gap-2">
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="text-xs md:text-sm text-slate-500 flex items-center gap-1.5 md:gap-2">
+                                <svg class="w-2.5 h-2.5 md:w-3 md:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                 </svg>
-                                <span>demo.trainingos.ai</span>
+                                <span>try.trainingos.ai</span>
                             </div>
-                            <div class="w-12"></div>
+                            <div class="w-8 md:w-12"></div>
                         </div>
                         
                         <!-- Demo Content -->
-                        <div class="aspect-video bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
-                            <div class="text-center p-8">
-                                <svg class="w-16 h-16 text-primary-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                </svg>
-                                <h4 class="text-xl font-bold text-slate-900 mb-2">Interactive AI Demo</h4>
-                                <p class="text-slate-600 mb-4">Experience the power of TrainingOS AI</p>
-                                <a href="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1" target="_blank" class="inline-block bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-all">
-                                    Launch Demo
+                        <div class="aspect-video bg-gradient-to-br from-slate-50 to-white flex items-center justify-center p-4">
+                            <div class="text-center p-4 md:p-8">
+                                <div class="relative w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4">
+                                    <div class="absolute inset-0 bg-primary-400 rounded-full opacity-20 animate-pulse"></div>
+                                    <svg class="w-12 h-12 md:w-16 md:h-16 text-primary-600 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-4.201a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg md:text-xl font-bold text-slate-900 mb-1 md:mb-2">Meet Your AI Coach</h4>
+                                <p class="text-sm md:text-base text-slate-600 mb-3 md:mb-4">Experience personalized training with your 24/7 AI partner</p>
+                                <a href="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1" target="_blank" class="inline-block bg-primary-600 text-white px-5 py-2 md:px-6 md:py-2 rounded-lg font-semibold hover:bg-primary-700 transition-all mobile-tap-target text-sm md:text-base">
+                                    Start Free Demo
                                 </a>
                             </div>
                         </div>
@@ -323,564 +364,323 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-slate-50 fade-in">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                    Everything You Need to Scale Knowledge
+    <!-- Industries Section -->
+    <section id="industries" class="py-12 md:py-24 bg-slate-50 fade-in px-3 md:px-0">
+        <div class="container mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4">
+                    Built for South African Business Needs
                 </h2>
-                <p class="text-lg text-slate-600">
-                    TrainingOS combines cutting-edge generative AI with robust enterprise infrastructure to deliver a complete learning ecosystem.
+                <p class="text-sm sm:text-base md:text-lg text-slate-600">
+                    Your AI training partner adapts to your specific industry challenges and opportunities.
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Feature 1 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Industry 1 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-3 md:mb-4">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Smart Content Conversion</h3>
-                    <p class="text-slate-600 text-sm">Transform static PDFs, PPTs and training manuals into engaging, interactive digital learning journeys.</p>
+                    <h3 class="text-base md:text-lg font-bold text-slate-900 mb-2">Recruitment Agencies</h3>
+                    <p class="text-xs md:text-sm text-slate-600">Train candidates at scale before placement. Upskill your own team on sourcing techniques and interview skills.</p>
                 </div>
                 
-                <!-- Feature 2 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                <!-- Industry 2 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-3 md:mb-4">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Interactive AI Trainers</h3>
-                    <p class="text-slate-600 text-sm">Deploy 24/7 personalized AI tutors that roleplay scenarios and adapt to individual learning styles.</p>
+                    <h3 class="text-base md:text-lg font-bold text-slate-900 mb-2">Lead Generation</h3>
+                    <p class="text-xs md:text-sm text-slate-600">Train remote agents on product knowledge and compliance. Scale training across distributed teams effortlessly.</p>
                 </div>
                 
-                <!-- Feature 3 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <!-- Industry 3 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-3 md:mb-4">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">100+ Languages</h3>
-                    <p class="text-slate-600 text-sm">Instantly localize content with high semantic accuracy while preserving context and cultural nuance.</p>
+                    <h3 class="text-base md:text-lg font-bold text-slate-900 mb-2">Training Providers</h3>
+                    <p class="text-xs md:text-sm text-slate-600">Automate course delivery and assessments. Personalize learning paths without extra workload.</p>
                 </div>
                 
-                <!-- Feature 4 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                <!-- Industry 4 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-3 md:mb-4">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Deep Analytics & Reporting</h3>
-                    <p class="text-slate-600 text-sm">Track granular engagement metrics, knowledge retention rates, and skill gaps with enterprise-grade dashboards.</p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Mobile-First Learning</h3>
-                    <p class="text-slate-600 text-sm">Fully responsive experience optimized for all devices with offline capabilities for training anywhere.</p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Built-In Compliance</h3>
-                    <p class="text-slate-600 text-sm">Automatically generate SACE-compliant reports, learner progress analytics, and skills audit trails.</p>
+                    <h3 class="text-base md:text-lg font-bold text-slate-900 mb-2">Sales Teams</h3>
+                    <p class="text-xs md:text-sm text-slate-600">Role-play client objections with AI avatars. Onboard new reps with interactive product tours.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-16 md:py-24 bg-white fade-in">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                        Measurable Business Impact
-                    </h2>
-                    <p class="text-lg text-slate-600 mb-8">
-                        Stop treating training as a cost center. TrainingOS delivers tangible ROI through efficiency gains and performance improvements.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 mb-1">80% Cost Reduction</h3>
-                                <p class="text-slate-600">Eliminate travel, venue, and instructor costs. Switch to automated, scalable digital delivery.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 mb-1">95% Learner Retention</h3>
-                                <p class="text-slate-600">Interactive AI trainers and personalized learning paths dramatically improve knowledge retention.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 mb-1">90% Administrative Automation</h3>
-                                <p class="text-slate-600">Automate curriculum delivery, complex assessment grading, and compliance reporting.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Free Demo Section -->
+    <section class="py-12 md:py-24 bg-gradient-to-br from-primary-700 to-emerald-800 text-white fade-in px-3 md:px-0">
+        <div class="container mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/20 mb-4 md:mb-6">
+                <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-xs md:text-sm font-semibold">Interactive Demo</span>
+            </div>
+            
+            <h2 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2">
+                Try Your AI Coach Now
+            </h2>
+            <p class="text-sm sm:text-base md:text-lg text-primary-100 mb-6 md:mb-10 max-w-2xl mx-auto px-2">
+                Experience firsthand how your personal AI training team works. No signup required.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-6 md:mb-10">
+                <a href="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1" target="_blank" class="bg-white text-primary-700 px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold hover:bg-primary-50 transition-all mobile-tap-target text-sm md:text-base">
+                    Start Free Interactive Demo
+                </a>
                 
-                <!-- Visualization -->
-                <div class="relative">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl">
-                        <div class="bg-gradient-to-br from-slate-900 to-primary-900 p-8 aspect-square flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <div class="text-5xl font-bold mb-2">+150%</div>
-                                <div class="text-sm text-slate-300">Average ROI Improvement</div>
-                                
-                                <div class="mt-8">
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="text-sm text-slate-300">Training Efficiency</span>
-                                        <span class="text-sm text-emerald-400">+95%</span>
-                                    </div>
-                                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
-                                        <div class="h-full bg-emerald-500 w-3/4"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="bg-transparent text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold border-2 border-white hover:bg-white/10 transition-all flex items-center justify-center gap-2 mobile-tap-target text-sm md:text-base">
+                    <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    Book Live Demo
+                </a>
+            </div>
+            
+            <div class="inline-flex items-center justify-center gap-2 bg-black/20 rounded-lg px-4 py-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                <span class="text-xs md:text-sm">Demo URL: <a href="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1" target="_blank" class="underline">bey.chat/trainingos-demo</a></span>
             </div>
         </div>
     </section>
 
     <!-- Use Cases Section -->
-    <section id="usecases" class="py-16 md:py-24 bg-slate-50 fade-in">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Enterprise Implementation</h2>
-                <p class="text-lg text-slate-600">
-                    From technical upskilling to soft skills development, TrainingOS adapts to every department and learning need.
+    <section id="usecases" class="py-12 md:py-24 bg-white fade-in px-3 md:px-0">
+        <div class="container mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4">Your AI Team in Action</h2>
+                <p class="text-sm sm:text-base md:text-lg text-slate-600">
+                    See how your personal AI training department works across different scenarios.
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 <!-- Use Case 1 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-50 flex items-center justify-center">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                         </div>
-                        <h3 class="font-bold text-slate-900">Corporate Onboarding</h3>
+                        <h3 class="font-bold text-slate-900 text-sm md:text-base">Candidate Pre-screening</h3>
                     </div>
-                    <p class="text-slate-600 text-sm">Streamline new hire training with consistent, engaging content that scales automatically across global teams.</p>
+                    <p class="text-xs md:text-sm text-slate-600">Train candidates on company culture and role expectations before interviews. Improve placement quality and reduce turnover.</p>
                 </div>
                 
                 <!-- Use Case 2 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-slate-900">Technical Skills Development</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm">Upskill teams with interactive coding scenarios, software simulations, and technical certification programs.</p>
-                </div>
-                
-                <!-- Use Case 3 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-slate-900">Compliance Training</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm">Automate mandatory regulatory training with audit-ready tracking, certification, and compliance reporting.</p>
-                </div>
-                
-                <!-- Use Case 4 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-slate-900">Partner Enablement</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm">Train distributors and resellers in secure portals to ensure brand consistency and product knowledge.</p>
-                </div>
-                
-                <!-- Use Case 5 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-50 flex items-center justify-center">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                             </svg>
                         </div>
-                        <h3 class="font-bold text-slate-900">Sales Performance</h3>
+                        <h3 class="font-bold text-slate-900 text-sm md:text-base">Lead Gen Agent Training</h3>
                     </div>
-                    <p class="text-slate-600 text-sm">Role-play customer objections with AI avatars to sharpen sales techniques and improve conversion rates.</p>
+                    <p class="text-xs md:text-sm text-slate-600">Train remote teams on scripts, compliance, and product knowledge. Ensure consistent quality across all agents.</p>
+                </div>
+                
+                <!-- Use Case 3 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-50 flex items-center justify-center">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm md:text-base">Compliance Certification</h3>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-600">Automate mandatory training with audit-ready tracking. Scale compliance across distributed teams effortlessly.</p>
+                </div>
+                
+                <!-- Use Case 4 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-50 flex items-center justify-center">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm md:text-base">Partner Enablement</h3>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-600">Train distributors and resellers in secure portals. Ensure brand consistency and product knowledge at scale.</p>
+                </div>
+                
+                <!-- Use Case 5 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-50 flex items-center justify-center">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm md:text-base">Sales Role-play</h3>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-600">Practice customer objections with AI avatars. Sharpen sales techniques and improve conversion rates.</p>
                 </div>
                 
                 <!-- Use Case 6 -->
-                <div class="bg-white p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-50 flex items-center justify-center">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-4.201a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />
                             </svg>
                         </div>
-                        <h3 class="font-bold text-slate-900">Leadership Development</h3>
+                        <h3 class="font-bold text-slate-900 text-sm md:text-base">Multilingual Training</h3>
                     </div>
-                    <p class="text-slate-600 text-sm">Scale executive coaching through realistic management simulations and leadership competency assessments.</p>
+                    <p class="text-xs md:text-sm text-slate-600">Deliver training in 100+ languages instantly. Reach diverse South African audiences without translation costs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section id="leadership" class="py-16 md:py-24 bg-white fade-in">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                    The Executive Leadership Triad
-                </h2>
-                <p class="text-lg text-slate-600">
-                    A symbiosis of vision, governance, and strategy ensuring innovation is always balanced by integrity and scalability.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Leader 1 -->
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full bg-primary-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Tebogo Victor Mariba</h3>
-                    <p class="text-primary-600 font-semibold mb-2">Founder, CEO & Chief EdTech Architect</p>
-                    <p class="text-sm text-slate-500 mb-3 italic">Advanced TEFL/TESOL Certificate (100% Score), POPIA Reg: 2025-066818</p>
-                    <p class="text-slate-600 text-sm">The visionary behind TrainingOS, translating complex learning theories into scalable, intelligent systems.</p>
-                </div>
-                
-                <!-- Leader 2 -->
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full bg-primary-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Thuna Victor Mariba</h3>
-                    <p class="text-primary-600 font-semibold mb-2">Senior Educational Strategist</p>
-                    <p class="text-sm text-slate-500 mb-3 italic">SACE No: 25226, SABPP No: 7434, B.Tech HR Development</p>
-                    <p class="text-slate-600 text-sm">33-year career spanning public service and educational leadership. Provides critical institutional memory.</p>
-                </div>
-                
-                <!-- Leader 3 -->
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full bg-primary-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">John Coffman</h3>
-                    <p class="text-primary-600 font-semibold mb-2">Global Strategic Advisor (USA)</p>
-                    <p class="text-sm text-slate-500 mb-3 italic">25-Year Industry Veteran, US Insurance & Risk Management</p>
-                    <p class="text-slate-600 text-sm">Provides strategic oversight and risk intelligence for global scalability and financial maturity.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 md:py-24 bg-slate-50 fade-in">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Transparent Enterprise Pricing</h2>
-                <p class="text-lg text-slate-600">Scalable solutions designed for modern organizations with clear ROI.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Plan 1 -->
-                <div class="rounded-2xl p-8 bg-white border border-slate-200">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">TrainingOS Foundation</h3>
-                    <p class="text-slate-600 text-sm mb-6">Complete educational infrastructure with AI-powered content conversion</p>
-                    
-                    <div class="mb-6">
-                        <div class="text-3xl font-bold text-slate-900">R280,000</div>
-                        <div class="text-slate-500">/year</div>
-                    </div>
-                    
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Unlimited student access</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Advanced content conversion</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Analytics dashboard</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Priority technical support</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Multi-language delivery (100+)</span>
-                        </li>
-                    </ul>
-                    
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="block w-full bg-slate-100 text-slate-900 py-3 rounded-lg text-center font-semibold hover:bg-slate-200 transition-all">
-                        Get Started
-                    </a>
-                </div>
-                
-                <!-- Plan 2 - Popular -->
-                <div class="rounded-2xl p-8 bg-white border-2 border-primary-300 shadow-2xl relative">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                    </div>
-                    
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">AI Training Specialist</h3>
-                    <p class="text-slate-600 text-sm mb-6">Advanced AI trainers and personalized learning paths</p>
-                    
-                    <div class="mb-6">
-                        <div class="text-3xl font-bold text-slate-900">R170,000</div>
-                        <div class="text-slate-500">/year</div>
-                    </div>
-                    
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Unlimited user licenses</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">AI-powered personalized trainers</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Detailed performance analytics</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Priority customer support</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Role-playing scenarios</span>
-                        </li>
-                    </ul>
-                    
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="block w-full bg-primary-600 text-white py-3 rounded-lg text-center font-semibold hover:bg-primary-700 transition-all">
-                        Get Started
-                    </a>
-                </div>
-                
-                <!-- Plan 3 -->
-                <div class="rounded-2xl p-8 bg-white border border-slate-200">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Enterprise Complete</h3>
-                    <p class="text-slate-600 text-sm mb-6">Full TrainingOS ecosystem with dedicated support</p>
-                    
-                    <div class="mb-6">
-                        <div class="text-3xl font-bold text-slate-900">Custom</div>
-                        <div class="text-slate-500">tailored pricing</div>
-                    </div>
-                    
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Unlimited content conversion</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Unlimited AI Trainers</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">24/7 Dedicated Support</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Custom integrations</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span class="text-sm text-slate-600">Full 100+ language localization</span>
-                        </li>
-                    </ul>
-                    
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="block w-full bg-slate-100 text-slate-900 py-3 rounded-lg text-center font-semibold hover:bg-slate-200 transition-all">
-                        Contact Sales
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-16 md:py-24 bg-gradient-to-br from-primary-700 to-emerald-800 text-white fade-in">
-        <div class="container mx-auto px-4 md:px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">
-                Ready to Transform Your Educational Infrastructure?
-            </h2>
-            <p class="text-lg md:text-xl text-primary-100 mb-10 max-w-2xl mx-auto">
-                Join forward-thinking enterprises that have resolved the scale vs. quality dichotomy with TrainingOS.
-            </p>
-            <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-xl font-bold hover:bg-primary-50 transition-all">
-                Schedule Executive Briefing
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    <!-- Free Audit Section -->
+    <section id="audit" class="py-12 md:py-24 bg-gradient-to-br from-primary-700 to-emerald-800 text-white fade-in px-3 md:px-0">
+        <div class="container mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/20 mb-4 md:mb-6">
+                <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-            </a>
+                <span class="text-xs md:text-sm font-semibold">Special Offer for SA Businesses</span>
+            </div>
+            
+            <h2 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2">
+                Claim Your FREE Automation Audit
+            </h2>
+            <p class="text-sm sm:text-base md:text-lg text-primary-100 mb-6 md:mb-10 max-w-2xl mx-auto px-2">
+                We'll show you exactly how much time and money your personal AI training team could save you.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-6 md:mb-10">
+                <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="bg-white text-primary-700 px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold hover:bg-primary-50 transition-all mobile-tap-target text-sm md:text-base">
+                    Schedule Free Audit
+                </a>
+                
+                <a href="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1" target="_blank" class="bg-transparent text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold border-2 border-white hover:bg-white/10 transition-all flex items-center justify-center gap-2 mobile-tap-target text-sm md:text-base">
+                    <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Try Interactive Demo
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-16 md:py-24 bg-white fade-in">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Strategic Engagement</h2>
-                <p class="text-lg text-slate-600">
-                    Mariba Media is operational and ready for deployment in educational institutions, corporate environments, and government parastatals.
+    <section class="py-12 md:py-24 bg-white fade-in px-3 md:px-0">
+        <div class="container mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4">Ready to Deploy Your AI Team?</h2>
+                <p class="text-sm sm:text-base md:text-lg text-slate-600">
+                    Speak directly with our founders about implementing your personal AI training department.
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto">
                 <!-- Contact 1 -->
-                <div class="text-center p-6 rounded-xl border border-slate-200">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="text-center p-4 md:p-6 rounded-xl border border-slate-200">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-3 md:mb-4">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-slate-900 mb-2">Technology & AI Architecture</h3>
-                    <p class="text-primary-600 font-semibold mb-2">Tebogo Victor Mariba</p>
-                    <p class="text-slate-600 text-sm">+27 76 647 3499</p>
+                    <h3 class="font-bold text-slate-900 mb-1 md:mb-2 text-sm md:text-base">AI & Technology</h3>
+                    <p class="text-primary-600 font-semibold mb-1 md:mb-2 text-xs md:text-sm">Tebogo Victor Mariba</p>
+                    <a href="tel:+27766473499" class="text-slate-600 text-xs md:text-sm hover:text-primary-600 transition-colors mobile-tap-target block">+27 76 647 3499</a>
                 </div>
                 
                 <!-- Contact 2 -->
-                <div class="text-center p-6 rounded-xl border border-slate-200">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="text-center p-4 md:p-6 rounded-xl border border-slate-200">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-3 md:mb-4">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-slate-900 mb-2">Policy & Compliance</h3>
-                    <p class="text-primary-600 font-semibold mb-2">Thuna Victor Mariba</p>
-                    <p class="text-slate-600 text-sm">+27 83 294 8245</p>
+                    <h3 class="font-bold text-slate-900 mb-1 md:mb-2 text-sm md:text-base">Compliance & Strategy</h3>
+                    <p class="text-primary-600 font-semibold mb-1 md:mb-2 text-xs md:text-sm">Thuna Victor Mariba</p>
+                    <a href="tel:+27832948245" class="text-slate-600 text-xs md:text-sm hover:text-primary-600 transition-colors mobile-tap-target block">+27 83 294 8245</a>
                 </div>
                 
                 <!-- Contact 3 -->
-                <div class="text-center p-6 rounded-xl border border-slate-200">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <div class="text-center p-4 md:p-6 rounded-xl border border-slate-200">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-3 md:mb-4">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-slate-900 mb-2">Executive Office</h3>
-                    <p class="text-primary-600 font-semibold mb-2">Mariba Media</p>
-                    <p class="text-slate-600 text-sm">victor@maribamedia.co.za</p>
-                    <p class="text-slate-600 text-sm">www.maribamedia.co.za</p>
+                    <h3 class="font-bold text-slate-900 mb-1 md:mb-2 text-sm md:text-base">Executive Office</h3>
+                    <p class="text-primary-600 font-semibold mb-1 md:mb-2 text-xs md:text-sm">Mariba Media</p>
+                    <a href="mailto:victor@maribamedia.co.za" class="text-slate-600 text-xs md:text-sm hover:text-primary-600 transition-colors mobile-tap-target block">victor@maribamedia.co.za</a>
                 </div>
+            </div>
+            
+            <div class="mt-8 md:mt-12 text-center">
+                <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold hover:bg-primary-700 transition-all mobile-tap-target text-sm md:text-base">
+                    Book Strategy Session
+                    <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12">
-        <div class="container mx-auto px-4 md:px-6">
+    <footer class="bg-slate-900 text-slate-400 py-8 md:py-12 px-3 md:px-0">
+        <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="text-2xl font-bold text-white mb-2">
-                        Mariba<span class="text-primary-400">Media</span>
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="text-xl md:text-2xl font-bold text-white mb-2">
+                        Your AI <span class="text-primary-400">Training Team</span>
                     </div>
-                    <p class="text-sm">
-                        The Global Standard for AI-Powered Educational Infrastructure
+                    <p class="text-xs md:text-sm">
+                        No Hiring. No Overhead. Always On.
                     </p>
                 </div>
                 
-                <div class="text-sm text-center md:text-right">
+                <div class="text-xs md:text-sm text-center md:text-right">
                     <p>Company Registration: 2024 / 132788 / 07</p>
                     <p>Information Officer Reg: 2025-066818 (POPIA Compliant)</p>
-                    <p>Headquarters: Gauteng, South Africa | Global Strategic Advisory: United States</p>
+                    <p>Headquarters: Gauteng, South Africa</p>
                     <p class="mt-2">&copy; <script>document.write(new Date().getFullYear())</script> Mariba Media (Pty) Ltd. All rights reserved.</p>
+                </div>
+            </div>
+            
+            <!-- Mobile CTA -->
+            <div class="mt-8 md:hidden">
+                <div class="bg-primary-900/30 rounded-xl p-4 text-center">
+                    <p class="text-white text-sm mb-3">Ready to deploy your AI team?</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://bey.chat/ee8dd87e-0417-414d-9a88-3987ffab40f1" target="_blank" class="bg-white text-primary-700 py-3 rounded-lg font-semibold text-center mobile-tap-target">
+                            Try Free Demo
+                        </a>
+                        <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="bg-primary-600 text-white py-3 rounded-lg font-semibold text-center mobile-tap-target">
+                            Book Call
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -915,7 +715,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 70,
                         behavior: 'smooth'
                     });
                     
@@ -935,7 +735,7 @@
             if (currentScroll <= 0) {
                 navbar.classList.remove('shadow-lg');
                 navbar.classList.add('shadow-sm');
-            } else if (currentScroll > lastScroll) {
+            } else if (currentScroll > lastScroll && currentScroll > 100) {
                 // Scrolling down
                 navbar.classList.add('shadow-lg');
             } else {
@@ -975,6 +775,27 @@
         
         // Initial check
         checkFade();
+        
+        // Add touch feedback for mobile buttons
+        document.querySelectorAll('.mobile-tap-target').forEach(button => {
+            button.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            button.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Prevent zoom on double tap for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
     </script>
 </body>
 </html>
