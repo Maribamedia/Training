@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>TrainingOS | AI-Powered Learning for K-12, Corporate & University Students</title>
-    <meta name="description" content="AI-powered learning solutions with guaranteed results. K-12 English tutoring, Corporate Business English, and University academic support. Performance guarantee included.">
+    <title>TrainingOS | AI-Powered English Tutoring for K-12 Students</title>
+    <meta name="description" content="AI-powered English tutoring for K-12 students with guaranteed 8% grade improvement. Personalized learning with Tavus.io AI technology and certified instructors.">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
@@ -48,18 +48,6 @@
                             800: '#1e40af',
                             900: '#1e3a8a',
                         },
-                        tertiary: {
-                            50: '#faf5ff',
-                            100: '#f3e8ff',
-                            200: '#e9d5ff',
-                            300: '#d8b4fe',
-                            400: '#c084fc',
-                            500: '#a855f7',
-                            600: '#9333ea',
-                            700: '#7e22ce',
-                            800: '#6b21a8',
-                            900: '#581c87',
-                        },
                         dark: {
                             50: '#f9fafb',
                             100: '#f3f4f6',
@@ -71,12 +59,6 @@
                             700: '#374151',
                             800: '#1f2937',
                             900: '#111827',
-                        },
-                        whatsapp: {
-                            green: '#25D366',
-                            dark: '#128C7E',
-                            darker: '#075E54',
-                            light: '#DCF8C6'
                         }
                     },
                     fontFamily: {
@@ -108,8 +90,6 @@
                         'ripple': 'ripple 0.8s linear infinite',
                         'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
                         'slide-down': 'slide-down 0.3s ease-out',
-                        'bounce-whatsapp': 'bounce-whatsapp 2s infinite',
-                        'pulse-whatsapp': 'pulse-whatsapp 2s infinite',
                     },
                     keyframes: {
                         float: {
@@ -205,14 +185,6 @@
                         'slide-down': {
                             from: { transform: 'translateY(-10px)', opacity: 0 },
                             to: { transform: 'translateY(0)', opacity: 1 },
-                        },
-                        'bounce-whatsapp': {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        'pulse-whatsapp': {
-                            '0%, 100%': { boxShadow: '0 10px 30px rgba(37, 211, 102, 0.4)' },
-                            '50%': { boxShadow: '0 10px 30px rgba(37, 211, 102, 0.8)' },
                         }
                     }
                 }
@@ -222,7 +194,7 @@
     
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #16a34a 0%, #2563eb 50%, #9333ea 100%);
+            --primary-gradient: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
             --glass-bg: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
         }
@@ -258,8 +230,7 @@
             z-index: -2;
             background: 
                 radial-gradient(circle at 10% 20%, rgba(22, 163, 74, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 40%, rgba(37, 99, 235, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 50% 80%, rgba(147, 51, 234, 0.05) 0%, transparent 20%);
+                radial-gradient(circle at 90% 40%, rgba(22, 163, 74, 0.03) 0%, transparent 20%);
         }
         
         .floating-shapes {
@@ -290,19 +261,10 @@
         .shape-2 {
             width: 400px;
             height: 400px;
-            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            background: linear-gradient(135deg, #16a34a, #4ade80);
             top: 60%;
             right: 10%;
             animation-delay: 5s;
-        }
-        
-        .shape-3 {
-            width: 250px;
-            height: 250px;
-            background: linear-gradient(135deg, #9333ea, #a855f7);
-            bottom: 10%;
-            left: 20%;
-            animation-delay: 10s;
         }
         
         /* Glass Effect */
@@ -326,7 +288,7 @@
         
         /* Gradient Text */
         .gradient-text {
-            background: linear-gradient(135deg, #16a34a 0%, #2563eb 50%, #9333ea 100%);
+            background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -335,21 +297,9 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #16a34a 0%, #2563eb 50%, #9333ea 100%);
+            background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
             background-size: 200% 100%;
             animation: gradient 8s ease infinite;
-        }
-        
-        .k12-gradient {
-            background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-        }
-        
-        .corporate-gradient {
-            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-        }
-        
-        .university-gradient {
-            background: linear-gradient(135deg, #9333ea 0%, #a855f7 100%);
         }
         
         /* Animations */
@@ -394,202 +344,12 @@
             h2 {
                 font-size: 2rem !important;
             }
-            
-            /* WhatsApp widget mobile */
-            .whatsapp-widget {
-                right: 20px !important;
-                bottom: 80px !important;
-            }
-            
-            .whatsapp-chat-box {
-                width: 280px !important;
-                right: 0 !important;
-                bottom: 70px !important;
-            }
-        }
-        
-        /* WhatsApp Widget Styles */
-        .whatsapp-widget {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 9999;
-            animation: bounce-whatsapp 2s infinite;
-        }
-        
-        .whatsapp-button {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: pulse-whatsapp 2s infinite;
-            border: none;
-        }
-        
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
-            animation: none;
-        }
-        
-        .whatsapp-button i {
-            font-size: 32px;
-            color: white;
-        }
-        
-        .whatsapp-chat-box {
-            position: absolute;
-            bottom: 80px;
-            right: 0;
-            width: 320px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            transform: translateY(20px);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .whatsapp-chat-box.active {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .whatsapp-header {
-            background: linear-gradient(135deg, #075E54, #128C7E);
-            padding: 20px;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .whatsapp-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #25D366;
-        }
-        
-        .whatsapp-info h4 {
-            font-weight: 600;
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
-        
-        .whatsapp-info p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        
-        .whatsapp-body {
-            padding: 20px;
-            background: #f0f0f0;
-            min-height: 200px;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        
-        .whatsapp-message {
-            background: white;
-            padding: 12px 16px;
-            border-radius: 20px 20px 20px 5px;
-            margin-bottom: 12px;
-            max-width: 85%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            animation: slide-up 0.3s ease;
-        }
-        
-        .whatsapp-message p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
-        }
-        
-        .whatsapp-footer {
-            padding: 15px 20px;
-            background: white;
-            border-top: 1px solid #eee;
-        }
-        
-        .whatsapp-action-btn {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            text-align: center;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        
-        .whatsapp-action-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-        }
-        
-        .whatsapp-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(255, 255, 255, 0.2);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: white;
-            font-size: 14px;
-        }
-        
-        .whatsapp-close:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: rotate(90deg);
-        }
-        
-        .whatsapp-notification {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            width: 24px;
-            height: 24px;
-            background: #ff4757;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-            animation: pulse 1.5s infinite;
         }
         
         /* Guarantee Badge */
         .guarantee-badge {
-            background: linear-gradient(135deg, rgba(220, 252, 231, 0.9) 0%, rgba(219, 234, 254, 0.9) 50%, rgba(243, 232, 255, 0.9) 100%);
-            border: 2px solid rgba(34, 197, 94, 0.3);
+            background: linear-gradient(135deg, rgba(220, 252, 231, 0.9) 0%, rgba(187, 247, 208, 0.9) 100%);
+            border: 2px solid rgba(22, 163, 74, 0.3);
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(10px);
@@ -630,7 +390,7 @@
             transform: translateY(-10px) scale(1.02);
             box-shadow: 
                 0 25px 50px rgba(22, 163, 74, 0.15),
-                0 10px 30px rgba(37, 99, 235, 0.1);
+                0 10px 30px rgba(34, 197, 94, 0.1);
         }
         
         /* Feature Check */
@@ -655,7 +415,7 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #16a34a, #2563eb);
+            background: linear-gradient(135deg, #16a34a, #22c55e);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -740,7 +500,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #16a34a, #2563eb);
+            background: linear-gradient(135deg, #16a34a, #22c55e);
         }
         
         .timeline-item::after {
@@ -759,7 +519,7 @@
         
         /* Use Case Cards */
         .use-case-card {
-            border-top: 5px solid;
+            border-top: 5px solid #16a34a;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
@@ -783,14 +543,6 @@
         .guarantee-process-step:last-child::before {
             display: none;
         }
-        
-        /* Adjust back-to-top for WhatsApp */
-        @media (max-width: 768px) {
-            .back-to-top {
-                bottom: 100px;
-                right: 20px;
-            }
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -802,52 +554,6 @@
     <div class="floating-shapes">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-    </div>
-    
-    <!-- WhatsApp Chat Widget -->
-    <div class="whatsapp-widget" id="whatsappWidget">
-        <div class="whatsapp-button" id="whatsappButton">
-            <i class="fab fa-whatsapp"></i>
-            <div class="whatsapp-notification" id="whatsappNotification">1</div>
-        </div>
-        
-        <div class="whatsapp-chat-box" id="whatsappChatBox">
-            <div class="whatsapp-header">
-                <div class="whatsapp-avatar">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="whatsapp-info">
-                    <h4>TrainingOS Support</h4>
-                    <p>Typically replies in minutes</p>
-                </div>
-                <div class="whatsapp-close" id="whatsappClose">
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-            <div class="whatsapp-body" id="whatsappBody">
-                <div class="whatsapp-message">
-                    <p>👋 Hello! I'm your TrainingOS assistant. How can I help you today?</p>
-                </div>
-                <div class="whatsapp-message">
-                    <p>Choose an option or ask any question about our AI-powered learning programs:</p>
-                </div>
-                <div class="whatsapp-message">
-                    <p>• 📚 K-12 English Tutoring</p>
-                    <p>• 💼 Corporate Business English</p>
-                    <p>• 🎓 University Academic Support</p>
-                    <p>• 💰 Pricing & Guarantees</p>
-                    <p>• 📅 Book Free Assessment</p>
-                </div>
-            </div>
-            <div class="whatsapp-footer">
-                <a href="https://wa.me/27766473499?text=Hello%20TrainingOS%20team!%20I%27m%20interested%20in%20learning%20more%20about%20your%20AI-powered%20learning%20programs." 
-                   target="_blank" class="whatsapp-action-btn">
-                    <i class="fab fa-whatsapp"></i> Start Chat on WhatsApp
-                </a>
-                <p class="text-xs text-gray-500 text-center mt-3">Click to chat directly with our team</p>
-            </div>
-        </div>
     </div>
     
     <!-- Back to Top Button -->
@@ -862,22 +568,23 @@
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group animate-slide-in-left">
                     <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl gradient-bg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <i class="fas fa-rocket text-white text-xl md:text-2xl"></i>
+                        <i class="fas fa-graduation-cap text-white text-xl md:text-2xl"></i>
                     </div>
                     <div>
                         <div class="text-2xl md:text-3xl font-bold font-heading">
                             <span class="gradient-text">Training</span><span class="text-gray-900">OS</span>
                         </div>
-                        <div class="text-xs text-gray-500 -mt-1 font-medium">by Mariba Media</div>
+                        <div class="text-xs text-gray-500 -mt-1 font-medium">K-12 English Excellence</div>
                     </div>
                 </a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-8 animate-slide-in-right">
-                    <a href="#audiences" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Audiences</a>
+                    <a href="#demo" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Demo</a>
                     <a href="#features" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Features</a>
+                    <a href="#curriculum" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Curriculum</a>
                     <a href="#use-cases" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Use Cases</a>
-                    <a href="#guarantees" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Guarantees</a>
+                    <a href="#guarantee" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Guarantee</a>
                     <a href="#outcomes" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Outcomes</a>
                     <a href="#pricing" class="text-sm font-semibold text-gray-600 hover:text-primary-600 transition-colors duration-200 hover:scale-105">Pricing</a>
                     
@@ -899,10 +606,11 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="md:hidden mt-4 hidden animate-slide-down glass rounded-2xl overflow-hidden">
                 <div class="p-4 space-y-2">
-                    <a href="#audiences" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Audiences</a>
+                    <a href="#demo" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Demo</a>
                     <a href="#features" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Features</a>
+                    <a href="#curriculum" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Curriculum</a>
                     <a href="#use-cases" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Use Cases</a>
-                    <a href="#guarantees" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Guarantees</a>
+                    <a href="#guarantee" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Guarantee</a>
                     <a href="#outcomes" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Outcomes</a>
                     <a href="#pricing" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 active:scale-95">Pricing</a>
                     <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
@@ -919,8 +627,7 @@
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 -z-10 overflow-hidden">
             <div class="absolute -top-20 -right-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-primary-200 to-transparent blur-3xl opacity-30 floating"></div>
-            <div class="absolute -bottom-20 -left-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-secondary-200 to-transparent blur-3xl opacity-30 floating" style="animation-delay: 2s;"></div>
-            <div class="absolute top-1/3 left-1/3 w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-tr from-tertiary-200 to-transparent blur-3xl opacity-30 floating" style="animation-delay: 4s;"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-primary-300 to-transparent blur-3xl opacity-30 floating" style="animation-delay: 2s;"></div>
         </div>
         
         <div class="container mx-auto">
@@ -933,10 +640,10 @@
                                 <div class="w-10 h-10 rounded-full bg-white border-4 border-green-100 flex items-center justify-center shadow-sm">
                                     <i class="fas fa-chart-line text-green-600 text-lg"></i>
                                 </div>
-                                <span class="font-bold text-green-700 text-sm md:text-base tracking-wide">PERFORMANCE GUARANTEE</span>
+                                <span class="font-bold text-green-700 text-sm md:text-base tracking-wide">8% GUARANTEED IMPROVEMENT</span>
                             </div>
                             <div class="text-gray-900 text-lg md:text-xl font-bold">
-                                Measurable Improvement Guaranteed
+                                Measurable Results Every Quarter
                             </div>
                         </div>
                     </div>
@@ -945,12 +652,12 @@
                 <!-- Main Content -->
                 <div class="text-center mb-12 md:mb-16">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight animate-slide-up font-heading">
-                        <span class="block text-gray-900">AI-Powered Learning</span>
-                        <span class="gradient-text block mt-2">For Every Stage</span>
+                        <span class="block text-gray-900">AI-Powered English</span>
+                        <span class="gradient-text block mt-2">Tutoring for K-12</span>
                     </h1>
                     
                     <p class="text-lg md:text-xl text-gray-600 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.1s">
-                        Transformative education with <span class="font-semibold text-primary-600">Tavus.io PALs technology</span> + certified instructors for K-12, Corporate, and University learners
+                        Transformative English education with <span class="font-semibold text-primary-600">Tavus.io AI technology</span> + certified TEFL instructors. Guaranteed 8% grade improvement every quarter.
                     </p>
                     
                     <!-- Stats Row -->
@@ -960,15 +667,15 @@
                             <div class="text-xs md:text-sm text-gray-500 font-medium">Grade Improvement</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-secondary-600">95%</div>
-                            <div class="text-xs md:text-sm text-gray-500 font-medium">Satisfaction Rate</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-primary-600">95%</div>
+                            <div class="text-xs md:text-sm text-gray-500 font-medium">Student Satisfaction</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-tertiary-600">100%</div>
-                            <div class="text-xs md:text-sm text-gray-500 font-medium">Certified Instructors</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-primary-600">100%</div>
+                            <div class="text-xs md:text-sm text-gray-500 font-medium">TEFL-Certified</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-blue-600">24/7</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-primary-600">24/7</div>
                             <div class="text-xs md:text-sm text-gray-500 font-medium">AI Tutor Access</div>
                         </div>
                     </div>
@@ -988,17 +695,6 @@
                             <span class="font-semibold">Try 5-Min Demo</span>
                         </a>
                     </div>
-                    
-                    <!-- WhatsApp Quick Contact -->
-                    <div class="mt-10 animate-fade-in" style="animation-delay: 0.4s">
-                        <div class="inline-flex items-center gap-3 bg-whatsapp-light rounded-2xl px-5 py-3 shadow-sm">
-                            <i class="fab fa-whatsapp text-whatsapp-green text-xl"></i>
-                            <span class="text-gray-700 font-medium">Quick question? </span>
-                            <a href="https://wa.me/27766473499" target="_blank" class="text-whatsapp-dark font-semibold hover:underline">
-                                Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1010,15 +706,15 @@
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-10 md:mb-16">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="gradient-text">Experience Our AI</span>
+                        <span class="gradient-text">Experience Our AI Tutor</span>
                         <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">5-Minute Interactive Demo</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        See our Tavus.io AI technology in action. Try our interactive AI tutor demo below - no signup required!
+                        See how our Tavus.io AI technology adapts to K-12 learning needs. Try the interactive demo below - no signup required!
                     </p>
-                    <div class="inline-flex items-center gap-3 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl px-6 py-4 mb-8 shadow-sm">
-                        <i class="fas fa-clock text-primary-600 text-xl"></i>
-                        <span class="font-bold text-gray-900 text-lg">Just 5 minutes - Experience the future of learning</span>
+                    <div class="inline-flex items-center gap-3 bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl px-6 py-4 mb-8 shadow-sm">
+                        <i class="fas fa-child text-primary-600 text-xl"></i>
+                        <span class="font-bold text-gray-900 text-lg">Designed specifically for K-12 students</span>
                     </div>
                 </div>
                 
@@ -1043,8 +739,8 @@
                         <div class="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-4 shadow-lg">
                             <i class="fas fa-microphone-alt text-white text-2xl"></i>
                         </div>
-                        <h4 class="font-bold text-xl mb-3">Speak with AI Tutor</h4>
-                        <p class="text-gray-600">Try conversational English practice with our AI tutor</p>
+                        <h4 class="font-bold text-xl mb-3">Conversational Practice</h4>
+                        <p class="text-gray-600">Practice conversational English with our AI tutor</p>
                     </div>
                     
                     <div class="feature-card glass-card rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300">
@@ -1052,7 +748,7 @@
                             <i class="fas fa-brain text-white text-2xl"></i>
                         </div>
                         <h4 class="font-bold text-xl mb-3">Adaptive Learning</h4>
-                        <p class="text-gray-600">See how AI adapts to your learning style and pace</p>
+                        <p class="text-gray-600">AI adapts to your child's learning style and pace</p>
                     </div>
                     
                     <div class="feature-card glass-card rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300">
@@ -1060,7 +756,7 @@
                             <i class="fas fa-chart-line text-white text-2xl"></i>
                         </div>
                         <h4 class="font-bold text-xl mb-3">Instant Feedback</h4>
-                        <p class="text-gray-600">Get real-time corrections and improvement suggestions</p>
+                        <p class="text-gray-600">Real-time corrections and improvement suggestions</p>
                     </div>
                 </div>
                 
@@ -1068,7 +764,7 @@
                 <div class="text-center">
                     <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
                         <i class="fas fa-info-circle text-primary-600 mr-2"></i>
-                        Allow microphone access for the full interactive experience. Works best on Chrome or Safari.
+                        Allow microphone access for full interactive experience. Works best on Chrome or Safari.
                     </p>
                     <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank"
                        class="modern-btn ripple-btn inline-flex items-center gap-3 gradient-bg text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl transition-all duration-300 shadow-lg text-lg active:scale-95">
@@ -1081,160 +777,17 @@
         </div>
     </section>
 
-    <!-- Target Audiences Section -->
-    <section id="audiences" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative section-padding">
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative section-padding">
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-20 animate-on-scroll">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="gradient-text">Three Audiences</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">One Powerful Platform</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                        Tailored AI-powered learning solutions for every educational need
-                    </p>
-                </div>
-                
-                <!-- Audience Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    <!-- K-12 Card -->
-                    <div class="audience-card glass-card rounded-3xl p-6 md:p-8 animate-on-scroll">
-                        <div class="mb-6">
-                            <div class="w-16 h-16 rounded-2xl k12-gradient flex items-center justify-center mb-4 shadow-lg">
-                                <i class="fas fa-child text-white text-2xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-2 font-heading">K-12 Students</h3>
-                            <div class="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">
-                                <i class="fas fa-star"></i>8% Grade Guarantee
-                            </div>
-                            <p class="text-gray-600 mb-6">Build strong English foundations with AI tutors and certified teachers</p>
-                        </div>
-                        
-                        <ul class="space-y-3 mb-8">
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle"></i>
-                                <span><strong class="text-green-600">8% English grade improvement</strong> guaranteed per quarter</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Personalized AI learning companions</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle"></i>
-                                <span>TEFL-certified instructors</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Curriculum-aligned content</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Parent progress dashboard</span>
-                            </li>
-                        </ul>
-                        
-                        <a href="#features" class="modern-btn ripple-btn block w-full k12-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                            Explore Features
-                        </a>
-                    </div>
-                    
-                    <!-- Corporate Card -->
-                    <div class="audience-card glass-card rounded-3xl p-6 md:p-8 animate-on-scroll" style="transition-delay: 0.1s">
-                        <div class="mb-6">
-                            <div class="w-16 h-16 rounded-2xl corporate-gradient flex items-center justify-center mb-4 shadow-lg">
-                                <i class="fas fa-briefcase text-white text-2xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-2 font-heading">Corporate Business English</h3>
-                            <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">
-                                <i class="fas fa-chart-line"></i>ROI-Focused
-                            </div>
-                            <p class="text-gray-600 mb-6">Elevate team communication with business-focused English training</p>
-                        </div>
-                        
-                        <ul class="space-y-3 mb-8">
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span><strong class="text-blue-600">Business communication</strong> mastery</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span>Presentation & negotiation skills</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span>Industry-specific vocabulary</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span>Corporate training analytics</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span>Team and individual packages</span>
-                            </li>
-                        </ul>
-                        
-                        <a href="#use-cases" class="modern-btn ripple-btn block w-full corporate-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                            View Use Cases
-                        </a>
-                    </div>
-                    
-                    <!-- University Card -->
-                    <div class="audience-card glass-card rounded-3xl p-6 md:p-8 animate-on-scroll" style="transition-delay: 0.2s">
-                        <div class="mb-6">
-                            <div class="w-16 h-16 rounded-2xl university-gradient flex items-center justify-center mb-4 shadow-lg">
-                                <i class="fas fa-graduation-cap text-white text-2xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-2 font-heading">University Students</h3>
-                            <div class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">
-                                <i class="fas fa-award"></i>Academic Excellence
-                            </div>
-                            <p class="text-gray-600 mb-6">Master academic English for research, papers, and presentations</p>
-                        </div>
-                        
-                        <ul class="space-y-3 mb-8">
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span><strong class="text-purple-600">Academic writing</strong> and research papers</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span>Presentation & defense preparation</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span>Thesis and dissertation support</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span>Subject-specific terminology</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span>Citation and referencing mastery</span>
-                            </li>
-                        </ul>
-                        
-                        <a href="#outcomes" class="modern-btn ripple-btn block w-full university-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                            See Outcomes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comprehensive Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-white relative section-padding">
-        <div class="container mx-auto">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12 md:mb-20 animate-on-scroll">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="gradient-text">Advanced Features</span>
+                        <span class="gradient-text">Advanced Learning Features</span>
                         <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Powered by Tavus.io AI Technology</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                        Cutting-edge AI technology combined with human expertise for unparalleled learning outcomes
+                        Cutting-edge AI technology combined with certified TEFL instructors for unparalleled English learning outcomes
                     </p>
                 </div>
 
@@ -1265,44 +818,44 @@
                             </ul>
                         </div>
                         
-                        <!-- Custom Video Content -->
+                        <!-- Live TEFL Instructors -->
                         <div class="feature-card glass-card rounded-3xl p-6 md:p-8">
                             <div class="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center mb-6 shadow-lg">
-                                <i class="fas fa-video text-white text-xl"></i>
+                                <i class="fas fa-users text-white text-xl"></i>
                             </div>
-                            <h4 class="text-xl font-bold mb-4">Custom Video Content</h4>
-                            <p class="text-gray-600 mb-4">AI-generated video lessons tailored to specific curricula, learning objectives, and individual needs</p>
+                            <h4 class="text-xl font-bold mb-4">Live TEFL Instructors</h4>
+                            <p class="text-gray-600 mb-4">Certified TEFL instructors provide 1-on-1 sessions tailored to your child's specific needs</p>
                             <ul class="space-y-2">
                                 <li class="flex items-center gap-2">
                                     <i class="fas fa-check text-green-500 text-sm"></i>
-                                    <span>Curriculum-aligned content</span>
+                                    <span>100% TEFL-certified instructors</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fas fa-check text-green-500 text-sm"></i>
-                                    <span>Interactive video lessons</span>
+                                    <span>Curriculum-aligned sessions</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fas fa-check text-green-500 text-sm"></i>
-                                    <span>Multi-language support</span>
+                                    <span>Progress tracking & reports</span>
                                 </li>
                             </ul>
                         </div>
                         
-                        <!-- Advanced Analytics -->
+                        <!-- Parent Dashboard -->
                         <div class="feature-card glass-card rounded-3xl p-6 md:p-8">
                             <div class="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center mb-6 shadow-lg">
                                 <i class="fas fa-chart-bar text-white text-xl"></i>
                             </div>
-                            <h4 class="text-xl font-bold mb-4">Advanced Analytics</h4>
-                            <p class="text-gray-600 mb-4">Comprehensive analytics dashboard providing real-time insights into learning progress and outcomes</p>
+                            <h4 class="text-xl font-bold mb-4">Parent Dashboard</h4>
+                            <p class="text-gray-600 mb-4">Comprehensive analytics dashboard providing real-time insights into your child's learning progress</p>
                             <ul class="space-y-2">
                                 <li class="flex items-center gap-2">
                                     <i class="fas fa-check text-green-500 text-sm"></i>
-                                    <span>Progress tracking & reporting</span>
+                                    <span>Real-time progress tracking</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fas fa-check text-green-500 text-sm"></i>
-                                    <span>Predictive performance analysis</span>
+                                    <span>Detailed performance reports</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fas fa-check text-green-500 text-sm"></i>
@@ -1313,9 +866,9 @@
                     </div>
                 </div>
 
-                <!-- Advanced Features -->
+                <!-- Additional Features -->
                 <div class="animate-on-scroll" style="transition-delay: 0.1s">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading text-gray-900">Advanced Learning Features</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading text-gray-900">Advanced Learning Tools</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         <!-- Speech Recognition -->
                         <div class="feature-card glass-card rounded-2xl p-6 text-center">
@@ -1335,22 +888,22 @@
                             <p class="text-gray-600 text-sm">Interactive games and rewards for engagement</p>
                         </div>
                         
-                        <!-- Live Tutoring -->
-                        <div class="feature-card glass-card rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mx-auto mb-4 shadow-lg">
-                                <i class="fas fa-users text-white text-lg"></i>
-                            </div>
-                            <h5 class="font-bold text-lg mb-2">Live Tutoring</h5>
-                            <p class="text-gray-600 text-sm">1-on-1 sessions with certified instructors</p>
-                        </div>
-                        
-                        <!-- Content Library -->
+                        <!-- Homework Support -->
                         <div class="feature-card glass-card rounded-2xl p-6 text-center">
                             <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mx-auto mb-4 shadow-lg">
                                 <i class="fas fa-book text-white text-lg"></i>
                             </div>
-                            <h5 class="font-bold text-lg mb-2">Content Library</h5>
-                            <p class="text-gray-600 text-sm">10,000+ hours of curated learning materials</p>
+                            <h5 class="font-bold text-lg mb-2">Homework Support</h5>
+                            <p class="text-gray-600 text-sm">24/7 AI assistance with English homework</p>
+                        </div>
+                        
+                        <!-- Curriculum Library -->
+                        <div class="feature-card glass-card rounded-2xl p-6 text-center">
+                            <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <i class="fas fa-graduation-cap text-white text-lg"></i>
+                            </div>
+                            <h5 class="font-bold text-lg mb-2">Curriculum Library</h5>
+                            <p class="text-gray-600 text-sm">10,000+ hours of curriculum-aligned content</p>
                         </div>
                     </div>
                 </div>
@@ -1362,16 +915,211 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="text-center">
                                 <div class="text-4xl font-bold text-primary-600 mb-2">40%</div>
-                                <p class="text-gray-600">Faster learning compared to traditional methods</p>
+                                <p class="text-gray-600">Faster learning vs traditional tutoring</p>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl font-bold text-secondary-600 mb-2">95%</div>
-                                <p class="text-gray-600">Student satisfaction and engagement rate</p>
+                                <div class="text-4xl font-bold text-primary-600 mb-2">95%</div>
+                                <p class="text-gray-600">Student satisfaction rate</p>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl font-bold text-tertiary-600 mb-2">24/7</div>
-                                <p class="text-gray-600">Access to AI tutors and learning resources</p>
+                                <div class="text-4xl font-bold text-primary-600 mb-2">24/7</div>
+                                <p class="text-gray-600">Access to AI tutors and resources</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="py-16 md:py-24 bg-white relative section-padding">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 md:mb-20 animate-on-scroll">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
+                        <span class="gradient-text">Comprehensive Curriculum</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Aligned with K-12 Standards</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                        Our curriculum is designed to complement school learning and accelerate English mastery
+                    </p>
+                </div>
+
+                <!-- Grade Levels -->
+                <div class="mb-16 animate-on-scroll">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading text-gray-900">Grade-Level Focus Areas</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+                        <!-- Foundation (Grades 1-3) -->
+                        <div class="glass-card rounded-3xl p-6 text-center">
+                            <div class="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white text-xl font-bold">1-3</span>
+                            </div>
+                            <h4 class="font-bold text-xl mb-4">Foundation Phase</h4>
+                            <ul class="space-y-2 text-left">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Phonics & reading basics</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Basic vocabulary building</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Simple sentence structure</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Listening comprehension</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Intermediate (Grades 4-6) -->
+                        <div class="glass-card rounded-3xl p-6 text-center">
+                            <div class="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white text-xl font-bold">4-6</span>
+                            </div>
+                            <h4 class="font-bold text-xl mb-4">Intermediate Phase</h4>
+                            <ul class="space-y-2 text-left">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Reading comprehension</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Paragraph writing</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Grammar fundamentals</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Vocabulary expansion</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Senior (Grades 7-9) -->
+                        <div class="glass-card rounded-3xl p-6 text-center">
+                            <div class="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white text-xl font-bold">7-9</span>
+                            </div>
+                            <h4 class="font-bold text-xl mb-4">Senior Phase</h4>
+                            <ul class="space-y-2 text-left">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Essay writing skills</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Literary analysis</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Advanced grammar</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Critical thinking</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- FET (Grades 10-12) -->
+                        <div class="glass-card rounded-3xl p-6 text-center">
+                            <div class="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                <span class="text-white text-xl font-bold">10-12</span>
+                            </div>
+                            <h4 class="font-bold text-xl mb-4">FET Phase</h4>
+                            <ul class="space-y-2 text-left">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Exam preparation</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Research skills</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Advanced writing</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500 text-sm"></i>
+                                    <span>Oral presentation skills</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Development -->
+                <div class="animate-on-scroll" style="transition-delay: 0.1s">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading text-gray-900">Core Skills Development</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="glass-card rounded-3xl p-6 md:p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center">
+                                    <i class="fas fa-book-reader text-white text-lg"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">Reading & Comprehension</h4>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Phonics and decoding skills</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Reading fluency development</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Comprehension strategies</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Critical reading skills</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Literature analysis</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="glass-card rounded-3xl p-6 md:p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center">
+                                    <i class="fas fa-pen-alt text-white text-lg"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">Writing & Composition</h4>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Sentence structure mastery</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Paragraph and essay writing</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Grammar and punctuation</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Creative writing skills</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Editing and proofreading</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1386,125 +1134,112 @@
                 <div class="text-center mb-12 md:mb-20 animate-on-scroll">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
                         <span class="gradient-text">Real-World Use Cases</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Practical Applications Across All Audiences</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">How We Help K-12 Students Succeed</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                        See how our platform solves real learning challenges for different audiences
+                        See how our platform solves real learning challenges for K-12 students
                     </p>
                 </div>
 
-                <!-- K-12 Use Cases -->
-                <div class="mb-16 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-12 h-12 rounded-xl k12-gradient flex items-center justify-center shadow-lg">
-                            <i class="fas fa-child text-white text-xl"></i>
+                <!-- Use Cases Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 animate-on-scroll">
+                    <div class="use-case-card glass-card rounded-3xl p-6">
+                        <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fas fa-running text-white text-lg"></i>
                         </div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading">K-12 Use Cases</h3>
+                        <h4 class="font-bold text-xl mb-3 text-primary-600">Catch-Up Support</h4>
+                        <p class="text-gray-600 mb-4">Students falling behind in English get personalized AI tutoring to catch up with their peers</p>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-clock"></i>
+                            <span>Average improvement: 8-12% per quarter</span>
+                        </div>
                     </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-green-500">
-                            <h4 class="font-bold text-xl mb-3 text-green-600">Catch-Up Support</h4>
-                            <p class="text-gray-600 mb-4">Students falling behind in English get personalized AI tutoring to catch up with their peers</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-clock"></i>
-                                <span>Average improvement: 8-12% per quarter</span>
-                            </div>
+                    <div class="use-case-card glass-card rounded-3xl p-6">
+                        <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fas fa-graduation-cap text-white text-lg"></i>
                         </div>
-                        
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-green-500">
-                            <h4 class="font-bold text-xl mb-3 text-green-600">Exam Preparation</h4>
-                            <p class="text-gray-600 mb-4">Targeted preparation for standardized tests and school exams with AI-powered practice tests</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-chart-line"></i>
-                                <span>95% pass rate improvement</span>
-                            </div>
+                        <h4 class="font-bold text-xl mb-3 text-primary-600">Exam Preparation</h4>
+                        <p class="text-gray-600 mb-4">Targeted preparation for standardized tests and school exams with AI-powered practice tests</p>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-chart-line"></i>
+                            <span>95% pass rate improvement</span>
                         </div>
-                        
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-green-500">
-                            <h4 class="font-bold text-xl mb-3 text-green-600">Homework Support</h4>
-                            <p class="text-gray-600 mb-4">24/7 AI assistance with English homework, writing assignments, and reading comprehension</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-check-circle"></i>
-                                <span>100% homework completion rate</span>
-                            </div>
+                    </div>
+                    
+                    <div class="use-case-card glass-card rounded-3xl p-6">
+                        <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fas fa-home text-white text-lg"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-primary-600">Homework Support</h4>
+                        <p class="text-gray-600 mb-4">24/7 AI assistance with English homework, writing assignments, and reading comprehension</p>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% homework completion rate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card glass-card rounded-3xl p-6">
+                        <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fas fa-rocket text-white text-lg"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-primary-600">Accelerated Learning</h4>
+                        <p class="text-gray-600 mb-4">Advanced students get challenging material to stay engaged and reach their full potential</p>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-bolt"></i>
+                            <span>40% faster progress</span>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card glass-card rounded-3xl p-6">
+                        <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fas fa-language text-white text-lg"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-primary-600">ESL Support</h4>
+                        <p class="text-gray-600 mb-4">Non-native English speakers receive specialized support to master English as a second language</p>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-globe"></i>
+                            <span>2x faster language acquisition</span>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card glass-card rounded-3xl p-6">
+                        <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4 shadow-lg">
+                            <i class="fas fa-star text-white text-lg"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-primary-600">Confidence Building</h4>
+                        <p class="text-gray-600 mb-4">Students build confidence in English through positive reinforcement and gradual skill mastery</p>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-smile"></i>
+                            <span>94% confidence improvement</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Corporate Use Cases -->
-                <div class="mb-16 animate-on-scroll" style="transition-delay: 0.1s">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-12 h-12 rounded-xl corporate-gradient flex items-center justify-center shadow-lg">
-                            <i class="fas fa-briefcase text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading">Corporate Use Cases</h3>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-blue-500">
-                            <h4 class="font-bold text-xl mb-3 text-blue-600">Global Team Training</h4>
-                            <p class="text-gray-600 mb-4">Upskill international teams with business English for effective cross-border communication</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-globe"></i>
-                                <span>Used by 50+ multinational companies</span>
+                <!-- Testimonial -->
+                <div class="mt-16 animate-on-scroll" style="transition-delay: 0.1s">
+                    <div class="glass-card rounded-3xl p-6 md:p-8">
+                        <div class="flex flex-col md:flex-row items-center gap-6">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                                <i class="fas fa-quote-left text-primary-600 text-2xl"></i>
                             </div>
-                        </div>
-                        
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-blue-500">
-                            <h4 class="font-bold text-xl mb-3 text-blue-600">Presentation Skills</h4>
-                            <p class="text-gray-600 mb-4">Executives improve presentation delivery, Q&A handling, and boardroom communication</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-presentation"></i>
-                                <span>40% improvement in confidence scores</span>
-                            </div>
-                        </div>
-                        
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-blue-500">
-                            <h4 class="font-bold text-xl mb-3 text-blue-600">Client Communication</h4>
-                            <p class="text-gray-600 mb-4">Sales and client-facing teams enhance communication skills for better customer relationships</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-handshake"></i>
-                                <span>28% increase in client satisfaction</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- University Use Cases -->
-                <div class="animate-on-scroll" style="transition-delay: 0.2s">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-12 h-12 rounded-xl university-gradient flex items-center justify-center shadow-lg">
-                            <i class="fas fa-graduation-cap text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading">University Use Cases</h3>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-purple-500">
-                            <h4 class="font-bold text-xl mb-3 text-purple-600">Thesis Writing Support</h4>
-                            <p class="text-gray-600 mb-4">Postgraduate students receive AI-powered guidance for thesis structure, writing, and editing</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-file-alt"></i>
-                                <span>Average grade improvement: 1.5 points</span>
-                            </div>
-                        </div>
-                        
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-purple-500">
-                            <h4 class="font-bold text-xl mb-3 text-purple-600">Research Paper Assistance</h4>
-                            <p class="text-gray-600 mb-4">Undergraduates master academic writing, citation, and research paper formatting</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-search"></i>
-                                <span>75% reduction in formatting errors</span>
-                            </div>
-                        </div>
-                        
-                        <div class="use-case-card glass-card rounded-3xl p-6 border-t-purple-500">
-                            <h4 class="font-bold text-xl mb-3 text-purple-600">Conference Preparation</h4>
-                            <p class="text-gray-600 mb-4">PhD candidates prepare for conference presentations, poster sessions, and academic networking</p>
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="fas fa-microphone"></i>
-                                <span>92% success rate in presentations</span>
+                            <div class="flex-1">
+                                <p class="text-lg text-gray-700 mb-4 italic">
+                                    "My daughter was struggling with English and had fallen behind her class. After just one quarter with TrainingOS, her grade improved from 58% to 72%. The AI tutor is available whenever she needs help, and the live sessions with certified teachers have made all the difference."
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="font-bold text-gray-900">Sarah M.</p>
+                                        <p class="text-sm text-gray-600">Parent of Grade 8 student</p>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1513,121 +1248,59 @@
         </div>
     </section>
 
-    <!-- Comprehensive Guarantees Section -->
-    <section id="guarantees" class="py-16 md:py-24 bg-white relative section-padding">
+    <!-- Guarantee Section -->
+    <section id="guarantee" class="py-16 md:py-24 bg-white relative section-padding">
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-20 animate-on-scroll">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="gradient-text">Our Guarantees</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Measurable Results, Contractually Guaranteed</span>
+                        <span class="gradient-text">Our Iron-Clad Guarantee</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">8% Grade Improvement or Your Money Back</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                        We stand behind our results with industry-leading guarantees for every audience
+                        We're so confident in our platform that we guarantee measurable results
                     </p>
                 </div>
 
-                <!-- Guarantee Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 animate-on-scroll">
-                    <!-- K-12 Guarantee -->
-                    <div class="glass-card rounded-3xl p-6 md:p-8">
-                        <div class="w-16 h-16 rounded-2xl k12-gradient flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i class="fas fa-child text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-center font-heading">K-12 Guarantee</h3>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-green-600">8%</div>
-                            <p class="text-gray-600">English grade improvement per quarter</p>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-green-500"></i>
-                                <span>Contractually guaranteed improvement</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-green-500"></i>
-                                <span>Quarterly progress assessments</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-green-500"></i>
-                                <span>Money-back guarantee if not met</span>
-                            </li>
-                        </ul>
-                        <div class="bg-green-50 rounded-xl p-4">
-                            <p class="text-sm text-green-700 text-center">
-                                <i class="fas fa-shield-alt mr-1"></i>
-                                <strong>Guaranteed:</strong> 8% grade improvement or full refund
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Corporate Guarantee -->
-                    <div class="glass-card rounded-3xl p-6 md:p-8">
-                        <div class="w-16 h-16 rounded-2xl corporate-gradient flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i class="fas fa-briefcase text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-center font-heading">Corporate Guarantee</h3>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-blue-600">ROI</div>
-                            <p class="text-gray-600">Measurable communication improvement</p>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span>Business communication assessment</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span>Quarterly progress reviews</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                <span>Partial refund if targets not met</span>
-                            </li>
-                        </ul>
-                        <div class="bg-blue-50 rounded-xl p-4">
-                            <p class="text-sm text-blue-700 text-center">
-                                <i class="fas fa-chart-line mr-1"></i>
-                                <strong>Guaranteed:</strong> Measurable ROI or partial refund
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- University Guarantee -->
-                    <div class="glass-card rounded-3xl p-6 md:p-8">
-                        <div class="w-16 h-16 rounded-2xl university-gradient flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i class="fas fa-graduation-cap text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-center font-heading">University Guarantee</h3>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-purple-600">1.5</div>
-                            <p class="text-gray-600">Grade point improvement in writing</p>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span>Academic writing assessment</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span>Monthly progress tracking</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check-circle text-purple-500"></i>
-                                <span>Additional support if needed</span>
-                            </li>
-                        </ul>
-                        <div class="bg-purple-50 rounded-xl p-4">
-                            <p class="text-sm text-purple-700 text-center">
-                                <i class="fas fa-award mr-1"></i>
-                                <strong>Guaranteed:</strong> Academic improvement or extra sessions
-                            </p>
+                <!-- Guarantee Card -->
+                <div class="max-w-4xl mx-auto animate-on-scroll">
+                    <div class="glass-card rounded-3xl p-6 md:p-8 border-4 border-green-100">
+                        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                            <div class="w-24 h-24 rounded-2xl gradient-bg flex items-center justify-center shadow-lg">
+                                <i class="fas fa-shield-alt text-white text-3xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-4 text-gray-900">8% Grade Improvement Guarantee</h3>
+                                <p class="text-gray-600 mb-6">
+                                    We guarantee your child will improve their English grade by at least 8% every quarter. If they don't, we'll refund your money for that quarter.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-primary-600 mb-2">Contractual</div>
+                                        <p class="text-sm text-gray-600">Guarantee included in service agreement</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-primary-600 mb-2">Quarterly</div>
+                                        <p class="text-sm text-gray-600">Measured every 3 months</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-primary-600 mb-2">Money-Back</div>
+                                        <p class="text-sm text-gray-600">Full refund if not achieved</p>
+                                    </div>
+                                </div>
+                                <div class="bg-green-50 rounded-xl p-4">
+                                    <p class="text-sm text-green-700 text-center font-medium">
+                                        <i class="fas fa-file-contract mr-2"></i>
+                                        This guarantee is contractually binding and included in every service agreement
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Guarantee Process -->
-                <div class="glass-card rounded-3xl p-6 md:p-8 animate-on-scroll" style="transition-delay: 0.1s">
+                <div class="mt-16 animate-on-scroll" style="transition-delay: 0.1s">
                     <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading">How Our Guarantee Process Works</h3>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                         <div class="text-center">
@@ -1635,7 +1308,7 @@
                                 <span class="text-xl font-bold text-white">1</span>
                             </div>
                             <h4 class="font-bold text-lg mb-2">Baseline Assessment</h4>
-                            <p class="text-gray-600 text-sm">We assess current skill level and set measurable goals</p>
+                            <p class="text-gray-600 text-sm">We assess current English grade and set measurable goals</p>
                         </div>
                         
                         <div class="text-center">
@@ -1651,7 +1324,7 @@
                                 <span class="text-xl font-bold text-white">3</span>
                             </div>
                             <h4 class="font-bold text-lg mb-2">Progress Tracking</h4>
-                            <p class="text-gray-600 text-sm">Regular assessments track improvement toward goals</p>
+                            <p class="text-gray-600 text-sm">Regular assessments track improvement toward 8% goal</p>
                         </div>
                         
                         <div class="text-center">
@@ -1659,20 +1332,7 @@
                                 <span class="text-xl font-bold text-white">4</span>
                             </div>
                             <h4 class="font-bold text-lg mb-2">Guarantee Fulfilled</h4>
-                            <p class="text-gray-600 text-sm">Achieve goals or receive refund/additional support</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contract Details -->
-                <div class="mt-12 text-center animate-on-scroll" style="transition-delay: 0.2s">
-                    <div class="inline-flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-6 max-w-3xl mx-auto">
-                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg">
-                            <i class="fas fa-file-contract text-green-600 text-2xl"></i>
-                        </div>
-                        <div class="text-left">
-                            <h4 class="font-bold text-xl mb-2 text-gray-900">Contractually Backed Guarantees</h4>
-                            <p class="text-gray-700">All our performance guarantees are included in your service agreement. We're committed to your success and back it with contractual obligations.</p>
+                            <p class="text-gray-600 text-sm">Achieve 8% improvement or receive full refund</p>
                         </div>
                     </div>
                 </div>
@@ -1686,11 +1346,11 @@
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-20 animate-on-scroll">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="gradient-text">Measurable Outcomes</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Proven Results Across All Audiences</span>
+                        <span class="gradient-text">Proven Outcomes</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Measurable Results for K-12 Students</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                        See the tangible results our platform delivers for students, professionals, and academics
+                        See the tangible results our platform delivers for K-12 students
                     </p>
                 </div>
 
@@ -1711,176 +1371,81 @@
                         </div>
                         
                         <div class="outcome-stat glass-card rounded-2xl p-6 text-center">
-                            <div class="text-4xl font-bold text-secondary-600 mb-2">40%</div>
+                            <div class="text-4xl font-bold text-primary-600 mb-2">40%</div>
                             <p class="text-gray-600">Faster Skill Acquisition</p>
                             <div class="mt-2">
                                 <i class="fas fa-bolt text-yellow-500"></i>
-                                <span class="text-sm text-gray-500">vs traditional methods</span>
+                                <span class="text-sm text-gray-500">vs traditional tutoring</span>
                             </div>
                         </div>
                         
                         <div class="outcome-stat glass-card rounded-2xl p-6 text-center">
-                            <div class="text-4xl font-bold text-tertiary-600 mb-2">98%</div>
-                            <p class="text-gray-600">Completion Rate</p>
+                            <div class="text-4xl font-bold text-primary-600 mb-2">98%</div>
+                            <p class="text-gray-600">Program Completion</p>
                             <div class="mt-2">
                                 <i class="fas fa-check-circle text-green-500"></i>
-                                <span class="text-sm text-gray-500">Course completion</span>
+                                <span class="text-sm text-gray-500">Full program completion</span>
                             </div>
                         </div>
                         
                         <div class="outcome-stat glass-card rounded-2xl p-6 text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">3.2x</div>
-                            <p class="text-gray-600">ROI for Corporate Clients</p>
+                            <div class="text-4xl font-bold text-primary-600 mb-2">8-12%</div>
+                            <p class="text-gray-600">Average Grade Improvement</p>
                             <div class="mt-2">
                                 <i class="fas fa-chart-line text-green-500"></i>
-                                <span class="text-sm text-gray-500">Return on investment</span>
+                                <span class="text-sm text-gray-500">Per quarter</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Audience-Specific Outcomes -->
+                <!-- Detailed Outcomes -->
                 <div class="animate-on-scroll" style="transition-delay: 0.1s">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading">Audience-Specific Outcomes</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                        <!-- K-12 Outcomes -->
-                        <div class="glass-card rounded-3xl p-6 md:p-8">
-                            <div class="flex items-center gap-3 mb-6">
-                                <div class="w-12 h-12 rounded-xl k12-gradient flex items-center justify-center">
-                                    <i class="fas fa-child text-white text-lg"></i>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading">Detailed Student Outcomes</h3>
+                    <div class="glass-card rounded-3xl p-6 md:p-8">
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-700 font-medium">English Grade Improvement</span>
+                                    <span class="font-bold text-primary-600">8-12%</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900">K-12 Outcomes</h4>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full" style="width: 85%"></div>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-1">Average improvement per quarter across all grade levels</p>
                             </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Grade Improvement</span>
-                                        <span class="font-bold text-green-600">8-12%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
-                                    </div>
+                            
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-700 font-medium">Test Score Improvement</span>
+                                    <span class="font-bold text-primary-600">+22%</span>
                                 </div>
-                                
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Test Scores</span>
-                                        <span class="font-bold text-green-600">+22%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-green-500 h-2 rounded-full" style="width: 78%"></div>
-                                    </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full" style="width: 78%"></div>
                                 </div>
-                                
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Confidence Level</span>
-                                        <span class="font-bold text-green-600">94%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-green-500 h-2 rounded-full" style="width: 94%"></div>
-                                    </div>
-                                </div>
+                                <p class="text-sm text-gray-500 mt-1">Average improvement in standardized test scores</p>
                             </div>
-                            <div class="mt-6 pt-6 border-t border-gray-100">
-                                <p class="text-sm text-gray-600">
-                                    <i class="fas fa-quote-left text-green-500 mr-1"></i>
-                                    "My child's English grade improved from 65% to 78% in just one quarter"
-                                </p>
+                            
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-700 font-medium">Confidence Level</span>
+                                    <span class="font-bold text-primary-600">94%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full" style="width: 94%"></div>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-1">Students reporting increased confidence in English</p>
                             </div>
-                        </div>
-                        
-                        <!-- Corporate Outcomes -->
-                        <div class="glass-card rounded-3xl p-6 md:p-8">
-                            <div class="flex items-center gap-3 mb-6">
-                                <div class="w-12 h-12 rounded-xl corporate-gradient flex items-center justify-center">
-                                    <i class="fas fa-briefcase text-white text-lg"></i>
+                            
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-700 font-medium">Homework Completion</span>
+                                    <span class="font-bold text-primary-600">100%</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-gray-900">Corporate Outcomes</h4>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Communication Skills</span>
-                                        <span class="font-bold text-blue-600">+45%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 82%"></div>
-                                    </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full" style="width: 100%"></div>
                                 </div>
-                                
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Presentation Skills</span>
-                                        <span class="font-bold text-blue-600">+38%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 76%"></div>
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Client Satisfaction</span>
-                                        <span class="font-bold text-blue-600">+28%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 72%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-6 pt-6 border-t border-gray-100">
-                                <p class="text-sm text-gray-600">
-                                    <i class="fas fa-quote-left text-blue-500 mr-1"></i>
-                                    "Our international team's communication improved dramatically"
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <!-- University Outcomes -->
-                        <div class="glass-card rounded-3xl p-6 md:p-8">
-                            <div class="flex items-center gap-3 mb-6">
-                                <div class="w-12 h-12 rounded-xl university-gradient flex items-center justify-center">
-                                    <i class="fas fa-graduation-cap text-white text-lg"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-gray-900">University Outcomes</h4>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Writing Grades</span>
-                                        <span class="font-bold text-purple-600">+1.5 GPA</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-purple-500 h-2 rounded-full" style="width: 88%"></div>
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Research Quality</span>
-                                        <span class="font-bold text-purple-600">+32%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-purple-500 h-2 rounded-full" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="text-gray-700">Thesis Success</span>
-                                        <span class="font-bold text-purple-600">92%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 rounded-full h-2">
-                                        <div class="bg-purple-500 h-2 rounded-full" style="width: 92%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-6 pt-6 border-t border-gray-100">
-                                <p class="text-sm text-gray-600">
-                                    <i class="fas fa-quote-left text-purple-500 mr-1"></i>
-                                    "My thesis received distinction after using TrainingOS"
-                                </p>
+                                <p class="text-sm text-gray-500 mt-1">Students completing English homework with our support</p>
                             </div>
                         </div>
                     </div>
@@ -1900,24 +1465,24 @@
                             </div>
                             
                             <div class="text-center">
-                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
-                                    <span class="font-bold text-blue-600">1-2</span>
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-3">
+                                    <span class="font-bold text-green-600">1-2</span>
                                 </div>
                                 <h5 class="font-bold mb-1">Months</h5>
                                 <p class="text-sm text-gray-600">Significant skill development</p>
                             </div>
                             
                             <div class="text-center">
-                                <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-3">
-                                    <span class="font-bold text-purple-600">3</span>
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-3">
+                                    <span class="font-bold text-green-600">3</span>
                                 </div>
                                 <h5 class="font-bold mb-1">Months</h5>
-                                <p class="text-sm text-gray-600">Guaranteed outcomes achieved</p>
+                                <p class="text-sm text-gray-600">8% improvement achieved</p>
                             </div>
                             
                             <div class="text-center">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-green-100 to-blue-100 flex items-center justify-center mx-auto mb-3">
-                                    <span class="font-bold text-gray-900">6+</span>
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-3">
+                                    <span class="font-bold text-green-600">6+</span>
                                 </div>
                                 <h5 class="font-bold mb-1">Months</h5>
                                 <p class="text-sm text-gray-600">Mastery and advanced skills</p>
@@ -1929,510 +1494,190 @@
         </div>
     </section>
 
-    <!-- Comprehensive Pricing Section -->
-    <section id="pricing" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative section-padding">
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 md:py-24 bg-white relative section-padding">
         <div class="container mx-auto">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-12 md:mb-20 animate-on-scroll">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        Comprehensive <span class="gradient-text">Pricing Plans</span>
+                        Simple, <span class="gradient-text">Transparent Pricing</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                        Choose the perfect plan for your needs. All plans include our performance guarantee.
+                        Choose the perfect plan for your child's English learning journey. All plans include our 8% guarantee.
                     </p>
                 </div>
 
-                <!-- K-12 Pricing Section -->
-                <div class="mb-20 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-12 h-12 rounded-xl k12-gradient flex items-center justify-center shadow-lg">
-                            <i class="fas fa-child text-white text-xl"></i>
+                <!-- Pricing Cards -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 animate-on-scroll">
+                    <!-- Per Session -->
+                    <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
+                        <div class="text-center mb-6">
+                            <span class="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-bold">
+                                PAY-AS-YOU-GO
+                            </span>
                         </div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading">K-12 English Tutoring Plans</h3>
+                        
+                        <h4 class="text-xl font-bold mb-4 text-center">Per Session</h4>
+                        <p class="text-gray-600 mb-6 text-center">Flexible tutoring when needed</p>
+                        
+                        <div class="mb-6 text-center">
+                            <div class="flex items-baseline justify-center gap-1">
+                                <span class="text-4xl md:text-5xl font-bold text-gray-900">R350</span>
+                                <span class="text-gray-500">/session</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">1-hour with TEFL-certified tutor</p>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>1-on-1 personalized session</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>TEFL-certified tutor</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom lesson plan</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Progress report</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
+                           class="modern-btn ripple-btn block w-full gradient-bg text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
+                            Book First Session
+                        </a>
                     </div>
                     
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-                        <!-- Per Session -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-bold">
-                                    PAY-AS-YOU-GO
-                                </span>
+                    <!-- Professional -->
+                    <div class="pricing-card glass-card rounded-3xl p-6 md:p-8 relative">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <div class="gradient-bg text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                                <i class="fas fa-crown mr-2"></i>MOST POPULAR
                             </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Per Session</h4>
-                            <p class="text-gray-600 mb-6 text-center">Flexible tutoring when needed</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R350</span>
-                                    <span class="text-gray-500">/session</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">1-hour with TEFL-certified tutor</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>1-on-1 personalized session</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>TEFL-certified tutor</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Custom lesson plan</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Progress report</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full k12-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Book First Session
-                            </a>
                         </div>
                         
-                        <!-- Professional -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8 relative">
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                <div class="k12-gradient text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                                    <i class="fas fa-crown mr-2"></i>MOST POPULAR
-                                </div>
-                            </div>
-                            
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-bold">
-                                    PROFESSIONAL
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">AI + Live Tutoring</h4>
-                            <p class="text-gray-600 mb-6 text-center">Complete English mastery solution</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R3,500</span>
-                                    <span class="text-gray-500">/month</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">Save 40% vs traditional tutoring</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span><strong>8 Live sessions monthly</strong></span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>24/7 AI PALs access</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Custom video courses</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Advanced parent dashboard</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>8% quarterly guarantee</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full k12-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Start Free Assessment
-                            </a>
+                        <div class="text-center mb-6">
+                            <span class="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-bold">
+                                PROFESSIONAL
+                            </span>
                         </div>
                         
-                        <!-- Annual Excellence -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-bold">
-                                    PREMIUM
-                                </span>
+                        <h4 class="text-xl font-bold mb-4 text-center">AI + Live Tutoring</h4>
+                        <p class="text-gray-600 mb-6 text-center">Complete English mastery solution</p>
+                        
+                        <div class="mb-6 text-center">
+                            <div class="flex items-baseline justify-center gap-1">
+                                <span class="text-4xl md:text-5xl font-bold text-gray-900">R3,500</span>
+                                <span class="text-gray-500">/month</span>
                             </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Annual Excellence</h4>
-                            <p class="text-gray-600 mb-6 text-center">Maximum results, minimum cost</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R18,000</span>
-                                    <span class="text-gray-500">/year</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">Save 57% vs monthly</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span><strong>Everything in Professional</strong></span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>96 Live sessions yearly</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Custom AI PAL training</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Dedicated success manager</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Quarterly strategy reviews</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full k12-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Schedule Consultation
-                            </a>
+                            <p class="text-sm text-gray-500 mt-2">Save 40% vs traditional tutoring</p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Corporate Pricing Section -->
-                <div class="mb-20 animate-on-scroll" style="transition-delay: 0.1s">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-12 h-12 rounded-xl corporate-gradient flex items-center justify-center shadow-lg">
-                            <i class="fas fa-briefcase text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading">Corporate Business English Plans</h3>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>8 Live sessions monthly</strong></span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 AI PALs access</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom video courses</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Advanced parent dashboard</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>8% quarterly guarantee</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
+                           class="modern-btn ripple-btn block w-full gradient-bg text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
+                            Start Free Assessment
+                        </a>
                     </div>
                     
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-                        <!-- Team Starter -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-bold">
-                                    TEAM STARTER
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Team Starter</h4>
-                            <p class="text-gray-600 mb-6 text-center">For teams of 5-10 employees</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R8,500</span>
-                                    <span class="text-gray-500">/month</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">Custom team training</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Up to 10 team members</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Business communication focus</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Team progress dashboard</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Monthly progress reports</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Corporate training portal</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full corporate-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Request Quote
-                            </a>
+                    <!-- Annual Excellence -->
+                    <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
+                        <div class="text-center mb-6">
+                            <span class="inline-block px-4 py-2 rounded-full bg-green-50 text-green-700 text-sm font-bold">
+                                PREMIUM
+                            </span>
                         </div>
                         
-                        <!-- Enterprise -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8 relative">
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                <div class="corporate-gradient text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                                    <i class="fas fa-crown mr-2"></i>ENTERPRISE
-                                </div>
+                        <h4 class="text-xl font-bold mb-4 text-center">Annual Excellence</h4>
+                        <p class="text-gray-600 mb-6 text-center">Maximum results, minimum cost</p>
+                        
+                        <div class="mb-6 text-center">
+                            <div class="flex items-baseline justify-center gap-1">
+                                <span class="text-4xl md:text-5xl font-bold text-gray-900">R35,000</span>
+                                <span class="text-gray-500">/year</span>
                             </div>
-                            
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-bold">
-                                    ENTERPRISE
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Corporate Enterprise</h4>
-                            <p class="text-gray-600 mb-6 text-center">For organizations with 50+ employees</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">Custom</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">Tailored enterprise solution</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span><strong>Unlimited employees</strong></span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Custom curriculum development</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Executive coaching included</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Advanced analytics dashboard</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Dedicated account manager</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full corporate-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Contact Sales
-                            </a>
+                            <p class="text-sm text-gray-500 mt-2">Save 20% vs monthly</p>
                         </div>
                         
-                        <!-- Individual Professional -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-bold">
-                                    INDIVIDUAL
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Professional Development</h4>
-                            <p class="text-gray-600 mb-6 text-center">For individual professionals</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R4,500</span>
-                                    <span class="text-gray-500">/month</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">Career-focused English mastery</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span><strong>8 sessions monthly</strong></span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Business writing & presentations</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Negotiation & meeting skills</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Industry-specific vocabulary</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-blue-500"></i>
-                                    <span>Career advancement focus</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full corporate-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Start Assessment
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- University Pricing Section -->
-                <div class="animate-on-scroll" style="transition-delay: 0.2s">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-12 h-12 rounded-xl university-gradient flex items-center justify-center shadow-lg">
-                            <i class="fas fa-graduation-cap text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 font-heading">University Academic Support Plans</h3>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-                        <!-- Academic Writing -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-bold">
-                                    ACADEMIC WRITING
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Academic Writing</h4>
-                            <p class="text-gray-600 mb-6 text-center">Master research papers & essays</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R2,800</span>
-                                    <span class="text-gray-500">/month</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">4 specialized sessions monthly</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Research paper structure</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Citation & referencing</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Thesis statement development</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Academic vocabulary building</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Writing feedback & editing</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full university-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Start Writing Assessment
-                            </a>
-                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Everything in Professional</strong></span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>96 Live sessions yearly</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom AI PAL training</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dedicated success manager</span>
+                            </li>
+                            <li class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Quarterly strategy reviews</span>
+                            </li>
+                        </ul>
                         
-                        <!-- Presentation Mastery -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8 relative">
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                <div class="university-gradient text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                                    <i class="fas fa-crown mr-2"></i>POPULAR
-                                </div>
-                            </div>
-                            
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-bold">
-                                    PRESENTATION
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Presentation & Defense</h4>
-                            <p class="text-gray-600 mb-6 text-center">Ace presentations & thesis defenses</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R3,200</span>
-                                    <span class="text-gray-500">/month</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">6 sessions with video review</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span><strong>Presentation skills</strong></span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Thesis defense preparation</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Q&A session simulation</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Confidence building</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Video recording & feedback</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full university-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Book Presentation Assessment
-                            </a>
-                        </div>
-                        
-                        <!-- Comprehensive Academic -->
-                        <div class="pricing-card glass-card rounded-3xl p-6 md:p-8">
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-bold">
-                                    COMPREHENSIVE
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-xl font-bold mb-4 text-center">Comprehensive Academic</h4>
-                            <p class="text-gray-600 mb-6 text-center">Full academic English support</p>
-                            
-                            <div class="mb-6 text-center">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl md:text-5xl font-bold text-gray-900">R5,500</span>
-                                    <span class="text-gray-500">/month</span>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">10 sessions + AI tutor access</p>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span><strong>Writing + Presentation</strong></span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>24/7 AI academic assistant</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Thesis/dissertation support</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Subject-specific terminology</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check-circle text-purple-500"></i>
-                                    <span>Academic success guarantee</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                               class="modern-btn ripple-btn block w-full university-gradient text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
-                                Schedule Consultation
-                            </a>
-                        </div>
+                        <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
+                           class="modern-btn ripple-btn block w-full gradient-bg text-white py-4 rounded-xl text-center font-bold hover:shadow-xl transition-all active:scale-95">
+                            Schedule Consultation
+                        </a>
                     </div>
                 </div>
 
                 <!-- Guarantee Note -->
                 <div class="text-center mt-16 animate-on-scroll">
-                    <div class="inline-flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-6 md:p-8 max-w-4xl mx-auto shadow-lg">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-100 to-blue-100 flex items-center justify-center shadow-lg">
+                    <div class="inline-flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-green-50 to-green-100 rounded-3xl p-6 md:p-8 max-w-4xl mx-auto shadow-lg">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg">
                             <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
                         </div>
                         <div class="text-left">
-                            <h4 class="font-bold text-xl mb-2 text-gray-900">All Plans Include Our Performance Guarantee</h4>
-                            <p class="text-gray-700">We guarantee measurable improvement for every learner. If you don't see results, we'll refund or provide additional support until you do.</p>
+                            <h4 class="font-bold text-xl mb-2 text-gray-900">All Plans Include Our 8% Guarantee</h4>
+                            <p class="text-gray-700">We guarantee your child will improve their English grade by at least 8% every quarter. If they don't, we'll refund your money for that quarter.</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Payment Options -->
+                <div class="mt-12 text-center animate-on-scroll" style="transition-delay: 0.1s">
+                    <div class="inline-flex items-center gap-4 bg-gray-50 rounded-2xl px-6 py-4">
+                        <i class="fas fa-credit-card text-primary-600 text-xl"></i>
+                        <span class="text-gray-700 font-medium">Flexible payment options available</span>
+                        <span class="text-gray-500">•</span>
+                        <span class="text-gray-700 font-medium">Monthly or annual billing</span>
+                        <span class="text-gray-500">•</span>
+                        <span class="text-gray-700 font-medium">No long-term contracts</span>
                     </div>
                 </div>
             </div>
@@ -2440,10 +1685,10 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section class="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 section-padding">
+    <section class="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-primary-100 section-padding">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary-200 animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-secondary-200 animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-primary-300 animate-pulse" style="animation-delay: 1s;"></div>
         </div>
         
         <div class="container mx-auto relative">
@@ -2451,12 +1696,12 @@
                 <div class="bg-white rounded-3xl p-6 md:p-10 shadow-2xl border-2 border-primary-100">
                     <!-- Main Heading -->
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900 text-center font-heading">
-                        Ready for <span class="bg-gradient-to-r from-primary-600 via-secondary-600 to-tertiary-600 bg-clip-text text-transparent">Measurable Improvement</span>?
+                        Ready for <span class="bg-gradient-to-r from-primary-600 to-green-500 bg-clip-text text-transparent">8% Improvement</span>?
                     </h2>
                     
                     <!-- Subtitle -->
                     <p class="text-lg md:text-xl text-gray-800 mb-8 max-w-2xl mx-auto font-medium leading-relaxed text-center">
-                        Start with a free assessment tailored to your specific needs
+                        Start with a free assessment to see exactly how we can help your child excel in English
                     </p>
                     
                     <!-- CTA Button -->
@@ -2480,13 +1725,10 @@
                                 <i class="fas fa-envelope text-primary-600"></i>
                                 <span class="font-semibold text-gray-900">victor@maribamedia.co.za</span>
                             </div>
-                        </div>
-                        <div class="mt-4 text-center">
-                            <a href="https://wa.me/27766473499" target="_blank" 
-                               class="inline-flex items-center gap-2 bg-whatsapp-green text-white px-5 py-3 rounded-xl font-semibold hover:bg-whatsapp-dark transition-all duration-300">
-                                <i class="fab fa-whatsapp"></i>
-                                <span>Chat on WhatsApp</span>
-                            </a>
+                            <div class="flex items-center gap-2 bg-primary-50 px-4 py-3 rounded-xl shadow-sm">
+                                <i class="fas fa-clock text-primary-600"></i>
+                                <span class="font-semibold text-gray-900">Mon-Fri: 8am-8pm</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2506,7 +1748,8 @@
                             <span class="gradient-text">Training</span><span class="text-white">OS</span>
                         </div>
                         <p class="text-sm mb-6 max-w-md">
-                            AI-powered learning solutions for K-12, Corporate Business English, and University students. Performance guaranteed.
+                            AI-powered English tutoring for K-12 students with guaranteed 8% grade improvement. 
+                            Personalized learning with Tavus.io AI technology and certified TEFL instructors.
                         </p>
                         <div class="flex gap-4">
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 hover:scale-110 transition-all duration-300">
@@ -2516,22 +1759,19 @@
                                 <i class="fab fa-instagram"></i>
                             </a>
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 hover:scale-110 transition-all duration-300">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="https://wa.me/27766473499" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-whatsapp-green hover:scale-110 transition-all duration-300">
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
                     </div>
                     
                     <!-- Quick Links -->
                     <div>
-                        <h4 class="text-white font-bold mb-4 text-lg">Programs</h4>
+                        <h4 class="text-white font-bold mb-4 text-lg">Quick Links</h4>
                         <ul class="space-y-3">
-                            <li><a href="#audiences" class="footer-link hover:text-white transition-colors">K-12 English</a></li>
-                            <li><a href="#audiences" class="footer-link hover:text-white transition-colors">Corporate Business English</a></li>
-                            <li><a href="#audiences" class="footer-link hover:text-white transition-colors">University Academic Support</a></li>
-                            <li><a href="#guarantees" class="footer-link hover:text-white transition-colors">Performance Guarantee</a></li>
+                            <li><a href="#demo" class="footer-link hover:text-white transition-colors">AI Demo</a></li>
+                            <li><a href="#curriculum" class="footer-link hover:text-white transition-colors">Curriculum</a></li>
+                            <li><a href="#guarantee" class="footer-link hover:text-white transition-colors">8% Guarantee</a></li>
+                            <li><a href="#pricing" class="footer-link hover:text-white transition-colors">Pricing</a></li>
                         </ul>
                     </div>
                     
@@ -2546,10 +1786,6 @@
                             <li class="flex items-center gap-2">
                                 <i class="fas fa-envelope text-primary-400"></i>
                                 <a href="mailto:victor@maribamedia.co.za" class="footer-link hover:text-white transition-colors">victor@maribamedia.co.za</a>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fab fa-whatsapp text-whatsapp-green"></i>
-                                <a href="https://wa.me/27766473499" target="_blank" class="footer-link hover:text-white transition-colors">Chat on WhatsApp</a>
                             </li>
                             <li class="flex items-center gap-2">
                                 <i class="fas fa-building text-primary-400"></i>
@@ -2610,40 +1846,6 @@
             }
         });
 
-        // WhatsApp Widget Toggle
-        const whatsappButton = document.getElementById('whatsappButton');
-        const whatsappChatBox = document.getElementById('whatsappChatBox');
-        const whatsappClose = document.getElementById('whatsappClose');
-        const whatsappNotification = document.getElementById('whatsappNotification');
-
-        // Show chat box on button click
-        whatsappButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            whatsappChatBox.classList.toggle('active');
-            // Remove notification when opened
-            whatsappNotification.style.display = 'none';
-        });
-
-        // Close chat box when clicking close button
-        whatsappClose.addEventListener('click', (e) => {
-            e.stopPropagation();
-            whatsappChatBox.classList.remove('active');
-        });
-
-        // Close chat box when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!whatsappChatBox.contains(event.target) && !whatsappButton.contains(event.target)) {
-                whatsappChatBox.classList.remove('active');
-            }
-        });
-
-        // Auto-show notification after 5 seconds
-        setTimeout(() => {
-            if (whatsappNotification.style.display !== 'none') {
-                whatsappNotification.style.animation = 'pulse 1.5s infinite';
-            }
-        }, 5000);
-
         // Ripple Effect for Buttons
         document.querySelectorAll('.ripple-btn').forEach(button => {
             button.addEventListener('click', function(e) {
@@ -2684,8 +1886,6 @@
                     });
                     // Close mobile menu if open
                     mobileMenu.classList.add('hidden');
-                    // Close WhatsApp chat if open
-                    whatsappChatBox.classList.remove('active');
                 }
             });
         });
@@ -2842,7 +2042,6 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 mobileMenu.classList.add('hidden');
-                whatsappChatBox.classList.remove('active');
             }
         });
 
