@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Transform Failing Grades into Scholarship Success | TrainingOS 12% Grade Guarantee</title>
-    <meta name="description" content="Watching your child struggle with English grades? Our guaranteed 12% improvement unlocks scholarship eligibility, reduces homework stress 94%, and delivers 24/7 support with psychology-based learning. Free assessment reveals their path to academic confidence.">
+    <title>TrainingOS English Mastery Platform | K-12 English Excellence</title>
+    <meta name="description" content="Master English with TrainingOS: 25 Video Courses, Weekly Live Classes, 24/7 Q&A Support, Exam Prep, Grading & Assessment. Transform your child's English skills for R260/month.">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
@@ -412,16 +412,6 @@
             }
         }
         
-        /* Guarantee Badge */
-        .guarantee-badge {
-            background: #ffffff;
-            border: 2px solid rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        
         /* Modern Button */
         .modern-btn {
             position: relative;
@@ -448,11 +438,11 @@
         }
         
         /* Card Hover Effects */
-        .pricing-card, .feature-card, .outcome-card {
+        .pricing-card, .feature-card, .benefit-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .pricing-card:hover, .feature-card:hover, .outcome-card:hover {
+        .pricing-card:hover, .feature-card:hover, .benefit-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 
                 0 25px 50px rgba(0, 0, 0, 0.1),
@@ -542,101 +532,8 @@
             padding-right: 2rem;
         }
         
-        /* Video Container */
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            margin: 2rem 0;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Pain Point Cards */
-        .pain-point-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 24px;
-            position: relative;
-            overflow: hidden;
-            border-left: 4px solid;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        .pain-point-card.transform {
-            border-left-color: #000000;
-            background: #fafafa;
-        }
-        
-        .pain-point-card.transform::before {
-            content: '→';
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 32px;
-            color: #000000;
-            opacity: 0.2;
-        }
-        
-        .pain-point-card .icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        .pain-point-card .icon.problem {
-            background: #ffffff;
-        }
-        
-        .pain-point-card .icon.solution {
-            background: #f5f5f5;
-        }
-        
-        /* Scholarship Eligibility Badge */
-        .scholarship-badge {
-            background: linear-gradient(135deg, #000000 0%, #333333 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .scholarship-badge::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to right,
-                transparent 20%,
-                rgba(255, 255, 255, 0.1) 50%,
-                transparent 80%
-            );
-            transform: rotate(30deg);
-            animation: shimmer 3s infinite linear;
-        }
-        
-        /* Outcome Cards */
-        .outcome-card {
+        /* Feature Cards */
+        .feature-card {
             background: #ffffff;
             border-radius: 20px;
             padding: 32px;
@@ -645,7 +542,7 @@
             height: 100%;
         }
         
-        .outcome-card .icon-wrapper {
+        .feature-card .icon-wrapper {
             width: 70px;
             height: 70px;
             border-radius: 20px;
@@ -658,41 +555,19 @@
             color: white;
         }
         
-        /* Psychology Support Card */
-        .psychology-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border-left: 6px solid #000000;
-        }
-        
-        /* Support Feature */
-        .support-feature {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 24px;
+        /* Pricing Cards */
+        .pricing-card {
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
             position: relative;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
         }
         
-        .support-feature:hover {
+        .pricing-card.popular {
             border-color: #000000;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
-        .support-feature .icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            background: #000000;
-            color: white;
-        }
-
         /* Badge Styling */
         .badge {
             background: #000000;
@@ -719,51 +594,33 @@
             font-size: 1rem;
         }
 
-        /* Process Timeline */
-        .timeline-step {
+        /* Benefit Cards */
+        .benefit-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
             position: relative;
-            padding-left: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-
-        .timeline-step::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+        
+        .benefit-card:hover {
+            border-color: #000000;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-card .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
             background: #000000;
-        }
-
-        .timeline-step::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 20px;
-            width: 2px;
-            height: calc(100% - 12px);
-            background: rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-step:last-child::after {
-            display: none;
-        }
-        
-        /* Scholarship Progress Bar */
-        .scholarship-progress {
-            height: 8px;
-            background: #e5e5e5;
-            border-radius: 4px;
-            overflow: hidden;
-            margin: 16px 0;
-        }
-        
-        .scholarship-progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #000000, #333333);
-            border-radius: 4px;
-            transition: width 1.5s ease-in-out;
+            color: white;
         }
         
         /* Hero Heading Emphasis */
@@ -772,35 +629,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-        
-        /* Anxiety Reduction Meter */
-        .anxiety-meter {
-            position: relative;
-            height: 120px;
-            width: 120px;
-            margin: 0 auto;
-        }
-        
-        .meter-circle {
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
-        
-        .meter-bg {
-            fill: none;
-            stroke: #e5e5e5;
-            stroke-width: 8;
-        }
-        
-        .meter-fill {
-            fill: none;
-            stroke: #000000;
-            stroke-width: 8;
-            stroke-linecap: round;
-            stroke-dasharray: 314;
-            stroke-dashoffset: 314;
-            transition: stroke-dashoffset 2s ease-in-out;
         }
     </style>
 </head>
@@ -822,13 +650,13 @@
     
     <!-- WhatsApp Widget -->
     <div class="whatsapp-widget" id="whatsappWidget">
-        <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'm%20worried%20about%20my%20child's%20English%20grades%20and%20want%20to%20discuss%20scholarship%20eligibility%20and%20your%2012%%20guarantee." 
+        <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'd%20like%20to%20learn%20more%20about%20the%20English%20Mastery%20Platform%20for%20my%20child." 
            target="_blank" 
            class="whatsapp-button ripple-btn"
            aria-label="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <div class="whatsapp-tooltip">GET SCHOLARSHIP READY! 🎓</div>
+        <div class="whatsapp-tooltip">START LEARNING TODAY! 📚</div>
     </div>
     
     <!-- Navigation -->
@@ -844,21 +672,20 @@
                         <div class="text-2xl md:text-3xl font-bold font-heading">
                             <span class="text-black">Training</span><span class="text-black">OS</span>
                         </div>
-                        <div class="text-xs text-gray-600 -mt-1 font-medium tracking-wide">SCHOLARSHIP-READY ENGLISH TRANSFORMATION</div>
+                        <div class="text-xs text-gray-600 -mt-1 font-medium tracking-wide">ENGLISH MASTERY PLATFORM</div>
                     </div>
                 </a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-8 animate-slide-in-right">
-                    <a href="#pain" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Parent Pain Points</a>
-                    <a href="#outcomes" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Scholarship Outcomes</a>
-                    <a href="#psychology" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Psychology Support</a>
-                    <a href="#support" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">24/7 Homework Help</a>
-                    <a href="#guarantee" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">12% Guarantee</a>
+                    <a href="#features" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Features</a>
+                    <a href="#benefits" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Benefits</a>
+                    <a href="#pricing" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Pricing</a>
+                    <a href="#courses" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Courses</a>
                     
-                    <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
+                    <a href="#pricing" 
                        class="modern-btn ripple-btn bg-black text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 shadow-md relative">
-                        <span>Free Scholarship Assessment</span>
+                        <span>Start Learning</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -874,14 +701,13 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="md:hidden mt-4 hidden animate-slide-down glass rounded-2xl overflow-hidden">
                 <div class="p-4 space-y-2">
-                    <a href="#pain" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Parent Pain Points</a>
-                    <a href="#outcomes" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Scholarship Outcomes</a>
-                    <a href="#psychology" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Psychology Support</a>
-                    <a href="#support" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">24/7 Homework Help</a>
-                    <a href="#guarantee" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">12% Guarantee</a>
-                    <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
+                    <a href="#features" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Features</a>
+                    <a href="#benefits" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Benefits</a>
+                    <a href="#pricing" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Pricing</a>
+                    <a href="#courses" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Courses</a>
+                    <a href="#pricing" 
                        class="block mt-4 modern-btn bg-black text-white py-3 rounded-xl text-center font-semibold shadow-md">
-                        Free Scholarship Assessment
+                        Start Learning
                     </a>
                 </div>
             </div>
@@ -898,18 +724,18 @@
         
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
-                <!-- Scholarship Guarantee Badge -->
+                <!-- Platform Badge -->
                 <div class="mb-8 md:mb-12 max-w-2xl mx-auto animate-slide-up">
-                    <div class="scholarship-badge rounded-2xl p-4 md:p-5 shadow-lg">
+                    <div class="rounded-2xl p-4 md:p-5 shadow-lg bg-black">
                         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 relative z-10">
                             <div class="flex items-center gap-2">
                                 <div class="w-10 h-10 rounded-full bg-white border-2 border-black flex items-center justify-center shadow-sm">
-                                    <i class="fas fa-award text-black text-lg"></i>
+                                    <i class="fas fa-language text-black text-lg"></i>
                                 </div>
-                                <span class="font-bold text-white text-sm md:text-base tracking-wider uppercase">SCHOLARSHIP ELIGIBILITY GUARANTEED</span>
+                                <span class="font-bold text-white text-sm md:text-base tracking-wider uppercase">K-12 ENGLISH MASTERY PLATFORM</span>
                             </div>
                             <div class="text-white text-lg md:text-xl font-bold text-center">
-                                12% Grade Improvement = 85% Higher Scholarship Success
+                                25 Video Courses + Live Classes + 24/7 Support
                             </div>
                         </div>
                     </div>
@@ -917,534 +743,344 @@
                 
                 <!-- Main Content -->
                 <div class="text-center mb-12 md:mb-16">
-                    <!-- Hero Heading (Less than 3 sentences) -->
+                    <!-- Hero Heading -->
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight animate-slide-up font-heading">
-                        <span class="block hero-heading">Worried Your Child's English Grades<br>Will Limit Their Future?</span>
-                        <span class="block mt-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Our 12% Grade Guarantee Unlocks<br>Scholarship Eligibility & Reduces<br>Homework Stress by 94%</span>
+                        <span class="block hero-heading">Master English with<br>TrainingOS Platform</span>
+                        <span class="block mt-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">25 Video Courses • Weekly Live Classes<br>24/7 Q&A Support • Exam Preparation</span>
                     </h1>
                     
                     <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.1s">
-                        Transform failing English grades into scholarship success with our psychology-backed 12-session program featuring 24/7 homework support, exam preparation, and guaranteed 12% improvement—or we work for free until we achieve it.
+                        Complete English mastery platform for K-12 learners featuring video courses, live sessions, personalized support, grading & assessment, and exam preparation.
                     </p>
                     
-                    <!-- YouTube Video Embed -->
-                    <div class="video-container animate-fade-in" style="animation-delay: 0.2s">
-                        <!-- Replace VIDEO_ID with your actual YouTube video ID -->
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
-                                title="TrainingOS English Tutoring - From Failing Grades to Scholarship Success"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    
-                    <!-- Transformative Outcomes Row -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10 md:mb-14 animate-fade-in" style="animation-delay: 0.3s">
+                    <!-- Platform Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10 md:mb-14 animate-fade-in" style="animation-delay: 0.2s">
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">12%</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Grade Increase Guarantee</div>
-                        </div>
-                        <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">85%</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Higher Scholarship Eligibility</div>
-                        </div>
-                        <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">94%</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Homework Stress Reduction</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">25+</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Video Courses</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
                             <div class="stat-number text-2xl md:text-3xl font-bold text-black">24/7</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Psychology & Homework Support</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Q&A Support</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">Weekly</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Live Classes</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">R260</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Monthly Plan</div>
                         </div>
                     </div>
                     
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center animate-slide-up hero-buttons" style="animation-delay: 0.4s">
-                        <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
+                    <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center animate-slide-up hero-buttons" style="animation-delay: 0.3s">
+                        <a href="#pricing" 
                            class="group modern-btn ripple-btn bg-black text-white px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3 text-lg">
-                            <i class="fas fa-graduation-cap text-lg"></i>
-                            <span class="font-semibold">Free Scholarship Assessment</span>
+                            <i class="fas fa-play-circle text-lg"></i>
+                            <span class="font-semibold">Start Learning Now</span>
                             <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
                         </a>
                         
-                        <a href="#outcomes" 
+                        <a href="#features" 
                            class="group modern-btn glass-card text-black px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold border-2 border-gray-200 hover:border-black hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
-                            <i class="fas fa-university text-lg"></i>
-                            <span class="font-semibold">See Scholarship Outcomes</span>
+                            <i class="fas fa-list text-lg"></i>
+                            <span class="font-semibold">View All Features</span>
                         </a>
                     </div>
                     
-                    <p class="text-sm text-gray-600 mt-6 animate-fade-in" style="animation-delay: 0.5s">
-                        <i class="fas fa-shield-alt mr-2"></i>12% grade improvement guaranteed or we work for free + full refund
+                    <p class="text-sm text-gray-600 mt-6 animate-fade-in" style="animation-delay: 0.4s">
+                        <i class="fas fa-check-circle mr-2 text-green-500"></i>Personalized English Mastery sessions available at R260 (pay as you go)
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Parent Pain Points Section -->
-    <section id="pain" class="py-16 md:py-24 bg-gray-50 relative section-padding animate-on-scroll">
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-gray-50 relative section-padding animate-on-scroll">
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">We Understand Your Worries As A Parent</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">These Common Nightmares Don't Have To Be Your Reality</span>
+                        <span class="text-black">Complete English Mastery Platform</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Everything Your Child Needs for English Excellence</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        Every parent fears their child missing opportunities due to academic struggles. We transform these fears into guaranteed outcomes.
+                        Our comprehensive platform combines structured learning with personalized support
                     </p>
                 </div>
                 
-                <!-- Pain Points Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <!-- Pain Point 1: Scholarship Worries -->
-                    <div class="space-y-6">
-                        <div class="pain-point-card">
-                            <div class="icon problem">
-                                <i class="fas fa-times-circle text-black text-xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-2 text-black">"Will They Qualify For Scholarships?"</h4>
-                            <p class="text-gray-600">Watching your child's dreams fade as English grades block bursary and scholarship applications</p>
-                            <div class="mt-4">
-                                <div class="flex items-center gap-2 text-black">
-                                    <i class="fas fa-exclamation-triangle"></i>
-                                    <span class="text-sm font-semibold">Impact: Limited university funding options</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="pain-point-card transform">
-                            <div class="icon solution">
-                                <i class="fas fa-check-circle text-black text-xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-2 text-black">Scholarship Eligibility Unlocked</h4>
-                            <p class="text-gray-600">12% grade improvement makes your child competitive for 85% more scholarship opportunities</p>
-                            <div class="mt-4">
-                                <div class="flex items-center gap-2 text-black">
-                                    <i class="fas fa-award"></i>
-                                    <span class="text-sm font-semibold">Result: University funding secured</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Pain Point 2: Homework Stress -->
-                    <div class="space-y-6">
-                        <div class="pain-point-card">
-                            <div class="icon problem">
-                                <i class="fas fa-times-circle text-black text-xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-2 text-black">"Homework Battles Every Night"</h4>
-                            <p class="text-gray-600">Evenings consumed by frustration, tears, and arguments over incomplete English assignments</p>
-                            <div class="mt-4">
-                                <div class="flex items-center gap-2 text-black">
-                                    <i class="fas fa-heart-broken"></i>
-                                    <span class="text-sm font-semibold">Impact: Family stress & strained relationships</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="pain-point-card transform">
-                            <div class="icon solution">
-                                <i class="fas fa-check-circle text-black text-xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-2 text-black">94% Homework Stress Reduction</h4>
-                            <p class="text-gray-600">24/7 expert support means assignments completed confidently, restoring peaceful family evenings</p>
-                            <div class="mt-4">
-                                <div class="flex items-center gap-2 text-black">
-                                    <i class="fas fa-peace"></i>
-                                    <span class="text-sm font-semibold">Result: Stress-free family time</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Pain Point 3: Exam Anxiety -->
-                    <div class="space-y-6">
-                        <div class="pain-point-card">
-                            <div class="icon problem">
-                                <i class="fas fa-times-circle text-black text-xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-2 text-black">"Test Anxiety Destroying Confidence"</h4>
-                            <p class="text-gray-600">Watching your capable child freeze during exams, underperforming due to anxiety and poor preparation</p>
-                            <div class="mt-4">
-                                <div class="flex items-center gap-2 text-black">
-                                    <i class="fas fa-brain"></i>
-                                    <span class="text-sm font-semibold">Impact: Diminished self-esteem & potential</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="pain-point-card transform">
-                            <div class="icon solution">
-                                <i class="fas fa-check-circle text-black text-xl"></i>
-                            </div>
-                            <h4 class="font-bold text-lg mb-2 text-black">Psychology-Backed Exam Mastery</h4>
-                            <p class="text-gray-600">Evidence-based techniques reduce test anxiety 76% while building unshakeable academic confidence</p>
-                            <div class="mt-4">
-                                <div class="flex items-center gap-2 text-black">
-                                    <i class="fas fa-trophy"></i>
-                                    <span class="text-sm font-semibold">Result: Confident, high-performing student</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Pain Points Summary -->
-                <div class="glass-card rounded-3xl p-6 md:p-8 text-center border border-gray-200">
-                    <h4 class="text-2xl font-bold mb-4 text-black">Every Parent's Fear: "What If My Child's Potential Is Limited By English Grades?"</h4>
-                    <p class="text-gray-600 mb-6">Our data shows that students who achieve 12% English improvement gain access to R50,000+ in additional scholarship opportunities and experience 94% less academic stress.</p>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-black mb-2">R50k+</div>
-                            <p class="text-sm text-gray-600">Additional scholarship access</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-black mb-2">94%</div>
-                            <p class="text-sm text-gray-600">Homework stress reduction</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-black mb-2">76%</div>
-                            <p class="text-sm text-gray-600">Less exam anxiety</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-black mb-2">100%</div>
-                            <p class="text-sm text-gray-600">Guaranteed or free tutoring</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Transformative Outcomes Section -->
-    <section id="outcomes" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
-        <div class="container mx-auto">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">From Academic Struggle To Scholarship Success</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Guaranteed Outcomes That Transform Your Child's Future</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        We don't just improve grades—we unlock opportunities, reduce stress, and build lifelong confidence
-                    </p>
-                </div>
-                
-                <!-- Four Transformative Outcome Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-                    <!-- Outcome 1: Scholarship Eligibility -->
-                    <div class="outcome-card">
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Feature 1: Video Courses -->
+                    <div class="feature-card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-university"></i>
+                            <i class="fas fa-video"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">Scholarship & Bursary Eligibility Unlocked</h3>
-                        <p class="text-gray-600 mb-6">A 12% grade improvement makes your child competitive for scholarships they previously couldn't access.</p>
-                        <div class="space-y-4">
-                            <div class="scholarship-progress">
-                                <div class="scholarship-progress-fill" style="width: 85%"></div>
-                            </div>
-                            <div class="flex justify-between text-sm">
-                                <span class="font-medium text-gray-700">Before: Limited options</span>
-                                <span class="font-bold text-black">After: 85% more opportunities</span>
-                            </div>
-                            <ul class="space-y-3 mt-6">
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">University entrance requirements met</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">Merit-based scholarship eligibility</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">Application essay support included</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Outcome 2: Homework Stress Elimination -->
-                    <div class="outcome-card">
-                        <div class="icon-wrapper">
-                            <i class="fas fa-peace"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">94% Homework Stress Reduction</h3>
-                        <p class="text-gray-600 mb-6">24/7 expert support transforms nightly battles into confident, independent completion.</p>
-                        <div class="anxiety-meter mb-6">
-                            <svg class="anxiety-meter" viewBox="0 0 120 120">
-                                <circle class="meter-bg" cx="60" cy="60" r="50"></circle>
-                                <circle class="meter-fill" cx="60" cy="60" r="50" style="stroke-dashoffset: 47.1;"></circle>
-                                <text x="60" y="65" text-anchor="middle" font-size="24" font-weight="bold" fill="#000000">94%</text>
-                            </svg>
-                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black">25+ Comprehensive Video Courses</h3>
+                        <p class="text-gray-600 mb-6">Structured video lessons covering grammar, vocabulary, writing, comprehension, and literature for all K-12 levels.</p>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2">
                                 <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Instant WhatsApp support for questions</span>
+                                <span class="text-gray-700">Self-paced learning</span>
                             </li>
                             <li class="flex items-center gap-2">
                                 <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Assignment planning & time management</span>
+                                <span class="text-gray-700">Downloadable resources</span>
                             </li>
                             <li class="flex items-center gap-2">
                                 <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Peaceful family evenings restored</span>
+                                <span class="text-gray-700">Progress tracking</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Grade-specific content</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Outcome 3: Exam Confidence -->
-                    <div class="outcome-card">
+                    <!-- Feature 2: Q&A Support -->
+                    <div class="feature-card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-brain"></i>
+                            <i class="fas fa-question-circle"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">Psychology-Backed Exam Mastery</h3>
-                        <p class="text-gray-600 mb-6">Evidence-based techniques reduce test anxiety by 76% while building unshakeable academic confidence.</p>
-                        <div class="space-y-4">
-                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-                                <div class="text-left">
-                                    <div class="text-sm text-gray-600">Before Program</div>
-                                    <div class="text-2xl font-bold text-black">High Anxiety</div>
-                                </div>
-                                <i class="fas fa-arrow-right text-gray-400 text-xl"></i>
-                                <div class="text-right">
-                                    <div class="text-sm text-gray-600">After 12 Sessions</div>
-                                    <div class="text-2xl font-bold text-black">Confident Mastery</div>
-                                </div>
-                            </div>
-                            <ul class="space-y-3 mt-6">
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">Anxiety reduction techniques</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">Past paper mastery strategies</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">Time management under pressure</span>
-                                </li>
-                            </ul>
-                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black">24/7 Q&A Homework Support</h3>
+                        <p class="text-gray-600 mb-6">Get instant help with homework, assignments, and study questions through our dedicated support platform.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Expert tutors available</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Detailed explanations</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Step-by-step solutions</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Assignment review</span>
+                            </li>
+                        </ul>
                     </div>
                     
-                    <!-- Outcome 4: Future University Success -->
-                    <div class="outcome-card">
+                    <!-- Feature 3: Live Classes -->
+                    <div class="feature-card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-graduation-cap"></i>
+                            <i class="fas fa-chalkboard-teacher"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">University & Career Readiness</h3>
-                        <p class="text-gray-600 mb-6">Beyond grades, we build the critical thinking and communication skills needed for university and career success.</p>
-                        <div class="space-y-4">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="text-center p-3 bg-gray-50 rounded-lg">
-                                    <div class="text-2xl font-bold text-black mb-1">3.5x</div>
-                                    <div class="text-xs text-gray-600">Higher university acceptance</div>
-                                </div>
-                                <div class="text-center p-3 bg-gray-50 rounded-lg">
-                                    <div class="text-2xl font-bold text-black mb-1">2.8x</div>
-                                    <div class="text-xs text-gray-600">More scholarship awards</div>
-                                </div>
-                            </div>
-                            <ul class="space-y-3 mt-6">
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">Critical thinking development</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">University-level writing skills</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fas fa-check-circle text-black"></i>
-                                    <span class="text-gray-700">Career communication mastery</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Outcomes Summary -->
-                <div class="glass-card rounded-3xl p-8 border border-gray-200">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-black mb-2">12%</div>
-                            <h4 class="font-bold text-xl mb-2 text-black">Grade Improvement</h4>
-                            <p class="text-gray-600">Minimum guaranteed increase from baseline</p>
-                        </div>
-                        <div class="text-center md:border-l md:border-r border-gray-200 md:px-8">
-                            <div class="text-5xl font-bold text-black mb-2">=</div>
-                            <h4 class="font-bold text-xl mb-2 text-black">Transforms To</h4>
-                            <p class="text-gray-600">Life-changing opportunities unlocked</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-black mb-2">85%</div>
-                            <h4 class="font-bold text-xl mb-2 text-black">Scholarship Access</h4>
-                            <p class="text-gray-600">Additional funding opportunities available</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Psychology & Support Section -->
-    <section id="psychology" class="py-16 md:py-24 bg-gray-50 relative section-padding animate-on-scroll">
-        <div class="container mx-auto">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">Beyond Tutoring: Psychology-Based Support</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">24/7 Homework Help + Exam Preparation + Confidence Building</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        We address the root causes of academic struggle, not just the symptoms
-                    </p>
-                </div>
-                
-                <!-- Three Pillars of Support -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <!-- Pillar 1: Psychology -->
-                    <div class="psychology-card rounded-3xl p-8">
-                        <div class="icon-circle mx-auto mb-6" style="background: linear-gradient(135deg, #000000, #333333);">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Psychology-Based Learning</h3>
-                        <p class="text-gray-600 mb-6 text-center">We build academic resilience and confidence using evidence-based psychological principles.</p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Growth mindset development</span>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Weekly Live Classroom Sessions</h3>
+                        <p class="text-gray-600 mb-6">Interactive live classes with expert instructors for real-time learning and Q&A opportunities.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Small group sessions</span>
                             </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Test anxiety reduction techniques</span>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Interactive whiteboard</span>
                             </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Executive function skill building</span>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Recordings available</span>
                             </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Motivation & self-regulation strategies</span>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Topic-focused workshops</span>
                             </li>
                         </ul>
-                        <div class="text-center">
-                            <span class="badge">76% anxiety reduction</span>
-                        </div>
                     </div>
                     
-                    <!-- Pillar 2: 24/7 Support -->
-                    <div class="psychology-card rounded-3xl p-8">
-                        <div class="icon-circle mx-auto mb-6" style="background: linear-gradient(135deg, #000000, #333333);">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black text-center">24/7 Homework & Assignment Support</h3>
-                        <p class="text-gray-600 mb-6 text-center">Instant expert help means no more late-night struggles or last-minute panic before deadlines.</p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>WhatsApp support for urgent questions</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Essay planning & structuring help</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Assignment review before submission</span>
-                            </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Project planning & time management</span>
-                            </li>
-                        </ul>
-                        <div class="text-center">
-                            <span class="badge">94% stress reduction</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Pillar 3: Exam Preparation -->
-                    <div class="psychology-card rounded-3xl p-8">
-                        <div class="icon-circle mx-auto mb-6" style="background: linear-gradient(135deg, #000000, #333333);">
+                    <!-- Feature 4: Exam Preparation -->
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
                             <i class="fas fa-clipboard-check"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Comprehensive Exam Preparation</h3>
-                        <p class="text-gray-600 mb-6 text-center">From study schedules to past paper mastery, we ensure confident exam performance.</p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Customized study plan creation</span>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Comprehensive Exam Preparation</h3>
+                        <p class="text-gray-600 mb-6">Targeted preparation for tests, exams, and assessments with practice papers and revision strategies.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Past exam papers</span>
                             </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Past paper practice with feedback</span>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Revision schedules</span>
                             </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Exam technique & time management</span>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Exam techniques</span>
                             </li>
-                            <li class="feature-check">
-                                <i class="fas fa-check" style="color: #000000;"></i>
-                                <span>Stress management during exams</span>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Time management</span>
                             </li>
                         </ul>
-                        <div class="text-center">
-                            <span class="badge">Average 22% higher scores</span>
+                    </div>
+                    
+                    <!-- Feature 5: Grading & Assessment -->
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
                         </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Grading & Assessment System</h3>
+                        <p class="text-gray-600 mb-6">Regular assessments with detailed feedback to track progress and identify areas for improvement.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Progress reports</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Skill gap analysis</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Personalized recommendations</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Parent dashboard</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Feature 6: Personal Sessions -->
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Personalised English Mastery</h3>
+                        <p class="text-gray-600 mb-6">One-on-one sessions with expert tutors focused on individual learning needs and goals.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Custom learning plans</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Flexible scheduling</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">R260 per session</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-black"></i>
+                                <span class="text-gray-700">Pay as you go</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
+                        <span class="text-black">Why Choose TrainingOS?</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Benefits That Transform Learning</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+                        Experience measurable improvements in English skills and academic performance
+                    </p>
+                </div>
+                
+                <!-- Benefits Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Benefit 1 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Faster Learning Progress</h3>
+                        <p class="text-gray-600">Combination of video courses, live classes, and personalized support accelerates learning by 3x compared to traditional methods.</p>
+                    </div>
+                    
+                    <!-- Benefit 2 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Reduced Homework Stress</h3>
+                        <p class="text-gray-600">24/7 Q&A support means homework help is always available, eliminating frustration and building confidence.</p>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Improved Exam Results</h3>
+                        <p class="text-gray-600">Targeted exam preparation and practice tests lead to average grade improvements of 15-25% across all levels.</p>
+                    </div>
+                    
+                    <!-- Benefit 4 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Flexible Learning Schedule</h3>
+                        <p class="text-gray-600">Learn anytime, anywhere with on-demand video courses and scheduled live sessions that fit your family's routine.</p>
+                    </div>
+                    
+                    <!-- Benefit 5 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Cost-Effective Solution</h3>
+                        <p class="text-gray-600">Complete platform access for R260/month is more affordable than traditional tutoring while offering more features.</p>
+                    </div>
+                    
+                    <!-- Benefit 6 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Confidence Building</h3>
+                        <p class="text-gray-600">Regular assessment and positive reinforcement build academic confidence and love for learning English.</p>
                     </div>
                 </div>
                 
-                <!-- Support System Details -->
+                <!-- Benefits Summary -->
                 <div class="glass-card rounded-3xl p-8 border border-gray-200">
-                    <h3 class="text-2xl font-bold mb-6 text-center text-black">The Complete Support System Every Parent Wishes For</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <h4 class="font-bold text-xl mb-4 text-black">For Students:</h4>
+                            <h3 class="text-2xl font-bold mb-4 text-black">Perfect for K-12 Learners</h3>
+                            <p class="text-gray-600 mb-6">Our platform is specifically designed for school-aged learners, with content aligned to curriculum requirements and age-appropriate teaching methods.</p>
                             <ul class="space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Confidence to tackle challenging assignments</span>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Grade-specific content (Grades 1-12)</span>
                                 </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Reduced anxiety about tests and exams</span>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Curriculum-aligned material</span>
                                 </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Skills for independent learning success</span>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Age-appropriate teaching methods</span>
                                 </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Scholarship application readiness</span>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Safe, monitored learning environment</span>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-xl mb-4 text-black">For Parents:</h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Peace of mind knowing help is always available</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Reduced family stress about academics</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Confidence in your child's future opportunities</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-check-circle text-black mt-1"></i>
-                                    <span>Regular progress reports and updates</span>
-                                </li>
-                            </ul>
+                        <div class="text-center">
+                            <div class="text-6xl font-bold text-black mb-4">R260</div>
+                            <p class="text-gray-600 mb-4">per month for complete platform access</p>
+                            <div class="text-3xl font-bold text-black mb-2">OR</div>
+                            <div class="text-4xl font-bold text-black mb-4">R2600</div>
+                            <p class="text-gray-600">yearly plan (save 2 months)</p>
                         </div>
                     </div>
                 </div>
@@ -1452,136 +1088,266 @@
         </div>
     </section>
 
-    <!-- Guarantee Section -->
-    <section id="guarantee" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 md:py-24 bg-gray-50 relative section-padding animate-on-scroll">
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">Our Iron-Clad 12% Grade Guarantee</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Full Refund + We Work For Free Until We Achieve It</span>
+                        <span class="text-black">Simple, Affordable Pricing</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Choose Your English Mastery Plan</span>
                     </h2>
-                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                        We're so confident in our transformative outcomes that we guarantee them contractually
+                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+                        Two straightforward plans for complete English mastery
                     </p>
                 </div>
                 
-                <!-- Guarantee Details -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                    <!-- Left Column: Guarantee Terms -->
-                    <div class="glass-card rounded-3xl p-8 border border-gray-200">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="icon-circle" style="background: linear-gradient(135deg, #000000, #333333);">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-black">Our Guarantee Terms</h3>
-                        </div>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="icon-circle flex-shrink-0" style="background: linear-gradient(135deg, #000000, #333333);">
-                                    <i class="fas fa-percentage"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-black">12% Minimum Grade Increase</h4>
-                                    <p class="text-gray-600">Measurable 12% improvement in English grades from baseline to final assessment after 12 sessions.</p>
-                                </div>
+                <!-- Pricing Cards -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Monthly Plan -->
+                    <div class="pricing-card bg-white">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-2xl font-bold text-black">Monthly Plan</h3>
+                                <div class="badge">MOST FLEXIBLE</div>
                             </div>
                             
-                            <div class="flex items-start gap-4">
-                                <div class="icon-circle flex-shrink-0" style="background: linear-gradient(135deg, #000000, #333333);">
-                                    <i class="fas fa-money-bill-wave"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-black">Full Refund Guarantee</h4>
-                                    <p class="text-gray-600">100% money back if 12% improvement not achieved after completing the 12-session program.</p>
-                                </div>
+                            <div class="mb-6">
+                                <div class="text-5xl font-bold text-black mb-2">R260</div>
+                                <p class="text-gray-600">per month</p>
                             </div>
                             
-                            <div class="flex items-start gap-4">
-                                <div class="icon-circle flex-shrink-0" style="background: linear-gradient(135deg, #000000, #333333);">
-                                    <i class="fas fa-infinity"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-black">Free Sessions Until Success</h4>
-                                    <p class="text-gray-600">We continue tutoring for FREE until we achieve the guaranteed 12% grade increase.</p>
-                                </div>
-                            </div>
+                            <ul class="space-y-4 mb-8">
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Access to all 25+ video courses</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Weekly live classroom sessions</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>24/7 Q&A homework support</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Exam preparation materials</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Grading & assessment system</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Progress tracking dashboard</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Downloadable resources</span>
+                                </li>
+                            </ul>
                             
-                            <div class="flex items-start gap-4">
-                                <div class="icon-circle flex-shrink-0" style="background: linear-gradient(135deg, #000000, #333333);">
-                                    <i class="fas fa-file-contract"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-black">Contractually Binding</h4>
-                                    <p class="text-gray-600">Guarantee included in all service agreements with clear, measurable criteria.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 p-4 bg-gray-50 rounded-xl border border-gray-200">
-                            <p class="text-sm text-gray-700 font-medium">
-                                <i class="fas fa-exclamation-circle mr-2"></i>
-                                Only 1.3% of students require our money-back guarantee—98.7% achieve 12%+ improvement
-                            </p>
+                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20sign%20up%20for%20the%20Monthly%20Plan%20(R260)" 
+                               target="_blank"
+                               class="w-full modern-btn ripple-btn bg-black text-white py-4 rounded-xl font-bold hover:shadow-xl transition-all duration-300 text-center block">
+                                Start Monthly Plan
+                            </a>
                         </div>
                     </div>
                     
-                    <!-- Right Column: Why We Can Guarantee -->
+                    <!-- Yearly Plan -->
+                    <div class="pricing-card bg-white popular">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-2xl font-bold text-black">Yearly Plan</h3>
+                                <div class="badge bg-green-500">BEST VALUE</div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="text-5xl font-bold text-black mb-2">R2600</div>
+                                <p class="text-gray-600">per year (save R520)</p>
+                                <div class="mt-2 p-3 bg-green-50 rounded-lg">
+                                    <p class="text-green-700 font-semibold">
+                                        <i class="fas fa-gift mr-2"></i>
+                                        Equivalent to 2 months FREE!
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <ul class="space-y-4 mb-8">
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span><strong>Everything in Monthly Plan</strong></span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>2 FREE months of access</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Priority support access</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Bonus: 2 personal sessions (R520 value)</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Annual progress certificate</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Price lock for 1 year</span>
+                                </li>
+                                <li class="feature-check">
+                                    <i class="fas fa-check text-black"></i>
+                                    <span>Exclusive resource library</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20sign%20up%20for%20the%20Yearly%20Plan%20(R2600)" 
+                               target="_blank"
+                               class="w-full modern-btn ripple-btn bg-black text-white py-4 rounded-xl font-bold hover:shadow-xl transition-all duration-300 text-center block">
+                                Start Yearly Plan & Save
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Sessions -->
+                <div class="mt-12 max-w-2xl mx-auto">
                     <div class="glass-card rounded-3xl p-8 border border-gray-200">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="icon-circle" style="background: linear-gradient(135deg, #000000, #333333);">
-                                <i class="fas fa-chart-line"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Personalised English Mastery Sessions</h3>
+                        <p class="text-gray-600 mb-6 text-center">Need one-on-one attention? Book individual sessions with our expert tutors</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-black mb-2">R260</div>
+                                <p class="text-gray-600">per session</p>
                             </div>
-                            <h3 class="text-2xl font-bold text-black">Why We Can Make This Guarantee</h3>
-                        </div>
-                        
-                        <div class="space-y-6">
-                            <div class="bg-white p-4 rounded-xl border border-gray-200">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
-                                        <i class="fas fa-user-graduate text-white text-sm"></i>
-                                    </div>
-                                    <h4 class="font-bold text-black">5+ Years Proven Methodology</h4>
-                                </div>
-                                <p class="text-gray-600 text-sm">Our 12-session framework has been refined over 5 years with thousands of students, achieving 98.7% success rate.</p>
-                            </div>
-                            
-                            <div class="bg-white p-4 rounded-xl border border-gray-200">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
-                                        <i class="fas fa-brain text-white text-sm"></i>
-                                    </div>
-                                    <h4 class="font-bold text-black">Psychology-Based Approach</h4>
-                                </div>
-                                <p class="text-gray-600 text-sm">We address root causes of academic struggle, not just symptoms, ensuring lasting improvement.</p>
-                            </div>
-                            
-                            <div class="bg-white p-4 rounded-xl border border-gray-200">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
-                                        <i class="fas fa-clock text-white text-sm"></i>
-                                    </div>
-                                    <h4 class="font-bold text-black">24/7 Support System</h4>
-                                </div>
-                                <p class="text-gray-600 text-sm">Continuous support prevents small struggles from becoming major setbacks.</p>
-                            </div>
-                            
-                            <div class="bg-white p-4 rounded-xl border border-gray-200">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
-                                        <i class="fas fa-chart-bar text-white text-sm"></i>
-                                    </div>
-                                    <h4 class="font-bold text-black">Data-Driven Adjustments</h4>
-                                </div>
-                                <p class="text-gray-600 text-sm">Regular progress assessments allow us to adjust strategies to ensure success.</p>
+                            <div class="md:col-span-2">
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check text-black"></i>
+                                        <span>60-minute one-on-one tutoring</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check text-black"></i>
+                                        <span>Customized to specific needs</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check text-black"></i>
+                                        <span>Flexible scheduling</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check text-black"></i>
+                                        <span>Pay as you go - no commitment</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        
-                        <div class="mt-8">
-                            <div class="badge inline-block mb-3">TRANSFORMATION RATE</div>
-                            <h4 class="font-bold text-xl mb-2 text-black">98.7% Success Rate</h4>
-                            <p class="text-gray-600">Only 1.3% of students require our money-back guarantee, proving our methodology's effectiveness.</p>
+                        <div class="mt-6 text-center">
+                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20book%20a%20Personalised%20English%20Mastery%20Session%20(R260)" 
+                               target="_blank"
+                               class="inline-block modern-btn glass-card text-black px-6 py-3 rounded-xl font-bold border-2 border-gray-200 hover:border-black transition-all duration-300">
+                                Book Personal Session
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Preview -->
+    <section id="courses" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
+                        <span class="text-black">25+ Comprehensive Video Courses</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Structured Learning for Every Level</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+                        Our curriculum covers all aspects of English language mastery
+                    </p>
+                </div>
+                
+                <!-- Course Categories -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <!-- Category 1 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Grammar Mastery</h3>
+                        <p class="text-gray-600 mb-4">Complete grammar courses from basics to advanced concepts</p>
+                        <div class="text-sm text-gray-500">
+                            <div class="flex items-center gap-1 mb-1">
+                                <i class="fas fa-play-circle"></i>
+                                <span>6 video courses</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-clock"></i>
+                                <span>45+ hours of content</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Category 2 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Writing Excellence</h3>
+                        <p class="text-gray-600 mb-4">Essays, creative writing, formal letters, and reports</p>
+                        <div class="text-sm text-gray-500">
+                            <div class="flex items-center gap-1 mb-1">
+                                <i class="fas fa-play-circle"></i>
+                                <span>5 video courses</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-clock"></i>
+                                <span>38+ hours of content</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Category 3 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Reading & Comprehension</h3>
+                        <p class="text-gray-600 mb-4">Critical reading, comprehension techniques, and analysis</p>
+                        <div class="text-sm text-gray-500">
+                            <div class="flex items-center gap-1 mb-1">
+                                <i class="fas fa-play-circle"></i>
+                                <span>4 video courses</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-clock"></i>
+                                <span>32+ hours of content</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Category 4 -->
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Speaking & Listening</h3>
+                        <p class="text-gray-600 mb-4">Oral presentation, pronunciation, and listening skills</p>
+                        <div class="text-sm text-gray-500">
+                            <div class="flex items-center gap-1 mb-1">
+                                <i class="fas fa-play-circle"></i>
+                                <span>3 video courses</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-clock"></i>
+                                <span>25+ hours of content</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1589,16 +1355,25 @@
                 <!-- Final CTA -->
                 <div class="text-center">
                     <div class="glass-card rounded-3xl p-8 border border-gray-200 max-w-2xl mx-auto">
-                        <h3 class="text-2xl font-bold mb-4 text-black">Ready To Transform Your Child's Academic Future?</h3>
-                        <p class="text-gray-600 mb-6">Book your free scholarship assessment to discover your child's path to 12% grade improvement and scholarship eligibility.</p>
-                        <a href="https://cal.com/partner-discovery/south-africa?overlayCalendar=true" target="_blank" 
-                           class="group modern-btn ripple-btn bg-black text-white px-8 py-4 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3 text-lg max-w-md mx-auto">
-                            <i class="fas fa-graduation-cap text-lg"></i>
-                            <span class="font-semibold">Free Scholarship Assessment</span>
-                            <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
-                        </a>
-                        <p class="text-sm text-gray-600 mt-4">
-                            <i class="fas fa-lock mr-2"></i>No credit card required • 30-minute assessment • Personalized plan
+                        <h3 class="text-2xl font-bold mb-4 text-black">Start Your English Mastery Journey Today</h3>
+                        <p class="text-gray-600 mb-6">Join thousands of K-12 learners who have transformed their English skills with TrainingOS</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20sign%20up%20for%20TrainingOS%20English%20Mastery%20Platform" 
+                               target="_blank"
+                               class="group modern-btn ripple-btn bg-black text-white px-8 py-4 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                                <span class="font-semibold">Chat on WhatsApp</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
+                            </a>
+                            
+                            <a href="#pricing" 
+                               class="group modern-btn glass-card text-black px-8 py-4 rounded-xl font-bold border-2 border-gray-200 hover:border-black hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3">
+                                <i class="fas fa-list text-lg"></i>
+                                <span class="font-semibold">View Pricing Plans</span>
+                            </a>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-6">
+                            <i class="fas fa-phone-alt mr-2"></i>Need help deciding? Call/WhatsApp: +27 76 647 3499
                         </p>
                     </div>
                 </div>
@@ -1618,7 +1393,7 @@
                             <span class="text-white">Training</span><span class="text-white">OS</span>
                         </div>
                         <p class="text-gray-400 mb-6 max-w-md">
-                            We transform failing English grades into scholarship success through our psychology-backed 12-session program with 24/7 support and guaranteed 12% grade improvement.
+                            English Mastery Platform for K-12 learners featuring 25+ video courses, weekly live classes, 24/7 Q&A support, exam preparation, and personalized tutoring.
                         </p>
                         <div class="flex gap-4">
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
@@ -1635,22 +1410,22 @@
                     
                     <!-- Quick Links -->
                     <div>
-                        <h4 class="text-white font-bold mb-4 text-lg uppercase tracking-wide">Program</h4>
+                        <h4 class="text-white font-bold mb-4 text-lg uppercase tracking-wide">Platform</h4>
                         <ul class="space-y-3">
-                            <li><a href="#outcomes" class="text-gray-400 hover:text-white transition-colors">Scholarship Outcomes</a></li>
-                            <li><a href="#psychology" class="text-gray-400 hover:text-white transition-colors">Psychology Support</a></li>
-                            <li><a href="#support" class="text-gray-400 hover:text-white transition-colors">24/7 Homework Help</a></li>
-                            <li><a href="#guarantee" class="text-gray-400 hover:text-white transition-colors">12% Guarantee</a></li>
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                            <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors">Benefits</a></li>
+                            <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                            <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Courses</a></li>
                         </ul>
                     </div>
                     
                     <!-- Contact -->
                     <div>
-                        <h4 class="text-white font-bold mb-4 text-lg uppercase tracking-wide">Contact</h4>
+                        <h4 class="text-white font-bold mb-4 text-lg uppercase tracking-wide">Contact & Support</h4>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2 text-gray-400">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+27766473499" class="hover:text-white transition-colors">+27 76 647 3499</a>
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/27766473499" class="hover:text-white transition-colors">+27 76 647 3499</a>
                             </li>
                             <li class="flex items-center gap-2 text-gray-400">
                                 <i class="fas fa-envelope"></i>
@@ -1662,7 +1437,7 @@
                             </li>
                             <li class="flex items-center gap-2 text-gray-400">
                                 <i class="fas fa-clock"></i>
-                                <span>24/7 Support Available</span>
+                                <span>24/7 Q&A Support</span>
                             </li>
                         </ul>
                     </div>
@@ -1672,11 +1447,11 @@
                 <div class="border-t border-gray-800 pt-8">
                     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                         <div class="text-sm text-center md:text-left">
-                            <span class="text-gray-400 font-medium">Scholarship-Focused English Tutoring</span>
+                            <span class="text-gray-400 font-medium">K-12 English Mastery Platform</span>
                             <span class="mx-3 text-gray-600">|</span>
-                            <span class="text-gray-400 font-medium">12% Grade Guarantee</span>
+                            <span class="text-gray-400 font-medium">25+ Video Courses</span>
                             <span class="mx-3 text-gray-600">|</span>
-                            <span class="text-gray-400 font-medium">Psychology-Based Learning</span>
+                            <span class="text-gray-400 font-medium">Weekly Live Classes</span>
                         </div>
                         
                         <div class="text-sm text-center text-gray-400">
@@ -1686,7 +1461,7 @@
                             <span class="mx-3 text-gray-600">|</span>
                             <a href="#" class="hover:text-white transition-colors">Terms</a>
                             <span class="mx-3 text-gray-600">|</span>
-                            <a href="#" class="hover:text-white transition-colors">Guarantee Terms</a>
+                            <a href="#" class="hover:text-white transition-colors">Refund Policy</a>
                         </div>
                     </div>
                 </div>
@@ -1789,22 +1564,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    
-                    // Animate scholarship progress bars
-                    if (entry.target.id === 'outcomes') {
-                        setTimeout(() => {
-                            const progressFill = document.querySelector('.scholarship-progress-fill');
-                            if (progressFill) {
-                                progressFill.style.width = '85%';
-                            }
-                            
-                            // Animate anxiety meter
-                            const meterFill = document.querySelector('.meter-fill');
-                            if (meterFill) {
-                                meterFill.style.strokeDashoffset = '47.1'; // 94% filled
-                            }
-                        }, 300);
-                    }
                 }
             });
         }, observerOptions);
@@ -1845,17 +1604,20 @@
             // Animate stats counters
             const statNumbers = document.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
-                const finalValue = parseInt(stat.textContent);
-                let current = 0;
-                const increment = finalValue / 50;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= finalValue) {
-                        current = finalValue;
-                        clearInterval(timer);
-                    }
-                    stat.textContent = Math.floor(current) + (stat.textContent.includes('%') ? '%' : '');
-                }, 30);
+                const text = stat.textContent;
+                if (text.includes('+')) {
+                    const finalValue = parseInt(text.replace('+', ''));
+                    let current = 0;
+                    const increment = finalValue / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= finalValue) {
+                            current = finalValue;
+                            clearInterval(timer);
+                        }
+                        stat.textContent = Math.floor(current) + '+';
+                    }, 30);
+                }
             });
         });
 
@@ -1871,7 +1633,7 @@
         });
 
         // Enhanced hover effects for cards
-        document.querySelectorAll('.outcome-card, .psychology-card, .support-feature').forEach(card => {
+        document.querySelectorAll('.feature-card, .benefit-card, .pricing-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
                 this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.15)';
@@ -1882,22 +1644,6 @@
                 this.style.boxShadow = '';
             });
         });
-
-        // Scholarship progress animation
-        const scholarshipProgress = document.querySelector('.scholarship-progress-fill');
-        if (scholarshipProgress) {
-            setTimeout(() => {
-                scholarshipProgress.style.width = '85%';
-            }, 1000);
-        }
-
-        // Anxiety meter animation
-        const anxietyMeter = document.querySelector('.meter-fill');
-        if (anxietyMeter) {
-            setTimeout(() => {
-                anxietyMeter.style.strokeDashoffset = '47.1';
-            }, 1500);
-        }
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
@@ -1912,14 +1658,6 @@
             document.body.classList.add('touch-device');
         } else {
             document.body.classList.add('no-touch-device');
-        }
-
-        // WhatsApp Widget Click Analytics
-        const whatsappButton = document.querySelector('.whatsapp-button');
-        if (whatsappButton) {
-            whatsappButton.addEventListener('click', function() {
-                console.log('WhatsApp widget clicked for scholarship assessment');
-            });
         }
     </script>
 </body>
