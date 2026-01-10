@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>TrainingOS English Mastery Platform | K-12 English Excellence</title>
-    <meta name="description" content="Master English with TrainingOS: 25 Video Courses, Weekly Live Classes, 24/7 Q&A Support, Exam Prep, Grading & Assessment. Transform your child's English skills for R260/month.">
+    <title>TrainingOS - Dedicated English Tutoring, We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked. 25 Video Courses • Weekly Live Classes 24/7 Q&A Support • Exam Preparation</title>
+    <meta name="description" content="TrainingOS: We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked. 25 Video Courses • Weekly Live Classes 24/7 Q&A Support • Exam Preparation. Complete English mastery platform for K-12 learners.">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
@@ -363,6 +363,26 @@
             z-index: -1;
         }
         
+        /* Video Container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
         /* Mobile Optimizations */
         @media (max-width: 640px) {
             .hero-buttons {
@@ -409,6 +429,7 @@
             
             .video-container {
                 margin: 1rem 0;
+                border-radius: 12px;
             }
         }
         
@@ -630,6 +651,26 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        
+        /* Guarantee Badge */
+        .guarantee-badge {
+            background: linear-gradient(135deg, #000000, #2d3748);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .guarantee-badge i {
+            color: #10b981;
+            font-size: 1.3rem;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -745,16 +786,41 @@
                 <div class="text-center mb-12 md:mb-16">
                     <!-- Hero Heading -->
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight animate-slide-up font-heading">
-                        <span class="block hero-heading">Master English with<br>TrainingOS Platform</span>
-                        <span class="block mt-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">25 Video Courses • Weekly Live Classes<br>24/7 Q&A Support • Exam Preparation</span>
+                        <span class="block hero-heading">TrainingOS - Dedicated English Tutoring</span>
+                        <span class="block mt-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked.</span>
                     </h1>
                     
-                    <p class="text-lg md:text-xl text-gray-700 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.1s">
-                        Complete English mastery platform for K-12 learners featuring video courses, live sessions, personalized support, grading & assessment, and exam preparation.
+                    <div class="mb-8 md:mb-10 animate-fade-in" style="animation-delay: 0.1s">
+                        <div class="guarantee-badge inline-flex">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>90-Day Grade Improvement Guarantee</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-2xl md:text-3xl text-gray-800 mb-8 md:mb-10 max-w-4xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.2s">
+                        25 Video Courses • Weekly Live Classes<br>24/7 Q&A Support • Exam Preparation
                     </p>
                     
+                    <!-- YouTube VSL Video -->
+                    <div class="mb-10 md:mb-14 max-w-4xl mx-auto animate-fade-in" style="animation-delay: 0.3s">
+                        <div class="video-container">
+                            <!-- Replace VIDEO_ID with your actual YouTube VSL video ID -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                                title="TrainingOS English Mastery Platform - See How We Boost Grades By 12%+"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 text-center">Watch our VSL to see how TrainingOS boosts English grades by 12%+ in 90 days</p>
+                    </div>
+                    
                     <!-- Platform Stats -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10 md:mb-14 animate-fade-in" style="animation-delay: 0.2s">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10 md:mb-14 animate-fade-in" style="animation-delay: 0.4s">
+                        <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">12%+</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Grade Improvement</div>
+                        </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
                             <div class="stat-number text-2xl md:text-3xl font-bold text-black">25+</div>
                             <div class="text-xs md:text-sm text-gray-600 font-medium">Video Courses</div>
@@ -764,17 +830,13 @@
                             <div class="text-xs md:text-sm text-gray-600 font-medium">Q&A Support</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">Weekly</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Live Classes</div>
-                        </div>
-                        <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">R260</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Monthly Plan</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">90 Days</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Guarantee</div>
                         </div>
                     </div>
                     
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center animate-slide-up hero-buttons" style="animation-delay: 0.3s">
+                    <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center animate-slide-up hero-buttons" style="animation-delay: 0.5s">
                         <a href="#pricing" 
                            class="group modern-btn ripple-btn bg-black text-white px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3 text-lg">
                             <i class="fas fa-play-circle text-lg"></i>
@@ -789,8 +851,8 @@
                         </a>
                     </div>
                     
-                    <p class="text-sm text-gray-600 mt-6 animate-fade-in" style="animation-delay: 0.4s">
-                        <i class="fas fa-check-circle mr-2 text-green-500"></i>Personalized English Mastery sessions available at R260 (pay as you go)
+                    <p class="text-sm text-gray-600 mt-6 animate-fade-in" style="animation-delay: 0.6s">
+                        <i class="fas fa-check-circle mr-2 text-green-500"></i>Complete English mastery platform for K-12 learners featuring video courses, live sessions, personalized support, grading & assessment, and exam preparation.
                     </p>
                 </div>
             </div>
@@ -1000,8 +1062,8 @@
                         <div class="icon">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Faster Learning Progress</h3>
-                        <p class="text-gray-600">Combination of video courses, live classes, and personalized support accelerates learning by 3x compared to traditional methods.</p>
+                        <h3 class="text-xl font-bold mb-3 text-black">12%+ Grade Improvement</h3>
+                        <p class="text-gray-600">Proven results: Students improve their English grades by 12%+ within 90 days, guaranteed or your money back.</p>
                     </div>
                     
                     <!-- Benefit 2 -->
@@ -1393,7 +1455,7 @@
                             <span class="text-white">Training</span><span class="text-white">OS</span>
                         </div>
                         <p class="text-gray-400 mb-6 max-w-md">
-                            English Mastery Platform for K-12 learners featuring 25+ video courses, weekly live classes, 24/7 Q&A support, exam preparation, and personalized tutoring.
+                            TrainingOS: We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked. 25 Video Courses • Weekly Live Classes 24/7 Q&A Support • Exam Preparation.
                         </p>
                         <div class="flex gap-4">
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
