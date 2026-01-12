@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>TrainingOS - Dedicated English Tutoring, We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked. 25 Video Courses • Weekly Live Classes 24/7 Q&A Support • Exam Preparation</title>
-    <meta name="description" content="TrainingOS: We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked. 25 Video Courses • Weekly Live Classes 24/7 Q&A Support • Exam Preparation. Complete English mastery platform for K-12 learners.">
+    <title>TrainingOS - AI LMS | Complete Training Management Solution</title>
+    <meta name="description" content="TrainingOS: Complete AI-powered LMS with annual support, training management, student grading, video course creation, 24/7 support, and enterprise features.">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
-    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22%23000000%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22white%22 font-family=%22Arial%22>TOS</text></svg>">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22%23000000%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22white%22 font-family=%22Arial%22>AI</text></svg>">
     <meta name="theme-color" content="#000000">
     
     <!-- Fonts -->
@@ -44,6 +44,11 @@
                             700: '#0369a1',
                             800: '#075985',
                             900: '#0c4a6e',
+                        },
+                        enterprise: {
+                            blue: '#1d4ed8',
+                            purple: '#7c3aed',
+                            teal: '#0d9488'
                         }
                     },
                     fontFamily: {
@@ -152,8 +157,8 @@
                             '100%': { backgroundPosition: '200% center' },
                         },
                         'border-glow': {
-                            '0%, 100%': { borderColor: 'rgba(0, 0, 0, 0.2)' },
-                            '50%': { borderColor: 'rgba(0, 0, 0, 0.5)' },
+                            '0%, 100%': { borderColor: 'rgba(29, 78, 216, 0.2)' },
+                            '50%': { borderColor: 'rgba(29, 78, 216, 0.5)' },
                         },
                         'card-hover': {
                             from: { transform: 'translateY(0) scale(1)' },
@@ -164,8 +169,8 @@
                             '100%': { transform: 'scale(4)', opacity: 0 },
                         },
                         'neon-pulse': {
-                            '0%, 100%': { boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)' },
-                            '50%': { boxShadow: '0 0 40px rgba(0, 0, 0, 0.2)' },
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(29, 78, 216, 0.1)' },
+                            '50%': { boxShadow: '0 0 40px rgba(29, 78, 216, 0.2)' },
                         },
                         'slide-down': {
                             from: { transform: 'translateY(-10px)', opacity: 0 },
@@ -181,6 +186,7 @@
         :root {
             --glass-bg: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
+            --enterprise-gradient: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 50%, #0d9488 100%);
         }
         
         * {
@@ -213,8 +219,8 @@
             height: 100%;
             z-index: -2;
             background: 
-                radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 20%),
-                radial-gradient(circle at 90% 40%, rgba(0, 0, 0, 0.01) 0%, transparent 20%);
+                radial-gradient(circle at 10% 20%, rgba(29, 78, 216, 0.02) 0%, transparent 20%),
+                radial-gradient(circle at 90% 40%, rgba(124, 58, 237, 0.01) 0%, transparent 20%);
         }
         
         .floating-shapes {
@@ -236,7 +242,7 @@
         .shape-1 {
             width: 300px;
             height: 300px;
-            background: #000000;
+            background: #1d4ed8;
             top: 10%;
             left: 5%;
             animation-delay: 0s;
@@ -245,7 +251,7 @@
         .shape-2 {
             width: 400px;
             height: 400px;
-            background: #404040;
+            background: #7c3aed;
             top: 60%;
             right: 10%;
             animation-delay: 5s;
@@ -268,13 +274,16 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        /* Black Text */
-        .black-text {
-            color: #000000;
+        /* Enterprise Gradient */
+        .enterprise-gradient-text {
+            background: var(--enterprise-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .black-bg {
-            background: #000000;
+        .enterprise-gradient-bg {
+            background: var(--enterprise-gradient);
         }
         
         /* Animations */
@@ -304,9 +313,9 @@
             justify-content: center;
             width: 60px;
             height: 60px;
-            background-color: #000000;
+            background: linear-gradient(135deg, #25D366, #128C7E);
             border-radius: 50%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
             overflow: hidden;
@@ -315,7 +324,7 @@
         
         .whatsapp-button:hover {
             transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
         }
         
         .whatsapp-button:active {
@@ -358,7 +367,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background-color: #000000;
+            background-color: #25D366;
             animation: pulse-slow 2s infinite;
             z-index: -1;
         }
@@ -438,7 +447,7 @@
             position: relative;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid #000000;
+            border: 2px solid transparent;
             font-weight: 600;
             letter-spacing: 0.5px;
         }
@@ -452,7 +461,7 @@
         .ripple-btn .ripple {
             position: absolute;
             border-radius: 50%;
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(29, 78, 216, 0.1);
             transform: scale(0);
             animation: ripple 0.8s linear;
             pointer-events: none;
@@ -466,8 +475,8 @@
         .pricing-card:hover, .feature-card:hover, .benefit-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.1),
-                0 10px 30px rgba(0, 0, 0, 0.05);
+                0 25px 50px rgba(29, 78, 216, 0.1),
+                0 10px 30px rgba(29, 78, 216, 0.05);
         }
         
         /* Feature Check */
@@ -479,7 +488,7 @@
         }
         
         .feature-check i {
-            color: #000000;
+            color: #1d4ed8;
             font-size: 1.1rem;
             margin-top: 2px;
             flex-shrink: 0;
@@ -492,7 +501,7 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #000000;
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -503,7 +512,7 @@
             opacity: 0;
             transform: translateY(20px);
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
         }
         
         .back-to-top.visible {
@@ -572,26 +581,26 @@
             justify-content: center;
             margin-bottom: 24px;
             font-size: 28px;
-            background: #000000;
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
             color: white;
         }
         
         /* Pricing Cards */
         .pricing-card {
-            border: 2px solid rgba(0, 0, 0, 0.1);
+            border: 3px solid rgba(29, 78, 216, 0.2);
             border-radius: 24px;
             overflow: hidden;
             position: relative;
         }
         
         .pricing-card.popular {
-            border-color: #000000;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #1d4ed8;
+            box-shadow: 0 20px 40px rgba(29, 78, 216, 0.1);
         }
         
         /* Badge Styling */
         .badge {
-            background: #000000;
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
@@ -610,7 +619,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #000000;
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
             color: white;
             font-size: 1rem;
         }
@@ -626,9 +635,9 @@
         }
         
         .benefit-card:hover {
-            border-color: #000000;
+            border-color: #1d4ed8;
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(29, 78, 216, 0.1);
         }
         
         .benefit-card .icon {
@@ -640,13 +649,13 @@
             justify-content: center;
             margin-bottom: 20px;
             font-size: 24px;
-            background: #000000;
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
             color: white;
         }
         
         /* Hero Heading Emphasis */
         .hero-heading {
-            background: linear-gradient(135deg, #000000 0%, #404040 100%);
+            background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 50%, #0d9488 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -654,7 +663,7 @@
         
         /* Guarantee Badge */
         .guarantee-badge {
-            background: linear-gradient(135deg, #000000, #2d3748);
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
             color: white;
             padding: 12px 24px;
             border-radius: 50px;
@@ -663,19 +672,48 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(29, 78, 216, 0.15);
             border: 2px solid rgba(255, 255, 255, 0.1);
         }
         
         .guarantee-badge i {
-            color: #10b981;
+            color: #ffffff;
             font-size: 1.3rem;
+        }
+        
+        /* Value Cards */
+        .value-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .value-card:hover {
+            border-color: #1d4ed8;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(29, 78, 216, 0.1);
+        }
+        
+        .value-card .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+            color: white;
         }
     </style>
 </head>
 <body class="antialiased">
     <!-- Loading Bar -->
-    <div class="loading-bar" style="position: fixed; top: 0; left: 0; height: 3px; background: #000000; width: 0%; z-index: 9999;"></div>
+    <div class="loading-bar" style="position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #1d4ed8, #7c3aed); width: 0%; z-index: 9999;"></div>
     
     <!-- Animated Background -->
     <div class="animated-bg"></div>
@@ -691,13 +729,13 @@
     
     <!-- WhatsApp Widget -->
     <div class="whatsapp-widget" id="whatsappWidget">
-        <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'd%20like%20to%20learn%20more%20about%20the%20English%20Mastery%20Platform%20for%20my%20child." 
+        <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'd%20like%20to%20discuss%20the%20Complete%20Enterprise%20Solution%20for%20my%20organization." 
            target="_blank" 
            class="whatsapp-button ripple-btn"
            aria-label="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <div class="whatsapp-tooltip">START LEARNING TODAY! 📚</div>
+        <div class="whatsapp-tooltip">Get Custom Quote</div>
     </div>
     
     <!-- Navigation -->
@@ -706,28 +744,28 @@
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group animate-slide-in-left">
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl black-bg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <i class="fas fa-graduation-cap text-white text-xl md:text-2xl"></i>
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl enterprise-gradient-bg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-rocket text-white text-xl md:text-2xl"></i>
                     </div>
                     <div>
                         <div class="text-2xl md:text-3xl font-bold font-heading">
-                            <span class="text-black">Training</span><span class="text-black">OS</span>
+                            <span class="text-black">Training</span><span class="enterprise-gradient-text">OS</span>
                         </div>
-                        <div class="text-xs text-gray-600 -mt-1 font-medium tracking-wide">ENGLISH MASTERY PLATFORM</div>
+                        <div class="text-xs text-gray-600 -mt-1 font-medium tracking-wide">ENTERPRISE AI LMS</div>
                     </div>
                 </a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-8 animate-slide-in-right">
-                    <a href="#features" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Features</a>
-                    <a href="#benefits" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Benefits</a>
-                    <a href="#pricing" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Pricing</a>
-                    <a href="#courses" class="text-sm font-semibold text-gray-800 hover:text-black transition-colors duration-200">Courses</a>
+                    <a href="#features" class="text-sm font-semibold text-gray-800 hover:text-enterprise-blue transition-colors duration-200">Features</a>
+                    <a href="#value" class="text-sm font-semibold text-gray-800 hover:text-enterprise-blue transition-colors duration-200">Value</a>
+                    <a href="#solution" class="text-sm font-semibold text-gray-800 hover:text-enterprise-blue transition-colors duration-200">Solution</a>
+                    <a href="#pricing" class="text-sm font-semibold text-gray-800 hover:text-enterprise-blue transition-colors duration-200">Package</a>
                     
                     <a href="#pricing" 
-                       class="modern-btn ripple-btn bg-black text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 shadow-md relative">
-                        <span>Start Learning</span>
-                        <i class="fas fa-arrow-right ml-2"></i>
+                       class="modern-btn ripple-btn enterprise-gradient-bg text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 shadow-md relative">
+                        <span>Get Custom Quote</span>
+                        <i class="fas fa-comment ml-2"></i>
                     </a>
                 </div>
                 
@@ -742,13 +780,13 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="md:hidden mt-4 hidden animate-slide-down glass rounded-2xl overflow-hidden">
                 <div class="p-4 space-y-2">
-                    <a href="#features" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Features</a>
-                    <a href="#benefits" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Benefits</a>
-                    <a href="#pricing" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Pricing</a>
-                    <a href="#courses" class="block py-3 px-4 text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-200">Courses</a>
+                    <a href="#features" class="block py-3 px-4 text-gray-800 hover:text-enterprise-blue hover:bg-gray-50 rounded-xl transition-all duration-200">Features</a>
+                    <a href="#value" class="block py-3 px-4 text-gray-800 hover:text-enterprise-blue hover:bg-gray-50 rounded-xl transition-all duration-200">Value</a>
+                    <a href="#solution" class="block py-3 px-4 text-gray-800 hover:text-enterprise-blue hover:bg-gray-50 rounded-xl transition-all duration-200">Solution</a>
+                    <a href="#pricing" class="block py-3 px-4 text-gray-800 hover:text-enterprise-blue hover:bg-gray-50 rounded-xl transition-all duration-200">Package</a>
                     <a href="#pricing" 
-                       class="block mt-4 modern-btn bg-black text-white py-3 rounded-xl text-center font-semibold shadow-md">
-                        Start Learning
+                       class="block mt-4 modern-btn enterprise-gradient-bg text-white py-3 rounded-xl text-center font-semibold shadow-md">
+                        Get Custom Quote
                     </a>
                 </div>
             </div>
@@ -759,24 +797,24 @@
     <section class="pt-32 md:pt-40 pb-16 md:pb-24 relative overflow-hidden section-padding">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 -z-10 overflow-hidden">
-            <div class="absolute -top-20 -right-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-gray-100 blur-3xl opacity-50 floating"></div>
-            <div class="absolute -bottom-20 -left-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-gray-100 blur-3xl opacity-50 floating" style="animation-delay: 2s;"></div>
+            <div class="absolute -top-20 -right-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-blue-100 blur-3xl opacity-50 floating"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-purple-100 blur-3xl opacity-50 floating" style="animation-delay: 2s;"></div>
         </div>
         
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
                 <!-- Platform Badge -->
                 <div class="mb-8 md:mb-12 max-w-2xl mx-auto animate-slide-up">
-                    <div class="rounded-2xl p-4 md:p-5 shadow-lg bg-black">
+                    <div class="rounded-2xl p-4 md:p-5 shadow-lg enterprise-gradient-bg">
                         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 relative z-10">
                             <div class="flex items-center gap-2">
-                                <div class="w-10 h-10 rounded-full bg-white border-2 border-black flex items-center justify-center shadow-sm">
-                                    <i class="fas fa-language text-black text-lg"></i>
+                                <div class="w-10 h-10 rounded-full bg-white border-2 border-enterprise-blue flex items-center justify-center shadow-sm">
+                                    <i class="fas fa-crown text-enterprise-blue text-lg"></i>
                                 </div>
-                                <span class="font-bold text-white text-sm md:text-base tracking-wider uppercase">K-12 ENGLISH MASTERY PLATFORM</span>
+                                <span class="font-bold text-white text-sm md:text-base tracking-wider uppercase">COMPLETE ENTERPRISE SOLUTION</span>
                             </div>
                             <div class="text-white text-lg md:text-xl font-bold text-center">
-                                25 Video Courses + Live Classes + 24/7 Support
+                                Annual Support + Full Management
                             </div>
                         </div>
                     </div>
@@ -786,73 +824,60 @@
                 <div class="text-center mb-12 md:mb-16">
                     <!-- Hero Heading -->
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight animate-slide-up font-heading">
-                        <span class="block hero-heading">TrainingOS - Dedicated English Tutoring</span>
-                        <span class="block mt-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked.</span>
+                        <span class="block hero-heading">TrainingOS Enterprise</span>
+                        <span class="block mt-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Complete AI-Powered LMS with Annual Support & Full Management</span>
                     </h1>
                     
                     <div class="mb-8 md:mb-10 animate-fade-in" style="animation-delay: 0.1s">
                         <div class="guarantee-badge inline-flex">
                             <i class="fas fa-shield-alt"></i>
-                            <span>90-Day Grade Improvement Guarantee</span>
+                            <span>Annual Support • Training Management • 24/7 Customer Support</span>
                         </div>
                     </div>
                     
                     <p class="text-2xl md:text-3xl text-gray-800 mb-8 md:mb-10 max-w-4xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.2s">
-                        25 Video Courses • Weekly Live Classes<br>24/7 Q&A Support • Exam Preparation
+                        Everything you need to scale your training organization: Annual support, complete training management, student grading, video course creation, 24/7 customer support, and enterprise features.
                     </p>
-                    
-                    <!-- YouTube VSL Video -->
-                    <div class="mb-10 md:mb-14 max-w-4xl mx-auto animate-fade-in" style="animation-delay: 0.3s">
-                        <div class="video-container">
-                            <!-- Replace VIDEO_ID with your actual YouTube VSL video ID -->
-                            <iframe 
-                                src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
-                                title="TrainingOS English Mastery Platform - See How We Boost Grades By 12%+"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <p class="text-sm text-gray-600 mt-4 text-center">Watch our VSL to see how TrainingOS boosts English grades by 12%+ in 90 days</p>
-                    </div>
                     
                     <!-- Platform Stats -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10 md:mb-14 animate-fade-in" style="animation-delay: 0.4s">
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">12%+</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Grade Improvement</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold enterprise-gradient-text">24/7</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Customer Support</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">25+</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Video Courses</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold enterprise-gradient-text">Full</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Management</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">24/7</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Q&A Support</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold enterprise-gradient-text">AI</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Video Creation</div>
                         </div>
                         <div class="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-transform duration-300 border border-gray-200">
-                            <div class="stat-number text-2xl md:text-3xl font-bold text-black">90 Days</div>
-                            <div class="text-xs md:text-sm text-gray-600 font-medium">Guarantee</div>
+                            <div class="stat-number text-2xl md:text-3xl font-bold enterprise-gradient-text">Annual</div>
+                            <div class="text-xs md:text-sm text-gray-600 font-medium">Support Included</div>
                         </div>
                     </div>
                     
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center animate-slide-up hero-buttons" style="animation-delay: 0.5s">
-                        <a href="#pricing" 
-                           class="group modern-btn ripple-btn bg-black text-white px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3 text-lg">
-                            <i class="fas fa-play-circle text-lg"></i>
-                            <span class="font-semibold">Start Learning Now</span>
+                        <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'd%20like%20to%20get%20a%20custom%20quote%20for%20the%20Complete%20Enterprise%20Solution." 
+                           target="_blank"
+                           class="group modern-btn ripple-btn enterprise-gradient-bg text-white px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3 text-lg">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span class="font-semibold">Get Custom Quote on WhatsApp</span>
                             <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
                         </a>
                         
                         <a href="#features" 
-                           class="group modern-btn glass-card text-black px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold border-2 border-gray-200 hover:border-black hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
+                           class="group modern-btn glass-card text-black px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold border-2 border-gray-200 hover:border-enterprise-blue hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
                             <i class="fas fa-list text-lg"></i>
-                            <span class="font-semibold">View All Features</span>
+                            <span class="font-semibold">See Complete Features</span>
                         </a>
                     </div>
                     
                     <p class="text-sm text-gray-600 mt-6 animate-fade-in" style="animation-delay: 0.6s">
-                        <i class="fas fa-check-circle mr-2 text-green-500"></i>Complete English mastery platform for K-12 learners featuring video courses, live sessions, personalized support, grading & assessment, and exam preparation.
+                        <i class="fas fa-check-circle mr-2 text-enterprise-blue"></i>Complete solution including annual support, training management, student grading, video course creation, 24/7 customer support assistants, and enterprise features.
                     </p>
                 </div>
             </div>
@@ -865,174 +890,174 @@
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">Complete English Mastery Platform</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Everything Your Child Needs for English Excellence</span>
+                        <span class="text-black">Complete Enterprise Solution</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Everything Included in One Package</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        Our comprehensive platform combines structured learning with personalized support
+                        Our comprehensive package includes all the features your training organization needs to succeed
                     </p>
                 </div>
                 
                 <!-- Features Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <!-- Feature 1: Video Courses -->
+                    <!-- Feature 1: Annual Support -->
                     <div class="feature-card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-video"></i>
+                            <i class="fas fa-headset"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">25+ Comprehensive Video Courses</h3>
-                        <p class="text-gray-600 mb-6">Structured video lessons covering grammar, vocabulary, writing, comprehension, and literature for all K-12 levels.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Annual Technical Support</h3>
+                        <p class="text-gray-600 mb-6">Full year of technical support, updates, maintenance, and troubleshooting included in your package.</p>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Self-paced learning</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Priority technical support</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Downloadable resources</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Regular system updates</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Progress tracking</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Proactive maintenance</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Grade-specific content</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Emergency response team</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Feature 2: Q&A Support -->
+                    <!-- Feature 2: Training Management -->
                     <div class="feature-card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-question-circle"></i>
+                            <i class="fas fa-tasks"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">24/7 Q&A Homework Support</h3>
-                        <p class="text-gray-600 mb-6">Get instant help with homework, assignments, and study questions through our dedicated support platform.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Complete Training Management</h3>
+                        <p class="text-gray-600 mb-6">End-to-end training administration, enrollment management, scheduling, and reporting tools.</p>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Expert tutors available</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Student enrollment system</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Detailed explanations</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Course scheduling tools</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Step-by-step solutions</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Attendance tracking</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Assignment review</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Comprehensive reporting</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Feature 3: Live Classes -->
-                    <div class="feature-card">
-                        <div class="icon-wrapper">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">Weekly Live Classroom Sessions</h3>
-                        <p class="text-gray-600 mb-6">Interactive live classes with expert instructors for real-time learning and Q&A opportunities.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Small group sessions</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Interactive whiteboard</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Recordings available</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Topic-focused workshops</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Feature 4: Exam Preparation -->
+                    <!-- Feature 3: Student Assessment -->
                     <div class="feature-card">
                         <div class="icon-wrapper">
                             <i class="fas fa-clipboard-check"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">Comprehensive Exam Preparation</h3>
-                        <p class="text-gray-600 mb-6">Targeted preparation for tests, exams, and assessments with practice papers and revision strategies.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Student Grading & Assessment</h3>
+                        <p class="text-gray-600 mb-6">Advanced grading system with automated assessment, feedback tools, and performance analytics.</p>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Past exam papers</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Automated grading system</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Revision schedules</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Performance analytics</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Exam techniques</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Custom assessment creation</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Time management</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Progress tracking dashboards</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Feature 5: Grading & Assessment -->
+                    <!-- Feature 4: Video Course Creation -->
                     <div class="feature-card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-video"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">Grading & Assessment System</h3>
-                        <p class="text-gray-600 mb-6">Regular assessments with detailed feedback to track progress and identify areas for improvement.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-black">AI Video Course Creation</h3>
+                        <p class="text-gray-600 mb-6">Professional video course creation tools with AI assistance, editing, and production capabilities.</p>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Progress reports</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">AI-assisted video creation</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Skill gap analysis</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Professional editing tools</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Personalized recommendations</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Interactive video features</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Parent dashboard</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Multi-format export</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <!-- Feature 6: Personal Sessions -->
+                    <!-- Feature 5: 24/7 Support -->
                     <div class="feature-card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-user-graduate"></i>
+                            <i class="fas fa-clock"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-black">Personalised English Mastery</h3>
-                        <p class="text-gray-600 mb-6">One-on-one sessions with expert tutors focused on individual learning needs and goals.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-black">24/7 Customer Support Assistants</h3>
+                        <p class="text-gray-600 mb-6">Round-the-clock customer support with AI assistants and human backup for your learners.</p>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Custom learning plans</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">AI support assistants</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Flexible scheduling</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Human support backup</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">R260 per session</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Multi-channel support</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-black"></i>
-                                <span class="text-gray-700">Pay as you go</span>
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Custom support workflows</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Feature 6: Enterprise Features -->
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-black">Enterprise Management Tools</h3>
+                        <p class="text-gray-600 mb-6">Advanced tools for large-scale training management, reporting, and administration.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Multi-department management</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Advanced reporting suite</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Custom workflow creation</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                <span class="text-gray-700">Enterprise security features</span>
                             </li>
                         </ul>
                     </div>
@@ -1041,108 +1066,176 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
+    <!-- Value Section -->
+    <section id="value" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">Why Choose TrainingOS?</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Benefits That Transform Learning</span>
+                        <span class="text-black">Unmatched Value Proposition</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Why Our Complete Package Saves You Time & Money</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        Experience measurable improvements in English skills and academic performance
+                        Get everything you need in one comprehensive solution instead of piecing together multiple services
                     </p>
                 </div>
                 
-                <!-- Benefits Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <!-- Benefit 1 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">12%+ Grade Improvement</h3>
-                        <p class="text-gray-600">Proven results: Students improve their English grades by 12%+ within 90 days, guaranteed or your money back.</p>
-                    </div>
-                    
-                    <!-- Benefit 2 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Reduced Homework Stress</h3>
-                        <p class="text-gray-600">24/7 Q&A support means homework help is always available, eliminating frustration and building confidence.</p>
-                    </div>
-                    
-                    <!-- Benefit 3 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Improved Exam Results</h3>
-                        <p class="text-gray-600">Targeted exam preparation and practice tests lead to average grade improvements of 15-25% across all levels.</p>
-                    </div>
-                    
-                    <!-- Benefit 4 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Flexible Learning Schedule</h3>
-                        <p class="text-gray-600">Learn anytime, anywhere with on-demand video courses and scheduled live sessions that fit your family's routine.</p>
-                    </div>
-                    
-                    <!-- Benefit 5 -->
-                    <div class="benefit-card">
+                <!-- Value Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="value-card">
                         <div class="icon">
                             <i class="fas fa-money-bill-wave"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Cost-Effective Solution</h3>
-                        <p class="text-gray-600">Complete platform access for R260/month is more affordable than traditional tutoring while offering more features.</p>
+                        <h3 class="text-xl font-bold mb-3 text-black">Cost Savings</h3>
+                        <p class="text-gray-600">Save 40-60% compared to purchasing separate systems for support, management, and creation tools.</p>
                     </div>
                     
-                    <!-- Benefit 6 -->
-                    <div class="benefit-card">
+                    <div class="value-card">
                         <div class="icon">
-                            <i class="fas fa-award"></i>
+                            <i class="fas fa-clock"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Confidence Building</h3>
-                        <p class="text-gray-600">Regular assessment and positive reinforcement build academic confidence and love for learning English.</p>
+                        <h3 class="text-xl font-bold mb-3 text-black">Time Efficiency</h3>
+                        <p class="text-gray-600">Reduce administrative overhead by 70% with integrated management and automated processes.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Scalability</h3>
+                        <p class="text-gray-600">Grow your training programs without additional costs or system changes as your needs expand.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Risk Reduction</h3>
+                        <p class="text-gray-600">Single vendor responsibility eliminates integration issues and support conflicts between systems.</p>
                     </div>
                 </div>
                 
-                <!-- Benefits Summary -->
+                <!-- ROI Calculator -->
                 <div class="glass-card rounded-3xl p-8 border border-gray-200">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <h3 class="text-2xl font-bold mb-4 text-black">Perfect for K-12 Learners</h3>
-                            <p class="text-gray-600 mb-6">Our platform is specifically designed for school-aged learners, with content aligned to curriculum requirements and age-appropriate teaching methods.</p>
+                            <h3 class="text-2xl font-bold mb-4 text-black">Calculate Your ROI</h3>
+                            <p class="text-gray-600 mb-6">Most organizations save between $15,000 - $50,000 annually by consolidating their training systems with our complete package.</p>
                             <ul class="space-y-3">
                                 <li class="flex items-center gap-2">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Grade-specific content (Grades 1-12)</span>
+                                    <i class="fas fa-check text-enterprise-blue"></i>
+                                    <span>Eliminate separate support contracts</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Curriculum-aligned material</span>
+                                    <i class="fas fa-check text-enterprise-blue"></i>
+                                    <span>Reduce administrative staff hours</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Age-appropriate teaching methods</span>
+                                    <i class="fas fa-check text-enterprise-blue"></i>
+                                    <span>Minimize software licensing costs</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Safe, monitored learning environment</span>
+                                    <i class="fas fa-check text-enterprise-blue"></i>
+                                    <span>Decrease training development time</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="text-center">
-                            <div class="text-6xl font-bold text-black mb-4">R260</div>
-                            <p class="text-gray-600 mb-4">per month for complete platform access</p>
-                            <div class="text-3xl font-bold text-black mb-2">OR</div>
-                            <div class="text-4xl font-bold text-black mb-4">R2600</div>
-                            <p class="text-gray-600">yearly plan (save 2 months)</p>
+                            <div class="text-5xl font-bold enterprise-gradient-text mb-4">40-60%</div>
+                            <p class="text-gray-600 mb-4">Average cost savings</p>
+                            <div class="text-3xl font-bold text-black mb-2">VS</div>
+                            <div class="text-4xl font-bold text-black mb-4">Separate Systems</div>
+                            <p class="text-gray-600">Piecemeal solutions with integration challenges</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-16 md:py-24 bg-gray-50 relative section-padding animate-on-scroll">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
+                        <span class="text-black">Complete Solution for Every Need</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Designed for Organizations Like Yours</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+                        Whether you're a training provider, university, or corporate department, we have you covered
+                    </p>
+                </div>
+                
+                <!-- Solution Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Colleges & Universities</h3>
+                        <p class="text-gray-600">Complete academic management with accreditation tracking, student assessment, and faculty tools.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Corporate Training</h3>
+                        <p class="text-gray-600">Enterprise-grade training management for employee onboarding, compliance, and skill development.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-black">Training Providers</h3>
+                        <p class="text-gray-600">End-to-end solution for commercial training organizations with client management and billing.</p>
+                    </div>
+                </div>
+                
+                <!-- Integration Example -->
+                <div class="glass-card rounded-3xl p-8 border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-6 text-black text-center">Seamless Integration with Your Existing Systems</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-600 mb-6">Our solution integrates with your existing HR systems, CRM, payment processors, and communication tools for a seamless experience.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-plug text-enterprise-blue"></i>
+                                    <span>API integration with 100+ systems</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-sync-alt text-enterprise-blue"></i>
+                                    <span>Automated data synchronization</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-shield text-enterprise-blue"></i>
+                                    <span>Enterprise-grade security protocols</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-cogs text-enterprise-blue"></i>
+                                    <span>Custom integration development</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 border border-gray-200 rounded-xl text-center">
+                                <i class="fas fa-users text-3xl text-enterprise-blue mb-3"></i>
+                                <p class="font-medium">HR Systems</p>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-xl text-center">
+                                <i class="fas fa-credit-card text-3xl text-enterprise-blue mb-3"></i>
+                                <p class="font-medium">Payment Processors</p>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-xl text-center">
+                                <i class="fas fa-envelope text-3xl text-enterprise-blue mb-3"></i>
+                                <p class="font-medium">Email Systems</p>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-xl text-center">
+                                <i class="fas fa-chart-bar text-3xl text-enterprise-blue mb-3"></i>
+                                <p class="font-medium">Analytics Tools</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1151,168 +1244,155 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-16 md:py-24 bg-gray-50 relative section-padding animate-on-scroll">
+    <section id="pricing" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
         <div class="container mx-auto">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">Simple, Affordable Pricing</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Choose Your English Mastery Plan</span>
+                        <span class="text-black">One Complete Package</span>
+                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Everything You Need for Success</span>
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        Two straightforward plans for complete English mastery
+                        Get a custom quote based on your organization's specific needs and scale
                     </p>
                 </div>
                 
-                <!-- Pricing Cards -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Monthly Plan -->
-                    <div class="pricing-card bg-white">
-                        <div class="p-8">
-                            <div class="flex items-center justify-between mb-6">
-                                <h3 class="text-2xl font-bold text-black">Monthly Plan</h3>
-                                <div class="badge">MOST FLEXIBLE</div>
-                            </div>
-                            
-                            <div class="mb-6">
-                                <div class="text-5xl font-bold text-black mb-2">R260</div>
-                                <p class="text-gray-600">per month</p>
-                            </div>
-                            
-                            <ul class="space-y-4 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Access to all 25+ video courses</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Weekly live classroom sessions</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>24/7 Q&A homework support</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Exam preparation materials</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Grading & assessment system</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Progress tracking dashboard</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Downloadable resources</span>
-                                </li>
-                            </ul>
-                            
-                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20sign%20up%20for%20the%20Monthly%20Plan%20(R260)" 
-                               target="_blank"
-                               class="w-full modern-btn ripple-btn bg-black text-white py-4 rounded-xl font-bold hover:shadow-xl transition-all duration-300 text-center block">
-                                Start Monthly Plan
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Yearly Plan -->
+                <!-- Single Package -->
+                <div class="max-w-4xl mx-auto">
                     <div class="pricing-card bg-white popular">
-                        <div class="p-8">
-                            <div class="flex items-center justify-between mb-6">
-                                <h3 class="text-2xl font-bold text-black">Yearly Plan</h3>
-                                <div class="badge bg-green-500">BEST VALUE</div>
+                        <div class="p-8 md:p-12">
+                            <div class="flex flex-col md:flex-row items-center justify-between mb-8">
+                                <div>
+                                    <h3 class="text-3xl font-bold text-black mb-2">Complete Enterprise Solution</h3>
+                                    <p class="text-gray-600">Annual package with everything included</p>
+                                </div>
+                                <div class="badge bg-enterprise-teal mt-4 md:mt-0">BEST VALUE</div>
                             </div>
                             
-                            <div class="mb-6">
-                                <div class="text-5xl font-bold text-black mb-2">R2600</div>
-                                <p class="text-gray-600">per year (save R520)</p>
-                                <div class="mt-2 p-3 bg-green-50 rounded-lg">
-                                    <p class="text-green-700 font-semibold">
-                                        <i class="fas fa-gift mr-2"></i>
-                                        Equivalent to 2 months FREE!
-                                    </p>
+                            <!-- Package Description -->
+                            <div class="mb-10 p-6 bg-blue-50 rounded-2xl">
+                                <h4 class="text-xl font-bold mb-4 text-black text-center">Get a Custom Quote Tailored to Your Organization</h4>
+                                <p class="text-gray-700 text-center mb-4">Contact us for a personalized quote based on your number of users, courses, and specific requirements.</p>
+                                <div class="text-center">
+                                    <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'd%20like%20to%20get%20a%20custom%20quote%20for%20the%20Complete%20Enterprise%20Solution.%20Please%20contact%20me%20with%20pricing%20details." 
+                                       target="_blank"
+                                       class="inline-block modern-btn ripple-btn enterprise-gradient-bg text-white px-8 py-3 rounded-xl font-bold hover:shadow-xl transition-all duration-300">
+                                        Get Custom Quote on WhatsApp
+                                    </a>
                                 </div>
                             </div>
                             
-                            <ul class="space-y-4 mb-8">
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span><strong>Everything in Monthly Plan</strong></span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>2 FREE months of access</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Priority support access</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Bonus: 2 personal sessions (R520 value)</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Annual progress certificate</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Price lock for 1 year</span>
-                                </li>
-                                <li class="feature-check">
-                                    <i class="fas fa-check text-black"></i>
-                                    <span>Exclusive resource library</span>
-                                </li>
-                            </ul>
+                            <!-- Included Features -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+                                <div>
+                                    <h4 class="text-xl font-bold mb-4 text-black">Core Package Includes:</h4>
+                                    <ul class="space-y-4">
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Annual Technical Support</strong> - Full year of priority support</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Complete Training Management</strong> - Administration & enrollment</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Student Grading & Assessment</strong> - Automated grading system</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Video Course Creation</strong> - AI-assisted video production</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>24/7 Customer Support Assistants</strong> - Round-the-clock support</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-xl font-bold mb-4 text-black">Enterprise Features:</h4>
+                                    <ul class="space-y-4">
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Everything in Professional</strong> - All standard features included</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Unlimited Learners & Courses</strong> - Scale without limits</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Advanced Accreditation Automation</strong> - Compliance made easy</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Custom AI Model Training</strong> - Tailored to your content</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>White-label & Branding</strong> - Your brand, our platform</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>API Access & Integrations</strong> - Connect your systems</span>
+                                        </li>
+                                        <li class="feature-check">
+                                            <i class="fas fa-check-circle text-enterprise-blue"></i>
+                                            <span><strong>Dedicated Account Manager</strong> - Your personal point of contact</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                             
-                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20sign%20up%20for%20the%20Yearly%20Plan%20(R2600)" 
-                               target="_blank"
-                               class="w-full modern-btn ripple-btn bg-black text-white py-4 rounded-xl font-bold hover:shadow-xl transition-all duration-300 text-center block">
-                                Start Yearly Plan & Save
-                            </a>
+                            <!-- Final CTA -->
+                            <div class="text-center">
+                                <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'm%20ready%20to%20discuss%20the%20Complete%20Enterprise%20Solution%20for%20my%20organization.%20Please%20send%20me%20a%20customized%20quote%20and%20schedule%20a%20demo." 
+                                   target="_blank"
+                                   class="w-full modern-btn ripple-btn enterprise-gradient-bg text-white py-4 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 text-center block text-lg">
+                                    <i class="fab fa-whatsapp mr-2"></i>Start Conversation & Get Custom Quote
+                                </a>
+                                <p class="text-sm text-gray-600 mt-4">
+                                    <i class="fas fa-info-circle mr-2"></i>All quotes are customized based on your organization size and specific requirements
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Personal Sessions -->
-                <div class="mt-12 max-w-2xl mx-auto">
+                <!-- Implementation Support -->
+                <div class="mt-12 max-w-3xl mx-auto">
                     <div class="glass-card rounded-3xl p-8 border border-gray-200">
-                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Personalised English Mastery Sessions</h3>
-                        <p class="text-gray-600 mb-6 text-center">Need one-on-one attention? Book individual sessions with our expert tutors</p>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                        <h3 class="text-2xl font-bold mb-4 text-black text-center">Full Implementation & Support</h3>
+                        <p class="text-gray-600 mb-6 text-center">We handle everything from setup to ongoing support</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                             <div class="text-center">
-                                <div class="text-4xl font-bold text-black mb-2">R260</div>
-                                <p class="text-gray-600">per session</p>
+                                <div class="icon-circle mx-auto mb-4">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4 class="font-bold text-black mb-2">Setup & Configuration</h4>
+                                <p class="text-sm text-gray-600">We configure everything to match your workflows</p>
                             </div>
-                            <div class="md:col-span-2">
-                                <ul class="space-y-3">
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-black"></i>
-                                        <span>60-minute one-on-one tutoring</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-black"></i>
-                                        <span>Customized to specific needs</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-black"></i>
-                                        <span>Flexible scheduling</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class="fas fa-check text-black"></i>
-                                        <span>Pay as you go - no commitment</span>
-                                    </li>
-                                </ul>
+                            <div class="text-center">
+                                <div class="icon-circle mx-auto mb-4">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4 class="font-bold text-black mb-2">Team Training</h4>
+                                <p class="text-sm text-gray-600">Comprehensive training for your entire team</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="icon-circle mx-auto mb-4">
+                                    <i class="fas fa-life-ring"></i>
+                                </div>
+                                <h4 class="font-bold text-black mb-2">Ongoing Support</h4>
+                                <p class="text-sm text-gray-600">Dedicated support throughout your contract</p>
                             </div>
                         </div>
-                        <div class="mt-6 text-center">
-                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20book%20a%20Personalised%20English%20Mastery%20Session%20(R260)" 
+                        <div class="text-center">
+                            <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'd%20like%20to%20learn%20more%20about%20your%20implementation%20process%20and%20support%20services." 
                                target="_blank"
-                               class="inline-block modern-btn glass-card text-black px-6 py-3 rounded-xl font-bold border-2 border-gray-200 hover:border-black transition-all duration-300">
-                                Book Personal Session
+                               class="inline-block modern-btn glass-card text-black px-6 py-3 rounded-xl font-bold border-2 border-gray-200 hover:border-enterprise-blue transition-all duration-300">
+                                Discuss Implementation
                             </a>
                         </div>
                     </div>
@@ -1321,123 +1401,40 @@
         </div>
     </section>
 
-    <!-- Courses Preview -->
-    <section id="courses" class="py-16 md:py-24 bg-white relative section-padding animate-on-scroll">
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-purple-50 relative section-padding animate-on-scroll">
         <div class="container mx-auto">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
-                        <span class="text-black">25+ Comprehensive Video Courses</span>
-                        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-2">Structured Learning for Every Level</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        Our curriculum covers all aspects of English language mastery
-                    </p>
-                </div>
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading">
+                    <span class="text-black">Ready to Transform Your Training Operations?</span>
+                </h2>
                 
-                <!-- Course Categories -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                    <!-- Category 1 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Grammar Mastery</h3>
-                        <p class="text-gray-600 mb-4">Complete grammar courses from basics to advanced concepts</p>
-                        <div class="text-sm text-gray-500">
-                            <div class="flex items-center gap-1 mb-1">
-                                <i class="fas fa-play-circle"></i>
-                                <span>6 video courses</span>
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-clock"></i>
-                                <span>45+ hours of content</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Category 2 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-pen-fancy"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Writing Excellence</h3>
-                        <p class="text-gray-600 mb-4">Essays, creative writing, formal letters, and reports</p>
-                        <div class="text-sm text-gray-500">
-                            <div class="flex items-center gap-1 mb-1">
-                                <i class="fas fa-play-circle"></i>
-                                <span>5 video courses</span>
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-clock"></i>
-                                <span>38+ hours of content</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Category 3 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-book-reader"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Reading & Comprehension</h3>
-                        <p class="text-gray-600 mb-4">Critical reading, comprehension techniques, and analysis</p>
-                        <div class="text-sm text-gray-500">
-                            <div class="flex items-center gap-1 mb-1">
-                                <i class="fas fa-play-circle"></i>
-                                <span>4 video courses</span>
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-clock"></i>
-                                <span>32+ hours of content</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Category 4 -->
-                    <div class="benefit-card">
-                        <div class="icon">
-                            <i class="fas fa-microphone-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-black">Speaking & Listening</h3>
-                        <p class="text-gray-600 mb-4">Oral presentation, pronunciation, and listening skills</p>
-                        <div class="text-sm text-gray-500">
-                            <div class="flex items-center gap-1 mb-1">
-                                <i class="fas fa-play-circle"></i>
-                                <span>3 video courses</span>
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-clock"></i>
-                                <span>25+ hours of content</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Get a complete AI-powered LMS with annual support, full management, and enterprise features
+                </p>
                 
                 <!-- Final CTA -->
-                <div class="text-center">
-                    <div class="glass-card rounded-3xl p-8 border border-gray-200 max-w-2xl mx-auto">
-                        <h3 class="text-2xl font-bold mb-4 text-black">Start Your English Mastery Journey Today</h3>
-                        <p class="text-gray-600 mb-6">Join thousands of K-12 learners who have transformed their English skills with TrainingOS</p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="https://wa.me/27766473499?text=I'd%20like%20to%20sign%20up%20for%20TrainingOS%20English%20Mastery%20Platform" 
-                               target="_blank"
-                               class="group modern-btn ripple-btn bg-black text-white px-8 py-4 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3">
-                                <i class="fab fa-whatsapp text-lg"></i>
-                                <span class="font-semibold">Chat on WhatsApp</span>
-                                <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
-                            </a>
-                            
-                            <a href="#pricing" 
-                               class="group modern-btn glass-card text-black px-8 py-4 rounded-xl font-bold border-2 border-gray-200 hover:border-black hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3">
-                                <i class="fas fa-list text-lg"></i>
-                                <span class="font-semibold">View Pricing Plans</span>
-                            </a>
-                        </div>
-                        <p class="text-sm text-gray-600 mt-6">
-                            <i class="fas fa-phone-alt mr-2"></i>Need help deciding? Call/WhatsApp: +27 76 647 3499
-                        </p>
+                <div class="glass-card rounded-3xl p-8 border border-gray-200 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4 text-black">Start Your Transformation Today</h3>
+                    <p class="text-gray-600 mb-6">Chat with us on WhatsApp to discuss your needs and get a custom quote</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://wa.me/27766473499?text=Hi%20TrainingOS!%20I'm%20interested%20in%20the%20Complete%20Enterprise%20Solution.%20Can%20you%20please%20provide%20me%20with%20a%20custom%20quote%20and%20schedule%20a%20demo%20call?" 
+                           target="_blank"
+                           class="group modern-btn ripple-btn enterprise-gradient-bg text-white px-8 py-4 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span class="font-semibold">Get Custom Quote on WhatsApp</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                        
+                        <a href="#features" 
+                           class="group modern-btn glass-card text-black px-8 py-4 rounded-xl font-bold border-2 border-gray-200 hover:border-enterprise-blue hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3">
+                            <i class="fas fa-list text-lg"></i>
+                            <span class="font-semibold">Review Features Again</span>
+                        </a>
                     </div>
+                    <p class="text-sm text-gray-600 mt-6">
+                        <i class="fas fa-phone-alt mr-2"></i>Direct WhatsApp: +27 76 647 3499 | Email: victor@maribamedia.co.za
+                    </p>
                 </div>
             </div>
         </div>
@@ -1455,14 +1452,14 @@
                             <span class="text-white">Training</span><span class="text-white">OS</span>
                         </div>
                         <p class="text-gray-400 mb-6 max-w-md">
-                            TrainingOS: We help Parents Increase Their Children Grades By 12%+ in 90 Days or full refund, no questions asked. 25 Video Courses • Weekly Live Classes 24/7 Q&A Support • Exam Preparation.
+                            Complete AI-powered LMS solution with annual support, training management, student grading, video course creation, and 24/7 customer support for enterprise organizations.
                         </p>
                         <div class="flex gap-4">
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
-                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
                             </a>
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
                                 <i class="fab fa-youtube"></i>
@@ -1472,12 +1469,12 @@
                     
                     <!-- Quick Links -->
                     <div>
-                        <h4 class="text-white font-bold mb-4 text-lg uppercase tracking-wide">Platform</h4>
+                        <h4 class="text-white font-bold mb-4 text-lg uppercase tracking-wide">Solution</h4>
                         <ul class="space-y-3">
                             <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                            <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors">Benefits</a></li>
-                            <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-                            <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Courses</a></li>
+                            <li><a href="#value" class="text-gray-400 hover:text-white transition-colors">Value</a></li>
+                            <li><a href="#solution" class="text-gray-400 hover:text-white transition-colors">Integration</a></li>
+                            <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Package</a></li>
                         </ul>
                     </div>
                     
@@ -1499,7 +1496,7 @@
                             </li>
                             <li class="flex items-center gap-2 text-gray-400">
                                 <i class="fas fa-clock"></i>
-                                <span>24/7 Q&A Support</span>
+                                <span>24/7 Support Available</span>
                             </li>
                         </ul>
                     </div>
@@ -1509,11 +1506,11 @@
                 <div class="border-t border-gray-800 pt-8">
                     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                         <div class="text-sm text-center md:text-left">
-                            <span class="text-gray-400 font-medium">K-12 English Mastery Platform</span>
+                            <span class="text-gray-400 font-medium">Complete Enterprise LMS Solution</span>
                             <span class="mx-3 text-gray-600">|</span>
-                            <span class="text-gray-400 font-medium">25+ Video Courses</span>
+                            <span class="text-gray-400 font-medium">Annual Support Included</span>
                             <span class="mx-3 text-gray-600">|</span>
-                            <span class="text-gray-400 font-medium">Weekly Live Classes</span>
+                            <span class="text-gray-400 font-medium">Full Training Management</span>
                         </div>
                         
                         <div class="text-sm text-center text-gray-400">
@@ -1523,7 +1520,7 @@
                             <span class="mx-3 text-gray-600">|</span>
                             <a href="#" class="hover:text-white transition-colors">Terms</a>
                             <span class="mx-3 text-gray-600">|</span>
-                            <a href="#" class="hover:text-white transition-colors">Refund Policy</a>
+                            <a href="#" class="hover:text-white transition-colors">Enterprise Agreement</a>
                         </div>
                     </div>
                 </div>
@@ -1662,25 +1659,6 @@
             
             // Add loaded class to body for transition
             document.body.classList.add('loaded');
-            
-            // Animate stats counters
-            const statNumbers = document.querySelectorAll('.stat-number');
-            statNumbers.forEach(stat => {
-                const text = stat.textContent;
-                if (text.includes('+')) {
-                    const finalValue = parseInt(text.replace('+', ''));
-                    let current = 0;
-                    const increment = finalValue / 50;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= finalValue) {
-                            current = finalValue;
-                            clearInterval(timer);
-                        }
-                        stat.textContent = Math.floor(current) + '+';
-                    }, 30);
-                }
-            });
         });
 
         // Parallax effect for floating shapes
@@ -1695,10 +1673,10 @@
         });
 
         // Enhanced hover effects for cards
-        document.querySelectorAll('.feature-card, .benefit-card, .pricing-card').forEach(card => {
+        document.querySelectorAll('.feature-card, .benefit-card, .pricing-card, .value-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
-                this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.15)';
+                this.style.boxShadow = '0 25px 50px -12px rgba(29, 78, 216, 0.15)';
             });
             
             card.addEventListener('mouseleave', function() {
